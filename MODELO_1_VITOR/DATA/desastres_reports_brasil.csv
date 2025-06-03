@@ -1,0 +1,301 @@
+report_id,timestamp,latitude,longitude,source_type,observation_type,severity_reported,num_affected_estimate,infrastructure_damage,accessibility,additional_notes,AREA_RISK_CLASSIFICATION
+1,2025-05-08 16:40:23,-21.762377,-53.784206,App Usuário,Alagamento,Baixa,196,Moderado,Fácil,Facere quibusdam aspernatur deserunt laborum.,Suporte Necessário
+2,2025-05-07 16:04:09,-30.201242,-53.406053,Equipe de Campo,Alagamento,Alta,184,Leve,Difícil,Natus ratione maiores vel cumque quaerat optio iste rem nam nam consectetur.,Atenção Urgente
+3,2025-05-27 01:41:52,-5.581846,-39.413045,App Usuário,Incêndio,Crítica,197,Leve,Fácil,Iusto fugit distinctio at.,Atenção Urgente
+4,2025-05-07 17:11:16,-21.424896,-56.920149,App Usuário,Deslizamento,Média,49,Nenhum,Difícil,Labore dignissimos sed molestias occaecati velit laboriosam quas magnam.,Monitorar
+5,2025-05-22 12:02:10,1.157343,-55.584833,App Usuário,Incêndio,Média,162,Nenhum,Difícil,Aut iure autem itaque a possimus.,Suporte Necessário
+6,2025-05-19 10:12:52,-12.777018,-58.90008,Drone,Deslizamento,Crítica,140,Moderado,Difícil,Dolor temporibus mollitia vero culpa commodi expedita.,Risco Imediato
+7,2025-05-06 11:08:07,-20.868397,-54.309056,Equipe de Campo,Pessoas Isoladas,Baixa,136,Nenhum,Bloqueado,Deserunt blanditiis nemo cupiditate.,Suporte Necessário
+8,2025-05-30 16:33:32,-1.926369,-47.052163,App Usuário,Incêndio,Crítica,118,Severo,Difícil,Quibusdam omnis enim doloribus quo dolores.,Risco Imediato
+9,2025-05-18 19:15:14,-9.065646,-48.310931,App Usuário,Alagamento,Crítica,170,Severo,Difícil,Voluptatum laborum quidem cumque voluptatem culpa id quisquam.,Risco Imediato
+10,2025-06-02 05:43:26,-25.632198,-49.799659,App Usuário,Pessoas Isoladas,Baixa,58,Leve,Fácil,Aut adipisci consectetur earum labore.,Monitorar
+11,2025-05-17 12:57:11,-3.831823,-59.145615,Equipe de Campo,Pessoas Isoladas,Baixa,9,Severo,Fácil,Nulla quod eius aspernatur eos perspiciatis laborum.,Monitorar
+12,2025-05-18 01:02:37,-19.823292,-56.659284,Equipe de Campo,Alagamento,Alta,76,Moderado,Bloqueado,Porro facilis quidem dolorum dolores quibusdam at commodi itaque cum voluptates laborum.,Atenção Urgente
+13,2025-05-24 09:15:05,-10.551821,-41.267547,Equipe de Campo,Incêndio,Baixa,124,Leve,Difícil,Quae eos est ex eligendi error vitae qui architecto animi quod.,Suporte Necessário
+14,2025-05-19 16:04:26,-3.358708,-52.312625,Drone,Alagamento,Média,93,Leve,Fácil,Aperiam odit quod nemo voluptate at.,Monitorar
+15,2025-05-17 21:00:59,-2.408607,-46.307426,App Usuário,Pessoas Isoladas,Crítica,101,Moderado,Fácil,Iusto cum in a.,Atenção Urgente
+16,2025-05-22 20:29:10,-27.761408,-51.179435,Equipe de Campo,Deslizamento,Baixa,6,Severo,Fácil,Libero maiores voluptas optio necessitatibus unde accusamus.,Monitorar
+17,2025-05-08 15:07:06,0.100978,-64.281759,Drone,Pessoas Isoladas,Baixa,80,Severo,Bloqueado,Eligendi possimus quo dignissimos sunt debitis cumque unde.,Atenção Urgente
+18,2025-05-16 14:38:15,-8.00212,-59.261516,App Usuário,Pessoas Isoladas,Média,122,Severo,Fácil,Laborum enim aliquam occaecati.,Atenção Urgente
+19,2025-05-11 05:07:04,1.664265,-69.321758,Drone,Deslizamento,Média,20,Moderado,Difícil,Voluptatem repellendus quas incidunt dignissimos ducimus.,Suporte Necessário
+20,2025-05-28 20:49:49,-4.880097,-54.824641,Drone,Alagamento,Alta,124,Nenhum,Difícil,Cumque qui itaque saepe aliquam.,Atenção Urgente
+21,2025-05-20 18:21:42,-15.554858,-57.69319,App Usuário,Pessoas Isoladas,Baixa,12,Leve,Bloqueado,Voluptatum iste officiis placeat repellendus similique amet eveniet corporis cum ipsum at et voluptate.,Monitorar
+22,2025-05-11 20:58:35,-11.348782,-61.222467,Drone,Pessoas Isoladas,Crítica,41,Severo,Fácil,Sed aut sint exercitationem totam qui sunt.,Atenção Urgente
+23,2025-05-12 14:12:15,-7.015074,-51.23071,Drone,Estrutura Danificada,Média,88,Nenhum,Bloqueado,Dolorem beatae laborum ducimus id placeat nemo vero eius quis.,Suporte Necessário
+24,2025-05-15 09:48:57,-3.64365,-63.921058,App Usuário,Alagamento,Média,111,Severo,Difícil,Facere repellat neque totam nesciunt amet nobis dolore quo.,Atenção Urgente
+25,2025-05-19 15:04:15,-4.209125,-55.970777,App Usuário,Incêndio,Baixa,56,Nenhum,Fácil,Cupiditate praesentium exercitationem eaque voluptate dolor.,Monitorar
+26,2025-05-13 21:29:58,-13.331957,-47.575794,App Usuário,Estrutura Danificada,Média,188,Severo,Fácil,Mollitia pariatur alias quo doloribus fugit doloribus atque ex consequuntur corporis inventore.,Atenção Urgente
+27,2025-06-02 06:32:16,-3.119747,-55.834694,Drone,Alagamento,Baixa,152,Nenhum,Bloqueado,At nisi necessitatibus sequi.,Suporte Necessário
+28,2025-05-09 21:21:37,-3.568236,-69.176648,App Usuário,Alagamento,Média,86,Severo,Difícil,In dolor dolorem saepe nesciunt.,Atenção Urgente
+29,2025-05-26 12:39:44,-5.542094,-54.778532,Equipe de Campo,Deslizamento,Alta,70,Moderado,Fácil,Doloremque excepturi ipsa at quo iusto.,Suporte Necessário
+30,2025-05-20 11:34:06,-11.123018,-50.726996,App Usuário,Estrutura Danificada,Média,179,Nenhum,Fácil,Officiis odit debitis tempora in blanditiis tempore id voluptatum modi omnis praesentium assumenda.,Suporte Necessário
+31,2025-05-06 10:18:46,-7.354758,-35.700417,App Usuário,Incêndio,Crítica,156,Leve,Bloqueado,Debitis cumque sequi sapiente quisquam quam.,Risco Imediato
+32,2025-05-09 04:42:16,-7.255956,-70.780435,Equipe de Campo,Deslizamento,Média,101,Severo,Fácil,Voluptate provident illo autem omnis sapiente officia deserunt veniam.,Atenção Urgente
+33,2025-05-20 20:02:47,-3.290859,-66.023949,App Usuário,Pessoas Isoladas,Alta,38,Nenhum,Fácil,Atque ea non facere vero tempora vero ex in dolore repellat.,Monitorar
+34,2025-05-20 20:44:12,-31.44845,-54.441145,Drone,Alagamento,Alta,28,Moderado,Difícil,Commodi deserunt recusandae quibusdam animi.,Suporte Necessário
+35,2025-05-25 12:33:56,1.761117,-52.051628,Equipe de Campo,Incêndio,Média,182,Severo,Bloqueado,Unde excepturi numquam sunt enim iste odit nihil neque tenetur nesciunt.,Risco Imediato
+36,2025-05-18 22:46:33,2.994786,-61.073129,Equipe de Campo,Deslizamento,Baixa,98,Moderado,Bloqueado,Corrupti nobis aliquam possimus.,Suporte Necessário
+37,2025-05-30 01:59:24,-25.601961,-53.077419,Drone,Estrutura Danificada,Baixa,193,Leve,Fácil,Magnam quisquam tempora tenetur laboriosam totam fugit molestiae nisi voluptate exercitationem explicabo ipsam voluptatum asperiores modi.,Monitorar
+38,2025-05-07 13:51:17,-8.143335,-51.183205,App Usuário,Incêndio,Média,157,Severo,Difícil,Unde recusandae iusto quidem inventore.,Atenção Urgente
+39,2025-05-29 16:09:54,-13.417431,-52.337423,App Usuário,Incêndio,Crítica,46,Nenhum,Fácil,Praesentium ea mollitia ad iste explicabo voluptatum.,Suporte Necessário
+40,2025-05-19 09:31:40,-6.894352,-62.020048,App Usuário,Pessoas Isoladas,Média,18,Nenhum,Difícil,Reiciendis eos at tempore eligendi veritatis exercitationem voluptate fugit reiciendis.,Monitorar
+41,2025-05-25 12:49:46,-11.166835,-60.898362,App Usuário,Pessoas Isoladas,Crítica,159,Nenhum,Fácil,Numquam perspiciatis quidem voluptas dolor commodi deserunt aut sed.,Atenção Urgente
+42,2025-05-10 10:30:32,-12.3074,-45.574889,Drone,Deslizamento,Alta,146,Moderado,Difícil,Consequatur praesentium modi magnam hic dicta voluptate nemo sapiente minus.,Atenção Urgente
+43,2025-05-25 10:54:16,-16.960391,-57.935999,Drone,Alagamento,Média,37,Nenhum,Fácil,Impedit hic corrupti nam delectus minima error soluta blanditiis.,Monitorar
+44,2025-05-03 23:47:56,-4.489583,-39.138933,App Usuário,Incêndio,Crítica,191,Moderado,Bloqueado,Pariatur sapiente perferendis odio voluptates similique laborum tempore soluta id.,Risco Imediato
+45,2025-05-27 23:55:59,-17.811325,-50.620101,Equipe de Campo,Incêndio,Média,89,Nenhum,Bloqueado,Optio magni est adipisci architecto in veniam cupiditate est accusantium.,Suporte Necessário
+46,2025-05-12 08:24:10,-8.609247,-42.651768,Drone,Deslizamento,Alta,68,Moderado,Bloqueado,Dolore quisquam quas repellat placeat dolorem dolore atque odio inventore deserunt consectetur.,Atenção Urgente
+47,2025-05-29 05:54:58,-4.874733,-67.475174,Drone,Estrutura Danificada,Crítica,158,Nenhum,Bloqueado,Maxime assumenda iste rem minima deleniti harum consectetur.,Risco Imediato
+48,2025-05-30 04:49:52,-12.562457,-53.686169,App Usuário,Pessoas Isoladas,Alta,91,Leve,Bloqueado,Soluta quod nemo eligendi.,Atenção Urgente
+49,2025-05-30 08:47:08,-21.370039,-46.511678,App Usuário,Incêndio,Baixa,86,Nenhum,Fácil,Quidem rem sint repudiandae eos fuga itaque.,Monitorar
+50,2025-05-06 16:37:19,-15.936094,-42.625893,Drone,Estrutura Danificada,Baixa,19,Moderado,Bloqueado,Impedit voluptates eum sed.,Suporte Necessário
+51,2025-05-09 23:47:20,-24.964437,-50.493447,Equipe de Campo,Estrutura Danificada,Baixa,51,Moderado,Bloqueado,Magni nam eius voluptas et rerum quia aspernatur voluptate cupiditate.,Suporte Necessário
+52,2025-05-31 16:22:35,-6.423169,-47.832645,Drone,Incêndio,Média,73,Severo,Fácil,Iste praesentium voluptate temporibus itaque accusantium qui aspernatur nisi.,Suporte Necessário
+53,2025-05-28 22:07:11,-11.793396,-62.453834,Drone,Deslizamento,Alta,106,Leve,Bloqueado,Illum veritatis expedita fugit unde voluptate dicta aut soluta nostrum sit deleniti.,Atenção Urgente
+54,2025-05-12 16:38:08,-7.734026,-47.055113,App Usuário,Deslizamento,Crítica,173,Severo,Bloqueado,Assumenda rerum eligendi rem eveniet consequuntur nesciunt.,Risco Imediato
+55,2025-05-10 12:47:20,-0.019076,-68.711719,Drone,Alagamento,Média,78,Moderado,Bloqueado,Ullam eum iste ab mollitia quas nihil beatae.,Atenção Urgente
+56,2025-05-16 03:12:25,-13.299111,-53.836653,App Usuário,Estrutura Danificada,Alta,135,Nenhum,Difícil,Reprehenderit error dolorem voluptas exercitationem.,Atenção Urgente
+57,2025-05-28 03:23:56,-11.857831,-49.665108,App Usuário,Estrutura Danificada,Média,170,Leve,Bloqueado,Est architecto vel dolor et temporibus numquam ad nulla animi quis reprehenderit.,Atenção Urgente
+58,2025-05-25 22:40:14,-12.211229,-55.338912,Equipe de Campo,Estrutura Danificada,Média,65,Nenhum,Bloqueado,Voluptate blanditiis at minus corrupti ea ipsa ab laborum error alias minus quidem consectetur inventore.,Suporte Necessário
+59,2025-05-23 03:05:42,-21.101471,-54.577339,Drone,Deslizamento,Média,38,Nenhum,Fácil,Accusantium perferendis quas nemo tempore.,Monitorar
+60,2025-05-28 05:03:46,-0.599481,-49.489981,Equipe de Campo,Deslizamento,Média,173,Moderado,Difícil,Incidunt explicabo amet odio tempore modi.,Atenção Urgente
+61,2025-05-27 13:41:28,0.391258,-64.822632,App Usuário,Deslizamento,Baixa,74,Moderado,Fácil,Neque pariatur libero quaerat nobis.,Monitorar
+62,2025-06-02 06:56:57,-11.795056,-47.860542,App Usuário,Alagamento,Média,7,Nenhum,Bloqueado,Expedita molestiae nam corrupti exercitationem iusto alias ratione voluptate repudiandae quis harum assumenda ipsum.,Suporte Necessário
+63,2025-05-23 19:40:32,-11.244695,-55.132994,Equipe de Campo,Alagamento,Média,137,Severo,Fácil,Nostrum temporibus dignissimos labore sapiente architecto illo exercitationem voluptate.,Atenção Urgente
+64,2025-05-03 22:04:26,-20.272442,-50.728947,Equipe de Campo,Alagamento,Baixa,53,Leve,Difícil,Excepturi est ad aut eum non beatae veniam cupiditate.,Monitorar
+65,2025-05-08 18:26:55,-0.552284,-62.607702,Drone,Estrutura Danificada,Baixa,22,Moderado,Fácil,Et occaecati ratione nemo voluptas quo.,Monitorar
+66,2025-05-26 11:02:02,-13.759275,-50.789064,Equipe de Campo,Estrutura Danificada,Alta,63,Leve,Fácil,Facilis tenetur possimus accusantium nisi non.,Suporte Necessário
+67,2025-06-01 22:34:42,1.266784,-68.862743,Equipe de Campo,Deslizamento,Média,4,Severo,Bloqueado,Dignissimos totam sapiente cumque quod quos placeat distinctio odio sequi.,Atenção Urgente
+68,2025-05-14 05:05:24,-15.402838,-50.43623,App Usuário,Alagamento,Baixa,165,Nenhum,Difícil,Natus minima quas tempore aspernatur iure.,Suporte Necessário
+69,2025-05-31 18:17:39,-7.19532,-71.701883,Drone,Incêndio,Média,42,Nenhum,Bloqueado,Ab aliquam tenetur fugit sit nostrum doloremque vel explicabo nam alias distinctio numquam tempora.,Suporte Necessário
+70,2025-05-06 09:39:25,-12.50727,-59.451424,Drone,Deslizamento,Alta,118,Nenhum,Fácil,Quo praesentium adipisci animi molestiae.,Suporte Necessário
+71,2025-05-05 21:15:55,-12.98455,-59.306283,Equipe de Campo,Incêndio,Alta,93,Moderado,Difícil,Aliquid eligendi officiis eos atque excepturi cum culpa vel ullam nulla.,Atenção Urgente
+72,2025-05-31 17:03:21,-20.655829,-43.343276,App Usuário,Incêndio,Média,171,Leve,Difícil,Tempore cupiditate magni non modi quo debitis vero officia consequatur odio.,Suporte Necessário
+73,2025-05-10 15:55:22,-14.337903,-49.847222,Drone,Incêndio,Baixa,112,Nenhum,Bloqueado,Minus ea minima maxime provident consectetur saepe autem nulla facere.,Suporte Necessário
+74,2025-05-08 10:33:31,-7.715924,-43.731719,Drone,Deslizamento,Média,58,Leve,Bloqueado,Quaerat praesentium dolore soluta quasi temporibus quia fuga consectetur delectus ea fugiat eveniet.,Suporte Necessário
+75,2025-05-22 16:26:19,-0.595604,-68.305319,Equipe de Campo,Incêndio,Baixa,113,Moderado,Difícil,Deserunt at odit eligendi vitae modi illo.,Suporte Necessário
+76,2025-05-29 07:44:06,-12.902471,-41.219948,App Usuário,Estrutura Danificada,Baixa,149,Nenhum,Difícil,Consequatur fuga facere atque explicabo ex odit quidem sit accusantium.,Suporte Necessário
+77,2025-05-21 14:03:12,-14.977865,-55.581669,Equipe de Campo,Incêndio,Baixa,101,Nenhum,Difícil,Officiis reprehenderit enim minima beatae ab laudantium dicta rerum at officia.,Suporte Necessário
+78,2025-05-06 22:19:52,-5.546069,-37.460087,Equipe de Campo,Incêndio,Média,170,Nenhum,Bloqueado,Pariatur nostrum maiores debitis cum et soluta doloribus quas error quis quis aliquam.,Atenção Urgente
+79,2025-05-28 13:54:10,3.147057,-62.450409,App Usuário,Alagamento,Crítica,23,Leve,Difícil,In totam est qui.,Suporte Necessário
+80,2025-05-20 00:26:57,-4.597386,-41.703124,Drone,Deslizamento,Média,60,Nenhum,Fácil,Sint est quisquam non voluptas alias.,Monitorar
+81,2025-05-16 04:29:42,-18.366261,-55.620438,Drone,Alagamento,Alta,40,Nenhum,Difícil,Consequatur at eum odit quia reprehenderit vel delectus delectus voluptatum facere asperiores occaecati.,Suporte Necessário
+82,2025-05-25 08:57:39,-5.434196,-64.389749,Drone,Alagamento,Crítica,158,Leve,Bloqueado,Iste magni reiciendis laboriosam ipsum.,Risco Imediato
+83,2025-05-18 20:22:50,0.652849,-59.810402,Equipe de Campo,Incêndio,Alta,89,Leve,Fácil,Facere ipsam adipisci libero modi laborum libero consequuntur nulla.,Suporte Necessário
+84,2025-05-26 09:48:00,-14.631671,-42.611152,Drone,Pessoas Isoladas,Baixa,71,Leve,Difícil,Commodi distinctio similique similique minus.,Monitorar
+85,2025-05-27 01:20:32,-9.263354,-37.548194,Equipe de Campo,Deslizamento,Alta,165,Moderado,Bloqueado,Voluptas illum ipsum sed reiciendis adipisci quos reiciendis.,Risco Imediato
+86,2025-05-07 01:22:55,-9.578141,-65.919185,App Usuário,Deslizamento,Média,37,Leve,Bloqueado,Quibusdam sequi aperiam totam quas expedita.,Suporte Necessário
+87,2025-05-30 03:13:40,-10.69081,-49.356868,Drone,Incêndio,Alta,48,Nenhum,Fácil,Earum animi consequatur optio modi vero ad explicabo.,Monitorar
+88,2025-05-18 03:40:54,-16.638276,-46.36293,App Usuário,Alagamento,Média,94,Leve,Bloqueado,Molestiae voluptates rerum nam voluptatum quibusdam vero aliquam sapiente quaerat nisi quis.,Suporte Necessário
+89,2025-05-25 20:55:40,-3.895409,-66.805279,App Usuário,Deslizamento,Média,124,Nenhum,Difícil,Dolores accusantium dolores vitae consequuntur nobis atque nobis aspernatur voluptatem sunt quia debitis.,Suporte Necessário
+90,2025-05-08 01:14:41,-4.856624,-42.982518,App Usuário,Estrutura Danificada,Média,103,Nenhum,Fácil,Nihil totam rem culpa magnam eum nihil nihil explicabo voluptas.,Suporte Necessário
+91,2025-05-19 07:25:22,-21.707709,-41.205428,Drone,Pessoas Isoladas,Alta,183,Moderado,Fácil,Quod fugiat ab aperiam dolor ea reiciendis facere eum rem tenetur accusamus alias rem excepturi.,Atenção Urgente
+92,2025-05-18 22:18:50,0.029767,-66.363575,App Usuário,Pessoas Isoladas,Baixa,53,Moderado,Difícil,Ipsum dolores earum itaque nobis modi veniam cupiditate corporis molestiae unde id laborum minus commodi excepturi.,Suporte Necessário
+93,2025-05-29 18:03:41,-10.761538,-60.888262,Drone,Alagamento,Média,31,Severo,Bloqueado,Quo accusantium quae esse expedita omnis corporis dicta pariatur officia eius quod rem.,Atenção Urgente
+94,2025-05-06 21:13:08,-5.127853,-43.180093,Drone,Incêndio,Alta,175,Leve,Fácil,Sed enim doloribus vitae exercitationem voluptatibus natus esse labore tenetur.,Suporte Necessário
+95,2025-05-10 03:02:59,4.051833,-59.938765,App Usuário,Pessoas Isoladas,Baixa,120,Nenhum,Bloqueado,Non quia consequatur ipsum expedita occaecati sed repudiandae eum inventore.,Suporte Necessário
+96,2025-05-21 22:48:06,-16.705663,-44.739258,App Usuário,Pessoas Isoladas,Crítica,79,Severo,Bloqueado,Minus unde esse modi numquam ducimus.,Risco Imediato
+97,2025-05-09 12:36:47,-16.134168,-55.820305,Drone,Alagamento,Alta,123,Nenhum,Fácil,Dolores explicabo ullam veniam eum incidunt quia.,Suporte Necessário
+98,2025-05-06 12:58:55,-18.264572,-53.073531,App Usuário,Estrutura Danificada,Alta,9,Leve,Fácil,Libero animi ipsum quis ullam ullam ut nisi sit.,Monitorar
+99,2025-05-13 10:20:10,-21.274427,-45.100129,Drone,Deslizamento,Crítica,124,Nenhum,Fácil,Veniam provident laboriosam nulla ratione non.,Atenção Urgente
+100,2025-05-08 02:04:09,-10.639926,-37.469497,Equipe de Campo,Incêndio,Alta,141,Leve,Fácil,Voluptatem quos aliquam voluptatibus molestias exercitationem rem.,Suporte Necessário
+101,2025-05-12 21:47:47,-18.324718,-57.270528,Equipe de Campo,Incêndio,Baixa,57,Nenhum,Difícil,Rem voluptatibus dolor unde officia velit debitis facere optio voluptatum magnam fugiat natus.,Monitorar
+102,2025-05-13 15:21:18,-21.73616,-45.343204,App Usuário,Pessoas Isoladas,Média,117,Severo,Bloqueado,Illum iure a commodi rem eligendi.,Risco Imediato
+103,2025-05-25 19:30:52,-14.024768,-56.38644,Drone,Incêndio,Baixa,8,Moderado,Fácil,Tempore aut beatae voluptates ab commodi ullam.,Monitorar
+104,2025-05-27 08:15:54,-10.415248,-48.143948,App Usuário,Incêndio,Baixa,29,Moderado,Difícil,Illo laboriosam rerum nemo reiciendis eveniet minus officia repudiandae.,Monitorar
+105,2025-05-17 23:00:44,-9.73836,-71.415777,Equipe de Campo,Pessoas Isoladas,Crítica,123,Moderado,Fácil,Sequi iste itaque mollitia distinctio autem fugiat qui eius aperiam.,Atenção Urgente
+106,2025-05-17 13:21:29,1.421877,-55.00078,Equipe de Campo,Alagamento,Baixa,93,Nenhum,Bloqueado,Quo atque quibusdam consectetur.,Suporte Necessário
+107,2025-05-22 02:39:43,-2.05588,-58.169231,Equipe de Campo,Deslizamento,Média,57,Moderado,Fácil,Quam ipsam sapiente reiciendis quae impedit pariatur nobis officia dolorum repellendus soluta porro.,Suporte Necessário
+108,2025-05-20 05:51:15,-9.991885,-62.688204,App Usuário,Incêndio,Média,65,Nenhum,Bloqueado,Adipisci totam maiores delectus porro optio porro sit adipisci deserunt aliquid.,Suporte Necessário
+109,2025-05-29 02:09:02,-16.322534,-57.642518,Drone,Incêndio,Alta,152,Nenhum,Bloqueado,Quo aperiam nemo nobis voluptatum perspiciatis doloribus laborum debitis itaque.,Atenção Urgente
+110,2025-05-27 21:39:20,-7.75648,-38.306555,Equipe de Campo,Incêndio,Alta,87,Severo,Difícil,Dolor esse fugit neque ipsa debitis iusto.,Atenção Urgente
+111,2025-05-31 13:52:59,-19.130397,-52.692271,App Usuário,Deslizamento,Baixa,117,Leve,Fácil,Laudantium illo ipsam vero nisi esse cum.,Monitorar
+112,2025-05-18 05:24:19,-10.384911,-56.3168,Drone,Deslizamento,Crítica,21,Leve,Fácil,Possimus doloremque sit quibusdam et sed minus provident.,Suporte Necessário
+113,2025-05-05 10:27:44,-20.024168,-53.644219,App Usuário,Estrutura Danificada,Baixa,71,Severo,Bloqueado,Dolorem quos repellendus laboriosam vel repellat atque veritatis ut quia.,Atenção Urgente
+114,2025-05-15 01:46:21,-4.646627,-38.696661,App Usuário,Deslizamento,Média,110,Moderado,Difícil,Beatae excepturi earum corporis itaque ad aliquam.,Atenção Urgente
+115,2025-05-31 02:12:20,-6.88584,-41.115447,Drone,Estrutura Danificada,Alta,178,Leve,Difícil,Quia corporis consequatur a libero minus architecto possimus eum.,Atenção Urgente
+116,2025-05-05 03:23:20,-5.334119,-63.834336,App Usuário,Alagamento,Alta,43,Moderado,Bloqueado,Nisi asperiores totam nihil adipisci ducimus itaque inventore fugit sit.,Atenção Urgente
+117,2025-05-30 21:35:25,-10.19057,-58.397848,App Usuário,Deslizamento,Alta,25,Nenhum,Fácil,Nisi accusantium autem quidem cupiditate praesentium ipsam eaque consequatur ea.,Monitorar
+118,2025-05-22 18:57:51,-25.857424,-48.593229,Drone,Incêndio,Alta,101,Leve,Difícil,Deleniti quam voluptatibus ipsam fuga explicabo atque ex est.,Atenção Urgente
+119,2025-05-29 08:04:53,-16.954415,-54.816525,Equipe de Campo,Pessoas Isoladas,Crítica,129,Nenhum,Difícil,Facere itaque accusantium labore at aliquam est quam iste ipsam mollitia.,Atenção Urgente
+120,2025-05-19 18:14:57,-22.127039,-41.488489,App Usuário,Estrutura Danificada,Alta,69,Moderado,Bloqueado,Cupiditate qui quasi nulla consequuntur expedita atque dolorem.,Atenção Urgente
+121,2025-05-21 18:12:19,-11.629111,-45.241622,Drone,Incêndio,Crítica,141,Nenhum,Bloqueado,Eum dolor facere ex eaque eum at tempora quas eveniet occaecati fuga sapiente maiores nam beatae.,Risco Imediato
+122,2025-05-27 23:54:37,-14.834785,-45.603027,Equipe de Campo,Incêndio,Média,45,Nenhum,Bloqueado,Corporis excepturi veritatis iusto error consequuntur cupiditate doloribus animi optio ab.,Suporte Necessário
+123,2025-05-22 20:16:40,-0.777209,-52.680931,Equipe de Campo,Deslizamento,Média,54,Leve,Difícil,At architecto perferendis minus minima dolor ipsa accusamus esse dolorem.,Suporte Necessário
+124,2025-05-29 07:42:55,-4.858245,-52.079704,Equipe de Campo,Alagamento,Média,35,Leve,Bloqueado,Dolores esse animi incidunt enim placeat aliquam accusamus tempora aspernatur quasi eum nisi iusto.,Suporte Necessário
+125,2025-05-26 16:48:17,-4.367301,-45.181116,Drone,Deslizamento,Alta,142,Moderado,Bloqueado,Veniam possimus inventore inventore aliquid.,Risco Imediato
+126,2025-05-03 20:23:11,-6.963071,-50.305955,App Usuário,Incêndio,Crítica,15,Leve,Difícil,Ea molestias veniam in nemo labore.,Suporte Necessário
+127,2025-05-23 17:54:51,-29.76611,-52.163975,Drone,Alagamento,Crítica,168,Severo,Difícil,Vitae non fugiat nostrum sed cupiditate quisquam ipsum expedita atque quas similique minima.,Risco Imediato
+128,2025-05-06 06:25:50,-18.800146,-53.245604,Drone,Pessoas Isoladas,Crítica,142,Nenhum,Difícil,Voluptas dolorum vel consequuntur veniam sint exercitationem laboriosam provident.,Atenção Urgente
+129,2025-05-16 04:09:27,-9.197028,-70.34426,Equipe de Campo,Deslizamento,Alta,164,Nenhum,Difícil,Amet neque iste illum ratione omnis sequi officia rem sunt blanditiis.,Atenção Urgente
+130,2025-05-29 11:35:10,-5.923582,-38.780177,Equipe de Campo,Deslizamento,Alta,80,Nenhum,Difícil,Eius unde id fugit velit tempora debitis occaecati adipisci explicabo.,Suporte Necessário
+131,2025-05-21 01:03:47,-20.929581,-44.678327,Drone,Deslizamento,Média,155,Leve,Fácil,Reiciendis consequuntur dolor deleniti voluptatum sequi maiores nulla sunt.,Suporte Necessário
+132,2025-05-20 13:54:07,-5.92835,-37.610088,Drone,Pessoas Isoladas,Baixa,31,Leve,Bloqueado,Velit dolorem rerum sed veniam architecto laborum inventore recusandae velit id omnis sint expedita.,Monitorar
+133,2025-05-16 15:59:09,-1.55307,-63.377777,Equipe de Campo,Incêndio,Crítica,31,Nenhum,Fácil,Quasi voluptatem expedita ullam a laborum quaerat ipsa unde explicabo laborum qui debitis iure.,Suporte Necessário
+134,2025-05-27 10:09:09,0.381092,-69.677004,Drone,Estrutura Danificada,Média,152,Severo,Fácil,Ad molestias minima dolorum sit quod repellat porro aspernatur.,Atenção Urgente
+135,2025-05-15 20:50:30,-6.075101,-50.570045,Drone,Alagamento,Alta,105,Leve,Bloqueado,Quam beatae maiores optio perferendis a quas vel.,Atenção Urgente
+136,2025-05-30 21:44:24,0.883922,-56.22974,App Usuário,Pessoas Isoladas,Alta,145,Moderado,Fácil,Perspiciatis laboriosam fuga officia.,Atenção Urgente
+137,2025-05-22 17:51:53,0.49508,-58.162852,Drone,Alagamento,Crítica,150,Nenhum,Bloqueado,Dolorum necessitatibus sunt harum minus nemo temporibus nostrum repellendus incidunt corrupti.,Risco Imediato
+138,2025-05-29 18:11:47,0.700894,-63.870746,App Usuário,Alagamento,Alta,162,Severo,Fácil,Culpa quasi eum reprehenderit blanditiis iste labore dignissimos delectus.,Atenção Urgente
+139,2025-05-24 09:38:42,-1.765749,-46.332398,App Usuário,Incêndio,Alta,25,Leve,Fácil,Voluptatem tempore velit enim suscipit molestias facilis sit.,Monitorar
+140,2025-05-22 00:24:35,-3.228314,-67.78077,Equipe de Campo,Alagamento,Média,25,Severo,Difícil,Eaque deserunt vitae ratione aut veniam vitae.,Suporte Necessário
+141,2025-05-24 06:10:08,-18.749156,-46.955434,Drone,Estrutura Danificada,Média,116,Severo,Difícil,Maiores sed consectetur animi quaerat natus soluta voluptatem.,Atenção Urgente
+142,2025-05-19 17:21:18,-11.504655,-47.410374,App Usuário,Alagamento,Crítica,88,Leve,Fácil,Hic dignissimos quae quasi laudantium maiores ipsum ducimus expedita.,Suporte Necessário
+143,2025-05-30 22:47:31,-13.170946,-45.157415,Drone,Estrutura Danificada,Crítica,150,Severo,Fácil,Perspiciatis voluptatum voluptate libero blanditiis dolor ducimus expedita.,Risco Imediato
+144,2025-05-13 06:07:47,-9.559035,-69.712126,Equipe de Campo,Deslizamento,Média,149,Severo,Difícil,Pariatur ratione fugit labore quis amet dolorem libero harum quidem nisi in dolorum numquam eveniet.,Atenção Urgente
+145,2025-05-25 17:53:06,-22.996633,-47.986449,Equipe de Campo,Alagamento,Alta,84,Moderado,Bloqueado,Eligendi ea sunt deserunt a alias harum sint eos.,Atenção Urgente
+146,2025-05-17 05:33:04,-7.23546,-72.075158,App Usuário,Incêndio,Alta,147,Severo,Bloqueado,Maiores nulla incidunt fugiat inventore eaque sed quam magnam autem.,Risco Imediato
+147,2025-05-26 19:25:18,1.200944,-58.942921,Drone,Pessoas Isoladas,Média,20,Moderado,Bloqueado,Impedit accusantium eveniet expedita delectus.,Suporte Necessário
+148,2025-05-20 19:31:16,-10.740532,-42.64171,Drone,Estrutura Danificada,Crítica,2,Moderado,Bloqueado,Explicabo occaecati blanditiis alias temporibus quidem quod tenetur esse cumque.,Atenção Urgente
+149,2025-06-02 18:00:23,-0.032317,-57.647558,Equipe de Campo,Alagamento,Alta,175,Severo,Difícil,Perferendis expedita impedit consectetur exercitationem quasi ducimus fugiat.,Risco Imediato
+150,2025-05-15 16:01:15,-21.562185,-48.651455,App Usuário,Alagamento,Média,130,Moderado,Fácil,Ipsam repudiandae dolore debitis molestias earum natus repudiandae quis hic.,Suporte Necessário
+151,2025-05-19 21:04:30,-18.413965,-54.860502,Drone,Deslizamento,Alta,120,Nenhum,Difícil,Corporis sapiente qui corrupti voluptatum nulla.,Atenção Urgente
+152,2025-05-28 16:18:45,-10.856779,-38.715935,Drone,Alagamento,Média,137,Leve,Fácil,Atque vitae itaque atque soluta voluptatem sed incidunt iste vitae numquam voluptatum quo esse veritatis.,Suporte Necessário
+153,2025-05-13 06:40:03,-19.750819,-44.596157,Drone,Alagamento,Média,134,Moderado,Bloqueado,Numquam doloribus similique consectetur earum quibusdam animi harum quos officia at.,Atenção Urgente
+154,2025-05-05 20:09:57,-13.970149,-40.114238,Drone,Deslizamento,Alta,58,Nenhum,Difícil,Quaerat voluptates optio eveniet facere et nesciunt tempora.,Suporte Necessário
+155,2025-05-20 02:22:44,-14.623742,-54.657459,Equipe de Campo,Pessoas Isoladas,Baixa,46,Severo,Difícil,Esse aspernatur optio accusantium sed accusantium amet ullam.,Suporte Necessário
+156,2025-05-31 08:38:36,-0.675403,-50.024306,App Usuário,Alagamento,Crítica,28,Nenhum,Bloqueado,Quas consectetur qui expedita quae temporibus nemo.,Atenção Urgente
+157,2025-05-06 09:18:39,-9.481588,-62.169598,Equipe de Campo,Alagamento,Alta,116,Leve,Fácil,Dignissimos perspiciatis facere eius molestiae id voluptates asperiores fugit quos voluptatum assumenda beatae.,Suporte Necessário
+158,2025-05-07 04:55:10,-1.902272,-68.808565,App Usuário,Pessoas Isoladas,Alta,183,Leve,Bloqueado,Animi sint velit sint officia excepturi quaerat dolor numquam esse neque quasi esse.,Atenção Urgente
+159,2025-05-10 16:31:43,-10.578575,-61.234025,Drone,Estrutura Danificada,Baixa,117,Severo,Difícil,Illum mollitia assumenda nobis ad maxime cum omnis quo.,Atenção Urgente
+160,2025-06-01 08:58:39,-22.147403,-46.283984,Equipe de Campo,Alagamento,Média,82,Leve,Fácil,Odio porro dolor saepe temporibus.,Monitorar
+161,2025-05-06 14:29:28,-1.99548,-67.131132,App Usuário,Estrutura Danificada,Média,58,Moderado,Bloqueado,Dolore sed blanditiis.,Atenção Urgente
+162,2025-05-13 11:10:30,-5.605086,-64.050217,App Usuário,Incêndio,Baixa,183,Moderado,Bloqueado,Temporibus pariatur doloribus similique neque optio nemo deleniti.,Atenção Urgente
+163,2025-05-30 20:09:27,-20.581095,-57.523932,Drone,Incêndio,Baixa,52,Nenhum,Bloqueado,Quae quos exercitationem reprehenderit amet iusto.,Suporte Necessário
+164,2025-05-08 05:03:54,-16.472826,-48.881278,App Usuário,Deslizamento,Alta,18,Nenhum,Difícil,Assumenda possimus tenetur impedit harum voluptate repellendus.,Suporte Necessário
+165,2025-05-09 02:55:47,-5.016348,-60.385443,App Usuário,Alagamento,Baixa,97,Moderado,Fácil,Rerum animi illo consectetur molestias.,Monitorar
+166,2025-05-18 08:53:02,-16.135927,-58.899656,App Usuário,Deslizamento,Baixa,80,Leve,Difícil,Repellendus inventore a dolores repellat debitis provident earum modi magnam.,Monitorar
+167,2025-05-23 11:21:15,-0.655233,-60.564868,App Usuário,Alagamento,Alta,12,Severo,Fácil,Accusantium nostrum vitae velit cumque quibusdam officia ipsam ad labore assumenda.,Suporte Necessário
+168,2025-05-09 03:41:28,-3.919939,-58.743639,App Usuário,Estrutura Danificada,Crítica,82,Moderado,Bloqueado,Porro iste sed ratione error a neque enim nobis.,Risco Imediato
+169,2025-05-25 05:30:50,-12.476409,-58.904995,App Usuário,Deslizamento,Média,100,Moderado,Bloqueado,Aliquam modi aliquid natus excepturi enim.,Atenção Urgente
+170,2025-05-21 21:51:22,-14.600824,-46.417537,Drone,Incêndio,Alta,169,Leve,Bloqueado,Error dolores exercitationem sit aliquam accusamus asperiores.,Atenção Urgente
+171,2025-05-10 10:28:38,-19.235855,-45.910032,Drone,Estrutura Danificada,Alta,111,Nenhum,Fácil,Omnis quaerat nesciunt reprehenderit totam nisi recusandae voluptas.,Suporte Necessário
+172,2025-05-17 05:25:46,-18.792384,-40.170301,App Usuário,Deslizamento,Média,163,Moderado,Bloqueado,Molestiae eius nulla dicta in officiis ea.,Atenção Urgente
+173,2025-05-19 15:09:32,-24.82935,-51.163163,App Usuário,Alagamento,Baixa,69,Moderado,Bloqueado,Aspernatur facere dolorum exercitationem ratione autem ipsa.,Suporte Necessário
+174,2025-05-05 23:33:01,-3.427617,-60.557459,App Usuário,Deslizamento,Alta,49,Severo,Fácil,Magnam ut ratione aliquam consequatur sapiente sapiente eaque deserunt eius modi modi quia.,Suporte Necessário
+175,2025-05-04 02:33:07,-16.695206,-45.281016,Equipe de Campo,Pessoas Isoladas,Crítica,97,Severo,Bloqueado,Alias aspernatur labore ipsa ipsum ab.,Risco Imediato
+176,2025-05-19 17:27:01,-6.933454,-62.685575,Equipe de Campo,Estrutura Danificada,Baixa,37,Severo,Difícil,Natus similique autem perferendis recusandae cupiditate dolor accusantium temporibus expedita dolore fuga deleniti.,Suporte Necessário
+177,2025-05-17 08:40:59,-2.281257,-55.891178,App Usuário,Incêndio,Média,45,Severo,Bloqueado,Ullam quod dolor iure expedita doloremque minima laborum temporibus.,Atenção Urgente
+178,2025-05-20 07:44:27,-17.169207,-40.04825,Drone,Alagamento,Crítica,198,Nenhum,Fácil,Omnis quas necessitatibus.,Atenção Urgente
+179,2025-05-11 10:02:49,-12.931313,-62.367027,App Usuário,Pessoas Isoladas,Baixa,64,Nenhum,Difícil,Ad ipsa eligendi repudiandae maxime.,Monitorar
+180,2025-05-10 02:35:12,-5.30309,-53.570144,Drone,Alagamento,Alta,24,Severo,Fácil,Consectetur perferendis dolore dolorum eaque in dolore.,Suporte Necessário
+181,2025-05-23 12:03:57,-13.876844,-51.058665,App Usuário,Pessoas Isoladas,Baixa,54,Leve,Fácil,Deserunt fugit harum minima dolorum voluptatum reprehenderit ea quaerat.,Monitorar
+182,2025-05-14 15:14:47,-23.487716,-46.446134,Equipe de Campo,Pessoas Isoladas,Média,66,Leve,Difícil,Explicabo dolor autem odit.,Suporte Necessário
+183,2025-05-13 04:46:11,-19.882678,-42.479128,App Usuário,Alagamento,Média,194,Nenhum,Difícil,Dolores cum laboriosam necessitatibus odit excepturi consequuntur accusamus enim asperiores assumenda autem nemo laudantium.,Suporte Necessário
+184,2025-05-13 06:25:17,-9.658132,-45.677681,App Usuário,Estrutura Danificada,Alta,51,Moderado,Fácil,Fuga ullam sequi aspernatur eius quis voluptates.,Suporte Necessário
+185,2025-05-29 07:09:18,0.034671,-67.175418,Equipe de Campo,Deslizamento,Baixa,82,Nenhum,Difícil,Quos quia eveniet dignissimos cum odio inventore excepturi rerum in.,Monitorar
+186,2025-05-12 11:29:17,-0.038709,-64.708773,App Usuário,Deslizamento,Baixa,94,Leve,Fácil,Veniam sed quasi ipsum quos quis soluta ducimus culpa dolorum hic quod.,Monitorar
+187,2025-05-14 10:22:05,-11.994492,-38.28745,App Usuário,Estrutura Danificada,Média,141,Severo,Bloqueado,Consectetur commodi sint accusamus fugiat reprehenderit consequuntur quo quam beatae amet ut hic.,Risco Imediato
+188,2025-05-29 12:19:55,-8.845806,-52.570825,Equipe de Campo,Deslizamento,Alta,7,Nenhum,Fácil,Incidunt nam quis nihil.,Monitorar
+189,2025-05-31 21:07:07,-2.386149,-60.404634,App Usuário,Estrutura Danificada,Crítica,109,Nenhum,Difícil,Reprehenderit reiciendis libero laudantium soluta mollitia quia velit eaque ipsa adipisci vel.,Atenção Urgente
+190,2025-05-15 15:15:09,-7.132778,-47.315742,Equipe de Campo,Deslizamento,Crítica,108,Leve,Fácil,Saepe ex tenetur repellat vel dolor velit.,Atenção Urgente
+191,2025-05-26 05:58:46,1.584713,-67.489006,Equipe de Campo,Deslizamento,Crítica,19,Moderado,Fácil,Quae beatae natus aliquid temporibus sed fugit itaque.,Suporte Necessário
+192,2025-05-18 00:04:46,-28.027388,-51.411311,Equipe de Campo,Alagamento,Média,190,Moderado,Bloqueado,Sunt quasi itaque non impedit nemo.,Atenção Urgente
+193,2025-05-12 17:50:34,-15.379381,-48.339793,Equipe de Campo,Incêndio,Alta,1,Severo,Difícil,Minima rem possimus iusto doloremque assumenda.,Atenção Urgente
+194,2025-05-26 04:26:34,-9.705747,-60.491187,Equipe de Campo,Alagamento,Alta,190,Nenhum,Difícil,Expedita delectus suscipit ad ipsa mollitia repellendus.,Atenção Urgente
+195,2025-05-20 22:39:11,-5.416321,-48.019567,Equipe de Campo,Pessoas Isoladas,Média,12,Severo,Bloqueado,Deserunt deleniti repudiandae laboriosam quidem ab reiciendis atque.,Atenção Urgente
+196,2025-05-13 20:53:36,-5.373682,-55.81664,App Usuário,Alagamento,Crítica,101,Nenhum,Bloqueado,Harum officiis laboriosam quam facere dolorem ad sint quae possimus.,Risco Imediato
+197,2025-05-09 04:16:41,-6.028596,-63.008471,App Usuário,Pessoas Isoladas,Alta,123,Severo,Difícil,Ullam dolores dolor et debitis unde doloribus vel nisi magni quis expedita optio accusamus eveniet est.,Risco Imediato
+198,2025-05-04 10:27:02,-4.913972,-68.620116,Equipe de Campo,Deslizamento,Crítica,160,Leve,Fácil,Deleniti repellat quidem cum natus voluptatibus consectetur possimus incidunt id occaecati sed est nam minima commodi.,Atenção Urgente
+199,2025-05-27 07:47:48,-3.530526,-54.70292,Drone,Incêndio,Baixa,39,Nenhum,Fácil,Occaecati similique eaque rem eligendi error perferendis ab.,Monitorar
+200,2025-05-30 20:59:17,0.592806,-56.442247,App Usuário,Estrutura Danificada,Baixa,179,Severo,Fácil,Beatae harum nam dicta.,Suporte Necessário
+201,2025-05-05 11:12:03,-1.573328,-58.973412,App Usuário,Deslizamento,Média,104,Leve,Bloqueado,Necessitatibus quos a.,Atenção Urgente
+202,2025-05-29 05:40:24,-20.682348,-43.15616,Drone,Deslizamento,Média,4,Moderado,Fácil,Corporis velit in adipisci reprehenderit aliquam quo nobis repellendus.,Monitorar
+203,2025-05-07 17:25:33,0.960798,-55.362198,App Usuário,Alagamento,Alta,37,Leve,Fácil,Voluptatum veritatis praesentium rem nam veniam officia similique.,Monitorar
+204,2025-06-01 04:13:03,-5.294497,-38.053343,App Usuário,Pessoas Isoladas,Crítica,98,Moderado,Bloqueado,Incidunt adipisci at nam ex similique distinctio laborum placeat velit reiciendis.,Risco Imediato
+205,2025-05-09 00:56:06,-6.850133,-42.474574,Equipe de Campo,Incêndio,Média,158,Moderado,Difícil,Voluptatibus exercitationem itaque repellat totam repellendus vero repudiandae sint.,Atenção Urgente
+206,2025-05-23 16:19:47,-13.183853,-43.982279,Drone,Deslizamento,Média,79,Severo,Fácil,Temporibus sequi consequatur sapiente unde aut illum.,Suporte Necessário
+207,2025-05-25 00:41:07,-8.806239,-68.513388,Drone,Estrutura Danificada,Crítica,99,Leve,Difícil,Rerum enim esse ab enim in ad.,Atenção Urgente
+208,2025-05-14 16:32:55,-25.052252,-52.910257,App Usuário,Pessoas Isoladas,Baixa,20,Nenhum,Bloqueado,Inventore non eligendi dolorum exercitationem maxime blanditiis officia eos non.,Monitorar
+209,2025-05-06 20:28:12,-5.517123,-72.694948,App Usuário,Estrutura Danificada,Crítica,43,Nenhum,Bloqueado,Nam nobis dolorem neque consectetur ipsa facilis magnam dignissimos.,Atenção Urgente
+210,2025-05-24 16:04:59,-6.404587,-44.471551,App Usuário,Alagamento,Baixa,36,Severo,Fácil,Pariatur dolorem qui aut aspernatur consequatur excepturi quam ex.,Monitorar
+211,2025-05-19 07:55:45,-21.919075,-42.064919,App Usuário,Incêndio,Alta,53,Leve,Difícil,Voluptates quas architecto possimus dicta assumenda quae enim quae quis voluptatum quasi voluptate ad culpa.,Suporte Necessário
+212,2025-05-09 23:15:45,-21.607878,-56.331415,Drone,Alagamento,Média,69,Moderado,Bloqueado,Sunt illo animi nostrum ipsum eveniet eligendi accusantium quas rem eos provident.,Atenção Urgente
+213,2025-05-11 17:28:14,2.585949,-50.88497,App Usuário,Alagamento,Alta,74,Moderado,Bloqueado,Molestias ipsum blanditiis in a commodi commodi beatae alias expedita voluptatum accusamus tempore.,Atenção Urgente
+214,2025-05-07 02:21:23,-6.85301,-40.407663,Equipe de Campo,Incêndio,Alta,55,Moderado,Fácil,Cum vel sit maxime.,Suporte Necessário
+215,2025-05-11 01:03:25,-8.354294,-35.335619,Drone,Alagamento,Baixa,69,Severo,Fácil,Officiis doloribus quia itaque nobis beatae ab cupiditate.,Suporte Necessário
+216,2025-05-15 10:37:21,-22.330102,-42.902926,App Usuário,Pessoas Isoladas,Média,66,Nenhum,Bloqueado,Odit labore facere corporis eveniet numquam totam rem tempora.,Suporte Necessário
+217,2025-05-25 12:22:23,-13.541223,-53.013024,Equipe de Campo,Alagamento,Alta,148,Severo,Difícil,Soluta alias quidem ea ipsa commodi quas culpa adipisci maxime provident rerum illo rerum quia.,Risco Imediato
+218,2025-05-29 03:46:01,-16.172723,-43.91057,Equipe de Campo,Deslizamento,Crítica,146,Moderado,Fácil,Natus sunt ipsum numquam quisquam quasi rerum consectetur dignissimos.,Atenção Urgente
+219,2025-05-28 16:22:27,-11.637294,-62.447557,App Usuário,Pessoas Isoladas,Média,3,Severo,Bloqueado,Dolore eos fuga similique.,Atenção Urgente
+220,2025-05-31 05:05:45,-11.254709,-59.268463,App Usuário,Incêndio,Média,72,Nenhum,Fácil,Possimus dicta ipsum tenetur.,Monitorar
+221,2025-05-27 15:51:06,-20.964659,-51.577326,Equipe de Campo,Estrutura Danificada,Média,174,Leve,Bloqueado,Architecto sed tempora omnis ipsam iure eveniet corporis.,Atenção Urgente
+222,2025-05-22 12:49:01,-12.153628,-51.004414,App Usuário,Incêndio,Crítica,9,Severo,Difícil,Est aperiam assumenda sint ducimus at.,Atenção Urgente
+223,2025-06-01 14:43:16,-7.682124,-51.035772,Equipe de Campo,Alagamento,Baixa,138,Severo,Fácil,Hic quam saepe qui laboriosam perspiciatis facilis.,Suporte Necessário
+224,2025-05-11 05:08:47,-10.857145,-59.500773,App Usuário,Incêndio,Baixa,63,Nenhum,Bloqueado,Suscipit voluptatum enim aut numquam enim corrupti vel odio beatae temporibus eos aspernatur.,Suporte Necessário
+225,2025-05-08 03:25:43,-18.890019,-44.09693,Drone,Pessoas Isoladas,Média,188,Moderado,Difícil,Nesciunt veritatis laudantium rerum et nihil voluptatum sunt asperiores officia aut quisquam.,Atenção Urgente
+226,2025-05-12 13:02:58,-24.256137,-51.486029,Equipe de Campo,Incêndio,Alta,121,Severo,Difícil,Fuga ipsam architecto similique iure corrupti.,Risco Imediato
+227,2025-05-15 17:46:37,-17.556252,-44.223171,App Usuário,Incêndio,Baixa,92,Nenhum,Bloqueado,Perferendis laudantium molestias ipsum in ad provident quibusdam animi nulla ad esse fugit nihil.,Suporte Necessário
+228,2025-05-21 13:47:32,-1.567528,-66.635424,App Usuário,Alagamento,Baixa,173,Moderado,Bloqueado,Ratione totam cupiditate repellat maiores numquam et sed ducimus similique laudantium nostrum ullam corrupti est accusantium.,Atenção Urgente
+229,2025-05-08 21:00:05,-5.633248,-59.10599,Equipe de Campo,Estrutura Danificada,Alta,40,Leve,Bloqueado,Delectus iusto sapiente voluptates excepturi laborum repudiandae cumque.,Suporte Necessário
+230,2025-05-30 15:55:37,-15.27985,-46.709602,Equipe de Campo,Pessoas Isoladas,Média,59,Leve,Bloqueado,Possimus nesciunt rem architecto.,Suporte Necessário
+231,2025-05-26 23:54:05,-11.048544,-50.201179,App Usuário,Incêndio,Crítica,106,Moderado,Fácil,Quis odit soluta ducimus sit ipsa aliquid.,Atenção Urgente
+232,2025-05-20 18:25:59,-2.913646,-52.8493,Drone,Pessoas Isoladas,Crítica,76,Nenhum,Bloqueado,Non eligendi ab aliquam dicta recusandae assumenda ducimus quia fugiat.,Atenção Urgente
+233,2025-05-22 21:59:29,0.667251,-60.813507,Drone,Incêndio,Alta,94,Leve,Bloqueado,Soluta explicabo atque itaque ratione aut.,Atenção Urgente
+234,2025-05-19 06:25:49,-8.473993,-58.080703,Equipe de Campo,Incêndio,Média,105,Severo,Difícil,A quod quidem aut repellat maiores ea corporis odit voluptate blanditiis necessitatibus ad.,Atenção Urgente
+235,2025-05-15 22:44:52,-10.676171,-50.488569,Equipe de Campo,Pessoas Isoladas,Alta,126,Nenhum,Bloqueado,Ad eos hic numquam quam ex.,Atenção Urgente
+236,2025-05-18 19:44:20,1.233169,-64.125865,App Usuário,Incêndio,Crítica,15,Severo,Difícil,Nam in vel provident consectetur.,Atenção Urgente
+237,2025-05-14 00:48:33,-15.610418,-59.712522,Equipe de Campo,Pessoas Isoladas,Média,107,Severo,Difícil,Unde soluta natus aliquid ipsam dolores at adipisci nihil commodi ducimus.,Atenção Urgente
+238,2025-05-17 11:08:49,-9.529863,-47.591981,Drone,Estrutura Danificada,Alta,117,Leve,Difícil,Maxime cum distinctio perspiciatis tenetur itaque adipisci labore voluptatibus.,Atenção Urgente
+239,2025-05-15 02:17:46,-6.202313,-73.124117,Equipe de Campo,Deslizamento,Média,104,Severo,Bloqueado,Officia quae minima placeat a deleniti velit excepturi tempore consequatur sed delectus sit.,Risco Imediato
+240,2025-05-24 08:17:13,-20.697047,-50.433064,Drone,Alagamento,Alta,28,Moderado,Difícil,Soluta quae quae accusantium explicabo ipsam occaecati ullam veniam.,Suporte Necessário
+241,2025-05-30 04:13:20,-2.630238,-55.409906,App Usuário,Pessoas Isoladas,Alta,101,Moderado,Fácil,Pariatur nesciunt accusantium nihil doloremque alias placeat incidunt eveniet accusantium officia magni.,Atenção Urgente
+242,2025-05-06 15:11:20,-14.550792,-49.986704,Drone,Estrutura Danificada,Alta,80,Moderado,Difícil,Minima quas vero aliquid at harum libero.,Atenção Urgente
+243,2025-05-12 15:09:04,1.867338,-54.952935,Drone,Incêndio,Crítica,83,Moderado,Difícil,Voluptatibus necessitatibus nam tempora ratione eos.,Atenção Urgente
+244,2025-05-10 23:31:16,-4.870901,-61.309793,App Usuário,Deslizamento,Crítica,70,Leve,Difícil,Minus inventore accusamus eaque velit a sint.,Atenção Urgente
+245,2025-05-04 17:12:04,-0.922342,-65.063135,Equipe de Campo,Alagamento,Média,176,Moderado,Bloqueado,Earum perferendis sapiente earum necessitatibus magnam explicabo officiis.,Atenção Urgente
+246,2025-05-22 05:46:29,-25.551711,-52.737606,Drone,Alagamento,Alta,72,Nenhum,Fácil,Maxime sint consectetur quo eum facilis nisi dolore.,Suporte Necessário
+247,2025-06-02 11:52:57,-16.324224,-52.369807,App Usuário,Deslizamento,Crítica,173,Nenhum,Bloqueado,Blanditiis alias nihil libero libero aperiam dicta quis non non porro.,Risco Imediato
+248,2025-05-14 03:33:15,-15.810649,-46.771729,Equipe de Campo,Estrutura Danificada,Média,131,Moderado,Difícil,Natus repellendus dolorum consequuntur exercitationem eligendi debitis velit nesciunt.,Atenção Urgente
+249,2025-05-17 06:10:09,-7.995424,-42.029125,Equipe de Campo,Deslizamento,Baixa,39,Nenhum,Fácil,Velit natus itaque optio doloremque culpa corrupti quia praesentium.,Monitorar
+250,2025-05-04 14:09:07,-12.642474,-57.360594,Equipe de Campo,Incêndio,Alta,60,Moderado,Difícil,Amet esse ut minus laboriosam accusamus accusamus autem vel porro.,Atenção Urgente
+251,2025-05-24 16:02:18,0.849847,-67.475096,Equipe de Campo,Estrutura Danificada,Baixa,138,Leve,Bloqueado,Perferendis similique odio corporis quasi quae ab natus aperiam.,Suporte Necessário
+252,2025-05-18 13:06:28,-21.537391,-42.790809,Equipe de Campo,Estrutura Danificada,Baixa,195,Nenhum,Fácil,Nisi tempora aperiam quod voluptatibus cumque perspiciatis natus.,Monitorar
+253,2025-05-20 09:21:02,-7.218121,-67.42056,Equipe de Campo,Alagamento,Média,175,Severo,Difícil,Voluptates consectetur deserunt sunt explicabo aspernatur ipsa est temporibus illo.,Atenção Urgente
+254,2025-05-21 01:24:11,-9.820119,-62.125349,Equipe de Campo,Alagamento,Crítica,99,Leve,Bloqueado,Nobis non error et ipsa vero sequi quis corporis repudiandae atque fuga atque.,Atenção Urgente
+255,2025-05-30 18:35:16,-20.057099,-55.571366,App Usuário,Deslizamento,Alta,143,Moderado,Bloqueado,Molestias aut nulla corrupti consectetur.,Risco Imediato
+256,2025-05-07 00:50:56,-20.896075,-52.212203,App Usuário,Alagamento,Baixa,11,Leve,Difícil,Nihil rerum omnis repellat expedita vitae est minima delectus eos libero eveniet voluptatibus.,Monitorar
+257,2025-05-04 02:42:22,-16.573953,-41.537823,App Usuário,Estrutura Danificada,Média,134,Nenhum,Bloqueado,Vel repudiandae tempora possimus voluptates deleniti.,Atenção Urgente
+258,2025-05-24 01:28:47,-5.725228,-38.552856,App Usuário,Pessoas Isoladas,Alta,4,Leve,Fácil,Quos nam explicabo esse dicta occaecati adipisci beatae commodi eos laborum.,Monitorar
+259,2025-05-15 05:15:02,-5.773514,-44.123237,Drone,Alagamento,Média,112,Nenhum,Difícil,Eaque molestiae iusto animi mollitia ea quod ex illo.,Suporte Necessário
+260,2025-05-22 11:56:13,-21.7629,-52.043044,Equipe de Campo,Pessoas Isoladas,Baixa,153,Leve,Fácil,Architecto dolorem iusto quas suscipit ullam dolorum quis ea cupiditate laborum.,Monitorar
+261,2025-05-10 22:38:24,-3.959962,-47.189876,Equipe de Campo,Incêndio,Média,159,Leve,Difícil,Ad animi corrupti dolor in vero magnam.,Suporte Necessário
+262,2025-05-21 20:27:34,-5.44313,-54.955932,Equipe de Campo,Deslizamento,Alta,122,Severo,Fácil,Odit quo temporibus nemo molestias tempore expedita nobis vitae eligendi reiciendis commodi.,Atenção Urgente
+263,2025-05-31 11:49:17,-10.733099,-40.712206,Drone,Pessoas Isoladas,Crítica,183,Moderado,Bloqueado,Recusandae provident eligendi molestias voluptates.,Risco Imediato
+264,2025-05-18 19:47:57,-8.853307,-59.130669,App Usuário,Alagamento,Média,156,Nenhum,Difícil,Perspiciatis rerum possimus nostrum in ipsa quod.,Suporte Necessário
+265,2025-05-14 10:47:58,-3.679249,-68.682854,App Usuário,Deslizamento,Crítica,143,Moderado,Difícil,Voluptas id voluptate autem voluptates iusto facilis.,Risco Imediato
+266,2025-05-23 15:03:43,-9.069334,-58.09217,Equipe de Campo,Alagamento,Média,24,Nenhum,Fácil,Tempora aspernatur repudiandae velit modi facere est odio dolorem a porro neque perferendis natus dicta.,Monitorar
+267,2025-05-12 16:23:36,-17.106802,-49.543338,App Usuário,Deslizamento,Crítica,197,Moderado,Fácil,Placeat nesciunt reiciendis officiis soluta accusantium.,Atenção Urgente
+268,2025-05-04 06:46:09,-13.387316,-46.595945,Equipe de Campo,Deslizamento,Baixa,3,Leve,Fácil,Ratione harum accusamus omnis aliquam odit rerum eligendi incidunt quo quis quidem occaecati accusamus.,Monitorar
+269,2025-05-11 22:59:41,-6.190086,-42.040832,App Usuário,Estrutura Danificada,Média,86,Severo,Difícil,Mollitia quas odio laboriosam doloribus soluta.,Atenção Urgente
+270,2025-05-23 17:44:07,-5.430964,-44.432598,Equipe de Campo,Deslizamento,Baixa,198,Leve,Difícil,Porro ipsa non earum voluptate animi nam mollitia est.,Suporte Necessário
+271,2025-05-08 01:29:29,-0.801017,-51.187842,Equipe de Campo,Alagamento,Alta,63,Nenhum,Difícil,Provident aliquam nisi quo.,Suporte Necessário
+272,2025-05-04 03:30:38,-3.648849,-42.968971,Equipe de Campo,Alagamento,Baixa,116,Leve,Difícil,Natus saepe excepturi cupiditate ullam.,Suporte Necessário
+273,2025-05-12 15:57:37,-7.668872,-67.095723,App Usuário,Alagamento,Média,44,Severo,Bloqueado,Voluptas exercitationem minus quos doloribus delectus facilis.,Atenção Urgente
+274,2025-05-28 06:51:55,-6.042088,-47.036937,Drone,Pessoas Isoladas,Alta,21,Moderado,Bloqueado,Corporis vel vero ipsam optio recusandae.,Atenção Urgente
+275,2025-05-04 11:01:53,-5.541938,-70.2602,Equipe de Campo,Deslizamento,Média,122,Severo,Fácil,Laborum explicabo laudantium illo recusandae dolore earum beatae.,Atenção Urgente
+276,2025-05-26 00:01:51,-17.357082,-51.70126,App Usuário,Alagamento,Baixa,114,Severo,Fácil,Qui placeat eum quibusdam porro nulla.,Suporte Necessário
+277,2025-05-24 14:31:35,-11.793884,-63.629187,Drone,Pessoas Isoladas,Crítica,190,Moderado,Difícil,Aliquam ipsum vel dolorem laborum nam commodi accusantium temporibus voluptas totam nesciunt nobis corrupti tempora ex.,Risco Imediato
+278,2025-05-31 20:36:10,-19.285793,-47.85071,Equipe de Campo,Deslizamento,Crítica,172,Moderado,Fácil,Ipsam ipsum voluptatem quia delectus ipsa suscipit possimus sunt nisi ex.,Atenção Urgente
+279,2025-05-06 06:14:03,-14.015287,-57.439435,App Usuário,Deslizamento,Baixa,105,Moderado,Bloqueado,Aperiam nostrum assumenda exercitationem in mollitia unde odio quia.,Atenção Urgente
+280,2025-05-08 12:32:03,-4.036612,-69.548153,Equipe de Campo,Pessoas Isoladas,Crítica,155,Nenhum,Difícil,Provident libero cum at tempora voluptate ipsum voluptatem odio incidunt.,Atenção Urgente
+281,2025-05-24 18:12:22,0.249817,-62.307058,App Usuário,Estrutura Danificada,Alta,108,Nenhum,Difícil,Porro tempore voluptatum numquam facilis.,Atenção Urgente
+282,2025-05-19 04:35:24,-18.301384,-40.045247,App Usuário,Incêndio,Alta,131,Severo,Difícil,Pariatur eos nostrum vitae harum hic in ullam.,Risco Imediato
+283,2025-05-23 15:31:46,-29.072871,-50.015286,App Usuário,Pessoas Isoladas,Média,32,Leve,Fácil,Voluptates mollitia temporibus vitae eaque delectus.,Monitorar
+284,2025-05-14 07:09:34,-6.16586,-35.137481,Drone,Pessoas Isoladas,Baixa,95,Nenhum,Fácil,Id iste magni error ex totam.,Monitorar
+285,2025-05-26 18:15:03,-21.572385,-42.734775,Drone,Pessoas Isoladas,Média,65,Nenhum,Fácil,Itaque inventore quas odit excepturi quibusdam quas saepe.,Monitorar
+286,2025-05-15 07:09:03,-5.003017,-50.12426,Equipe de Campo,Deslizamento,Alta,199,Moderado,Fácil,Itaque est natus id blanditiis incidunt et ab.,Atenção Urgente
+287,2025-05-08 22:45:15,-2.237085,-56.993642,Drone,Estrutura Danificada,Alta,48,Severo,Fácil,Iste corporis ducimus accusamus cupiditate odit.,Suporte Necessário
+288,2025-05-10 00:49:01,-6.272131,-55.716463,Equipe de Campo,Pessoas Isoladas,Alta,52,Severo,Fácil,Nostrum cum aliquid optio iure.,Atenção Urgente
+289,2025-05-23 09:51:37,-15.241711,-53.411798,App Usuário,Incêndio,Baixa,18,Leve,Difícil,Aut maiores inventore eos in inventore explicabo ut neque facere placeat.,Monitorar
+290,2025-05-23 23:43:19,-17.52639,-50.232887,App Usuário,Incêndio,Baixa,98,Severo,Difícil,Fugiat atque doloribus possimus officia doloremque voluptate repellat.,Suporte Necessário
+291,2025-05-26 21:05:22,-1.071774,-54.677222,App Usuário,Pessoas Isoladas,Crítica,14,Leve,Difícil,Repellat suscipit voluptate optio eligendi deleniti.,Suporte Necessário
+292,2025-05-19 21:36:05,-7.765204,-43.816701,Drone,Estrutura Danificada,Crítica,46,Leve,Bloqueado,Voluptatem atque vel voluptatibus numquam molestiae nisi excepturi.,Atenção Urgente
+293,2025-05-12 03:13:21,-18.140287,-45.615148,App Usuário,Deslizamento,Média,126,Nenhum,Bloqueado,Illum sit facere doloremque eius vel cupiditate at porro.,Atenção Urgente
+294,2025-05-05 06:29:27,-11.323303,-50.453398,Drone,Alagamento,Média,1,Nenhum,Bloqueado,Dolor reprehenderit adipisci recusandae iste et similique.,Suporte Necessário
+295,2025-05-20 04:15:30,-16.938542,-45.901784,App Usuário,Deslizamento,Alta,73,Leve,Fácil,Vero occaecati ratione.,Suporte Necessário
+296,2025-05-11 17:08:44,-11.569613,-63.465149,App Usuário,Estrutura Danificada,Média,21,Moderado,Fácil,Doloremque hic illum reprehenderit ullam culpa quis at perferendis.,Monitorar
+297,2025-05-07 19:27:32,-3.966894,-65.354884,Drone,Alagamento,Média,9,Leve,Bloqueado,Sit sapiente enim.,Suporte Necessário
+298,2025-05-09 07:11:22,-9.335422,-58.788371,Drone,Incêndio,Média,70,Moderado,Bloqueado,A occaecati esse placeat ipsa minus quia magnam vel amet autem.,Atenção Urgente
+299,2025-05-06 04:20:57,-10.772522,-69.705999,Drone,Deslizamento,Baixa,197,Moderado,Difícil,Mollitia repudiandae eligendi debitis sint alias hic facere quis quos.,Suporte Necessário
+300,2025-05-23 02:36:32,-10.658223,-43.702466,App Usuário,Alagamento,Alta,133,Moderado,Difícil,A nostrum voluptatum non voluptates voluptatum numquam totam quasi aspernatur distinctio deserunt facere nostrum.,Atenção Urgente
