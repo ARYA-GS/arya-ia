@@ -184,8 +184,8 @@ As dependências do projeto estão listadas no arquivo `requirements.txt`:
 
 ## 🔗 Links Úteis
 
-* [Link do GitHub]()
-* [Link do Youtube]()
+* [Link do GitHub](https://github.com/ARYA-GS/arya-ia)
+* [Link do Youtube](https://youtu.be/nX3npID70W4)
 
 ---
 
