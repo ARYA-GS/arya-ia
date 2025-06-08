@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de Desastres e Risco</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Interface de Modelos de Desastres e Risco</h1>
+    </header>
+    <main>
+        <section class="model-selection">
+            <h2>Escolha um Modelo para Visualizar:</h2>
+            <div class="model-buttons">
+                <a href="/classificador_map" class="button">Classificador de Desastres</a>
+                <a href="/preditor_map" class="button">Preditor de Risco</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Modelos de IA. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

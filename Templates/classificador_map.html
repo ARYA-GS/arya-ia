@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ title }}</h1>
+        <nav>
+            <a href="/" class="button-back">Voltar para a seleção de modelos</a>
+        </nav>
+    </header>
+    <main class="map-container">
+        <div id="plotly-graph"></div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Modelos de IA. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        var graph = {{ graph_json | safe }};
+        Plotly.newPlot('plotly-graph', graph.data, graph.layout, {responsive: true});
+    </script>
+</body>
+</html>

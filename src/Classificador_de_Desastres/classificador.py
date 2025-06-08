@@ -172,25 +172,24 @@ def criar_geodataframe(df):
 # =======================
 # 6. Visualização com Plotly (Estilo Mapa de Calor com Bolhas)
 # =======================
-
+# MODIFICADO: A função agora retorna a figura Plotly em vez de mostrá-la
 def visualizar_mapa_com_legenda(gdf):
     """
     Cria uma visualização de mapa interativa usando Plotly, mostrando
     a classificação de risco com base nas previsões do modelo.
+    Retorna a figura Plotly.
     """
     if gdf is None or gdf.empty:
         print("Não há dados no GeoDataFrame para visualizar.")
-        return
+        return None # Retorna None se não houver dados
 
-    # Mapeamento de cores para as classes de risco (ajustado para os rótulos do seu dataset)
-    # Adapte estas cores e classes conforme as classes reais que 'classificacaoRisco' pode ter.
     cor_por_risco = {
         'ALTO': 'red',
         'MEDIO': 'orange',
         'BAIXO': 'green',
-        'CRITICO': 'darkred', # Exemplo de nova categoria
-        'MODERADO': 'yellow', # Exemplo de nova categoria
-        'DESCONHECIDO': 'gray' # Para qualquer classe não mapeada
+        'CRITICO': 'darkred',
+        'MODERADO': 'yellow',
+        'DESCONHECIDO': 'gray'
     }
 
     fig = go.Figure()
@@ -198,7 +197,6 @@ def visualizar_mapa_com_legenda(gdf):
     for risco, grupo in gdf.groupby("predicted_class"):
         cor = cor_por_risco.get(risco, 'gray')
 
-        # Marcadores principais (pontos com hover)
         fig.add_trace(go.Scattermapbox(
             lat=grupo.geometry.y,
             lon=grupo.geometry.x,
@@ -213,7 +211,7 @@ def visualizar_mapa_com_legenda(gdf):
             hoverinfo='text',
             hovertext=grupo.apply(lambda row:
                 f"<b>Classificação Prevista:</b> {row['predicted_class']}<br>"
-                f"<b>Tipo de Observação:</b> {row.get('tipoObservacao', 'N/A')}<br>"
+                f"<b>Tipo de Observação:</b> {row.get('tipoObservacao', 'N/A')}<br>" # Usar .get para segurança
                 f"<b>Nível de Gravidade:</b> {row.get('nivelGravidade', 'N/A')}<br>"
                 f"<b>Qtd. Atingidos:</b> {row.get('qtdAtingidos', 'N/A')}<br>"
                 f"<b>Dano Infraestrutura:</b> {row.get('danoInfraestrutura', 'N/A')}<br>"
@@ -222,7 +220,6 @@ def visualizar_mapa_com_legenda(gdf):
             showlegend=True
         ))
 
-        # Círculo de impacto (visual auxiliar)
         fig.add_trace(go.Scattermapbox(
             lat=grupo.geometry.y,
             lon=grupo.geometry.x,
@@ -242,7 +239,8 @@ def visualizar_mapa_com_legenda(gdf):
             zoom=5,
             center=dict(lat=gdf.geometry.y.mean(), lon=gdf.geometry.x.mean())
         ),
-        margin={"r": 0, "t": 40, "l": 0, "b": 0},
+        # Margens mínimas para preencher o espaço
+        margin={"r": 0, "t": 0, "l": 0, "b": 0},
         title_text="Classificação de Risco de Desastres por Localização",
         title_x=0.5,
         legend=dict(
@@ -251,48 +249,43 @@ def visualizar_mapa_com_legenda(gdf):
             bgcolor='rgba(255,255,255,0.7)',
             bordercolor='Black',
             borderwidth=1
-        )
+        ),
+        # Não definir width e height fixos para permitir responsividade do navegador
+        # height=None, # Não especificar height aqui
+        # width=None,  # Não especificar width aqui
     )
-    print("Mapa gerado. Abrindo visualização...")
-    fig.show()
+    # print("Mapa gerado. Retornando figura Plotly...") # Remover este print
+    return fig # RETORNA A FIGURA AQUI
 
 # =======================
-# 7. Execução principal
+# 7. Execução principal (modificada para retornar a figura)
 # =======================
 
-def main():
-    # Caminho do arquivo CSV (ajuste conforme a localização real do seu arquivo)
-    # Por exemplo, se o arquivo estiver na mesma pasta do script, use apenas "seuarquivo.csv"
-    caminho_csv = "C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/arya-ia/Data/CSV/relatorios_desastres_20250608_141218.csv"
+# MODIFICADO: A função main agora retorna a figura Plotly ou None
+def main_classificador(): # Renomeado para evitar conflito se ambos os main() forem importados
+    caminho_csv = "C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/arya-ia/Data/CSV/relatorios_desastres_20250608_141218.csv" #
 
-    # NOVAS COLUNAS DE FEATURES E COLUNA ALVO BASEADAS NO DATASET CORRETO
     colunas_features = [
         'tipoFonte', 'tipoObservacao', 'nivelGravidade',
         'qtdAtingidos', 'danoInfraestrutura', 'acessibilidade'
-        # 'dataHora' e 'notasAdicionais' são ignoradas por simplicidade.
-        # 'dataHora' poderia ser usada para extrair features de tempo.
-        # 'notasAdicionais' demandaria Processamento de Linguagem Natural.
     ]
-    coluna_alvo = 'classificacaoRisco'
+    coluna_alvo = 'classificacaoRisco' #
 
     df = carregar_dados(caminho_csv)
 
     if df is not None:
-        # Verifica se todas as colunas necessárias existem no DataFrame
         missing_features = [col for col in colunas_features if col not in df.columns]
         if missing_features:
             print(f"Erro: As seguintes colunas de features não foram encontradas no CSV: {missing_features}")
             print("Verifique se os nomes das colunas em 'colunas_features' e no seu CSV correspondem exatamente.")
-            return
+            return None
         if coluna_alvo not in df.columns:
             print(f"Erro: A coluna alvo '{coluna_alvo}' não foi encontrada no CSV.")
             print("Verifique se o nome da coluna alvo no seu CSV corresponde exatamente.")
-            return
+            return None
 
-        # Converter colunas numéricas (se houver alguma que o pandas não detectou automaticamente)
-        # O dataset atual tem 'qtdAtingidos'. Garantir que seja numérica.
-        df['qtdAtingidos'] = pd.to_numeric(df['qtdAtingidos'], errors='coerce')
-
+        # Converter colunas numéricas
+        df['qtdAtingidos'] = pd.to_numeric(df['qtdAtingidos'], errors='coerce') #
 
         X_train, X_test, y_train, y_test, df_encoded, label_encoders = preprocessar_dados(df.copy(), colunas_features, coluna_alvo)
 
@@ -304,12 +297,14 @@ def main():
         gdf = criar_geodataframe(df_predito)
 
         if gdf is not None:
-            visualizar_mapa_com_legenda(gdf)
+            return visualizar_mapa_com_legenda(gdf) # RETORNA A FIGURA
         else:
-            print("Não foi possível gerar o GeoDataFrame, a visualização não será exibida.")
+            print("Não foi possível gerar o GeoDataFrame.")
+            return None
     else:
         print("Não foi possível carregar os dados. O programa será encerrado.")
+        return None
 
-
-if __name__ == "__main__":
-    main()
+# Remover o bloco if __name__ == "__main__":
+# if __name__ == "__main__":
+#     main()

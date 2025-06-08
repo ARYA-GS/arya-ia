@@ -300,10 +300,20 @@ def explain_with_shap(pipeline, X_test_model_features, model_name="Model"):
 
 
 # --- Visualização do Mapa ---
+# src/Preditor_de_Risco/preditor.py
+# ... (imports e outras funções existentes) ...
+
+# --- Visualização do Mapa ---
+# MODIFICADO: A função agora retorna a figura Plotly em vez de mostrá-la
 def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', lon_col='longitude',
                                proba_col='predicted_level',
                                event_type_col='tipo_evento',
                                title="Mapa de Classificação de Nível de Risco"):
+    """
+    Exibe um mapa interativo com pontos sólidos e halos transparentes,
+    agora focado na classificação do Nível de Risco.
+    Retorna a figura Plotly.
+    """
     print(f"Gerando mapa com Plotly Graph Objects. Amostra dos dados:\n{df_map_with_preds_and_info.head(3)}")
 
     df_filtered = df_map_with_preds_and_info.dropna(subset=[lat_col, lon_col, event_type_col, proba_col]).copy()
@@ -311,7 +321,7 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
     
     if df_filtered.empty:
         print("Nenhum evento relevante para exibir no mapa após filtrar ou devido a NaNs.")
-        return
+        return None
 
     df_filtered[lat_col] = pd.to_numeric(df_filtered[lat_col], errors='coerce')
     df_filtered[lon_col] = pd.to_numeric(df_filtered[lon_col], errors='coerce')
@@ -319,7 +329,7 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
 
     if df_filtered.empty:
         print("Nenhum dado válido de latitude/longitude para centralizar o mapa após conversão.")
-        return
+        return None
 
     cor_por_risco_predito = {
         'ALTO': 'red',
@@ -344,20 +354,13 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
 
     hover_texts = []
     for _, row in df_filtered.iterrows():
-        # NOVO: Converter explicitamente NaNs em strings 'N/A' ANTES de formatar o texto
-        # Isso garante que mesmo após a imputação no df_full, se algo ficou NaN ou
-        # se colunas novas não imputadas forem adicionadas, elas apareçam como N/A.
-        
-        # O uso de .get() já trata a ausência da coluna. Para NaN nos valores, usaremos str().
         def format_value(val):
             if pd.isna(val) or val is None:
                 return 'N/A'
-            # Para números, arredondar se for float
             if isinstance(val, (float, np.float32, np.float64)):
-                # Evita arredondar números inteiros que foram lidos como floats
                 if val == int(val):
                     return str(int(val))
-                return f"{val:.1f}" # Arredonda floats para uma casa decimal
+                return f"{val:.1f}"
             return str(val)
 
 
@@ -438,8 +441,9 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
         mapbox_center_lon=map_center_lon,
         mapbox_zoom=3.8,
         margin={"r": 0, "t": 0, "l": 0, "b": 0},
-        # width=None, # Mantido comentado para comportamento responsivo
-        # height=None, # Mantido comentado para comportamento responsivo
+        # NÃO DEFINIR WIDTH E HEIGHT AQUI PARA PERMITIR RESPONSIVIDADE DO NAVEGADOR
+        # width=None,
+        # height=None,
         legend=dict(
             title_text='<b>Classificação de Risco (Cor e Tamanho)</b>',
             x=0.01, y=0.99,
@@ -448,17 +452,19 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
             borderwidth=1
         )
     )
-    fig.show()
+    # print("Mapa gerado. Retornando figura Plotly...") # Remover este print
+    return fig # RETORNA A FIGURA AQUI
 
-# --- 5. Workflow Principal ---
-def main():
-    filepath = 'C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/arya-ia/Data/CSV/desastres_naturais_20250608_141114.csv'
+# --- 5. Workflow Principal (modificado para retornar a figura) ---
+# MODIFICADO: A função main agora retorna a figura Plotly ou None
+def main_preditor(): # Renomeado para evitar conflito
+    filepath = 'C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/arya-ia/Data/CSV/desastres_naturais_20250608_141114.csv' #
 
     X_model_df, y_series, X_map_info_df = load_and_prepare_data(filepath)
     
     if X_model_df is None or X_model_df.empty or y_series is None or y_series.empty:
         print("Dados insuficientes para prosseguir com o treinamento do modelo.")
-        return
+        return None
 
     numerical_features, categorical_features = identify_feature_types(X_model_df)
     
@@ -467,7 +473,7 @@ def main():
 
     if not numerical_features and not categorical_features:
         print("Erro: Nenhuma feature válida para o modelo identificada.")
-        return
+        return None
     
     preprocessor = get_preprocessor(numerical_features, categorical_features)
 
@@ -604,7 +610,7 @@ def main():
         df_for_map = X_test_map_info.copy()
         df_for_map['predicted_level'] = y_pred_map_original
 
-        display_classification_map(
+        return display_classification_map( # RETORNA A FIGURA
             df_for_map,
             lat_col='latitude',
             lon_col='longitude',
@@ -613,9 +619,9 @@ def main():
             title=f"Mapa de Classificação de Nível de Risco ({model_to_map})"
         )
     else:
-        print(f"O modelo '{model_to_map}' não foi treinado com sucesso, o mapa não será gerado.")
-    
-    print("\n--- Fim da Execução ---")
+        print(f"O modelo '{model_to_map}' não foi treinado com sucesso.")
+        return None
 
-if __name__ == '__main__':
-    main()
+# Remover o bloco if __name__ == '__main__':
+# if __name__ == '__main__':
+#     main()

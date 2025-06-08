@@ -1,0 +1,91 @@
+/* static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.model-selection {
+    text-align: center;
+}
+
+.model-buttons {
+    margin-top: 30px;
+}
+
+.button, .button-back {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .button-back:hover {
+    background-color: #0056b3;
+}
+
+.button-back {
+    margin-top: 20px;
+    background-color: #6c757d;
+}
+
+.button-back:hover {
+    background-color: #5a6268;
+}
+
+.map-container {
+    padding: 0; /* Remove padding from main for map */
+    margin: 0; /* Remove margin from main for map */
+    width: 100%; /* Make it fill the available width */
+    height: 100vh; /* Make it fill the viewport height */
+    display: flex;
+    flex-direction: column; /* Allow header/footer and map to stack */
+}
+
+#plotly-graph {
+    flex: 1; /* Allow the graph to fill remaining space */
+    width: 100%; /* Ensure the graph div itself is 100% width */
+    height: 100%; /* Ensure the graph div itself is 100% height */
+    min-height: 500px; /* Garante uma altura mínima para o mapa */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9em;
+}
