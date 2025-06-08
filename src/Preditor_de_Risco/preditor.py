@@ -4,6 +4,7 @@ import time
 import geopandas as gpd
 import plotly.graph_objects as go
 from datetime import datetime
+import os
 
 # Preprocessing and Pipeline
 from sklearn.model_selection import train_test_split, GridSearchCV, RandomizedSearchCV
@@ -53,8 +54,10 @@ except ImportError:
 RANDOM_STATE = 42
 TARGET_COLUMN = 'nivel_de_risco'
 ENABLE_STATIC_PLOTS = False
-DO_HYPERPARAMETER_TUNING = False
+DO_HYPERPARAMETER_TUNING = False 
 DO_OVERSAMPLING = True
+
+RUN_ALL_MODELS = False 
 
 # --- 1. Carregamento e Preparação Inicial dos Dados ---
 def load_and_prepare_data(filepath='C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/arya-ia/Data/CSV/desastres_naturais_20250608_141114.csv'):
@@ -92,23 +95,22 @@ def load_and_prepare_data(filepath='C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/a
     # Informações para o mapa (manter nomes consistentes com o CSV e com as features extras)
     map_info_cols = ['latitude', 'longitude', 'tipo_evento', 'precipitacao_mm',
                      'temperatura_c', 'uso_do_solo', 'ocorrenca',
-                     'ano', 'dia_do_ano', 'dia_da_semana', 'trimestre', 'nivel_de_risco', # Nível de risco para hover
+                     'ano', 'dia_do_ano', 'dia_da_semana', 'trimestre', 'nivel_de_risco',
                      'umidade_percentual', 'densidade_populacional', 'altitude_metros',
                      'declividade_graus', 'distancia_agua_km', 'frequencia_sismos',
-                     'tipo_de_solo', 'nivel_acessibilidade', 'estacao_do_ano', 'regiao', 'mes'] # Adicionando mais colunas para o hover
+                     'tipo_de_solo', 'nivel_acessibilidade', 'estacao_do_ano', 'regiao', 'mes']
     
     map_info_cols_present = [col for col in map_info_cols if col in df_full.columns]
     X_map_info_df = df_full[map_info_cols_present].copy()
 
-    # NOVO: Imputar NaNs em X_map_info_df para o hover text
-    # Usar a mesma lógica de imputação das features do modelo
+    # NOVO: Imputar NaNs em X_map_info_df e limpar strings para o hover text
     for col in X_map_info_df.columns:
         if pd.api.types.is_numeric_dtype(X_map_info_df[col]):
             X_map_info_df[col].fillna(X_map_info_df[col].mean(), inplace=True)
         elif X_map_info_df[col].dtype == 'object' or pd.api.types.is_categorical_dtype(X_map_info_df[col]):
-            X_map_info_df[col].fillna('N/A', inplace=True) # Preencher categóricas com 'N/A' ou 'Desconhecido'
-            # Convert NaN floats to 'N/A' string in object columns after fillna
-            X_map_info_df[col] = X_map_info_df[col].apply(lambda x: 'N/A' if pd.isna(x) else x)
+            X_map_info_df[col] = X_map_info_df[col].astype(str).str.strip() # Limpa espaços
+            X_map_info_df[col].fillna('N/A', inplace=True) # Preenche NaNs com 'N/A'
+            X_map_info_df[col] = X_map_info_df[col].replace('nan', 'N/A') # Garante que string 'nan' vire 'N/A'
 
 
     print(f"Shape de X_model_df (features para o modelo): {X_model_df.shape}")
@@ -138,7 +140,7 @@ def identify_feature_types(df_for_model_features):
 
     for col in categorical_features:
         if col in df_for_model_features.columns:
-            df_for_model_features[col] = df_for_model_features[col].astype(str).fillna('MISSING_CATEGORY')
+            df_for_model_features[col] = df_for_model_features[col].astype(str).str.strip().fillna('MISSING_CATEGORY')
 
     print(f"Features numéricas (modelo): {numerical_features}")
     print(f"Features categóricas (modelo): {categorical_features}")
@@ -206,7 +208,7 @@ def get_feature_names_from_preprocessor(preprocessor, X_cols_original_names):
                 ohe = transformer.named_steps['onehot']
                 output_features.extend(ohe.get_feature_names_out(original_cols_applied))
             else:
-                output_features.extend([f"cat_{col}_{i}" for col in original_cols_applied for i in range(5)])
+                output_features.extend([f"cat_{col}_{i}" for col in original_cols_applied for i in range(len(pd.Series(original_cols_applied).unique()))])
         elif name == 'remainder' and transformer != 'drop':
             if hasattr(transformer, 'get_feature_names_out'):
                 output_features.extend(transformer.get_feature_names_out(original_cols_applied))
@@ -300,11 +302,6 @@ def explain_with_shap(pipeline, X_test_model_features, model_name="Model"):
 
 
 # --- Visualização do Mapa ---
-# src/Preditor_de_Risco/preditor.py
-# ... (imports e outras funções existentes) ...
-
-# --- Visualização do Mapa ---
-# MODIFICADO: A função agora retorna a figura Plotly em vez de mostrá-la
 def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', lon_col='longitude',
                                proba_col='predicted_level',
                                event_type_col='tipo_evento',
@@ -331,26 +328,33 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
         print("Nenhum dado válido de latitude/longitude para centralizar o mapa após conversão.")
         return None
 
+    # NOVO: Dicionário de cores aprimorado para os níveis de risco do Preditor
+    # Usei as classes que vi no seu dataset (BAIXO, MÉDIO, ALTO, MUITO BAIXO)
+    # E adicionei outras classes comuns (CRITICO, MODERADO) se houver
     cor_por_risco_predito = {
-        'ALTO': 'red',
-        'MEDIO': 'orange',
-        'BAIXO': 'green',
-        'CRITICO': 'darkred',
-        'MODERADO': 'yellow',
-        'VALOR_NULO': 'grey'
+        'MUITO BAIXO': '#a6d96a', # Verde claro, para o menor risco
+        'BAIXO': '#66bd63',       # Verde
+        'MODERADO': '#ffffbf',    # Amarelo claro, se houver
+        'MÉDIO': '#fdae61',       # Laranja, para médio
+        'ALTO': '#f46d43',        # Laranja escuro/vermelho, para alto
+        'CRITICO': '#d73027',     # Vermelho escuro, para o mais crítico
+        'N/A': 'grey'             # Fallback para valores não encontrados/imputados
     }
 
+    # NOVO: Lógica de tamanho de bolhas com base no nível de risco predito
     tamanho_por_risco_predito = {
+        'MUITO BAIXO': {'solid': 6, 'halo': 25},
         'BAIXO': {'solid': 8, 'halo': 30},
-        'MEDIO': {'solid': 12, 'halo': 45},
+        'MODERADO': {'solid': 10, 'halo': 38},
+        'MÉDIO': {'solid': 12, 'halo': 45},
         'ALTO': {'solid': 16, 'halo': 60},
         'CRITICO': {'solid': 20, 'halo': 75},
-        'MODERADO': {'solid': 10, 'halo': 40}
+        'N/A': {'solid': 7, 'halo': 25} # Tamanho padrão para N/A
     }
     
-    df_filtered['color_predito'] = df_filtered[proba_col].map(lambda x: cor_por_risco_predito.get(x, 'grey'))
-    df_filtered['solid_marker_size'] = df_filtered[proba_col].apply(lambda x: tamanho_por_risco_predito.get(x, {'solid': 7})['solid']).astype(int)
-    df_filtered['halo_marker_size'] = df_filtered[proba_col].apply(lambda x: tamanho_por_risco_predito.get(x, {'halo': 20})['halo']).astype(int)
+    df_filtered['color_predito'] = df_filtered[proba_col].map(lambda x: cor_por_risco_predito.get(str(x).strip(), 'grey'))
+    df_filtered['solid_marker_size'] = df_filtered[proba_col].apply(lambda x: tamanho_por_risco_predito.get(str(x).strip(), {'solid': 7})['solid']).astype(int)
+    df_filtered['halo_marker_size'] = df_filtered[proba_col].apply(lambda x: tamanho_por_risco_predito.get(str(x).strip(), {'halo': 20})['halo']).astype(int)
 
     hover_texts = []
     for _, row in df_filtered.iterrows():
@@ -368,6 +372,8 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
                 f"<b>Tipo Evento:</b> {format_value(row.get('tipo_evento', 'N/A')).capitalize()}<br>"
                 f"Lat: {format_value(row[lat_col])}, Lon: {format_value(row[lon_col])}<br>")
         
+        # Assegure que os nomes de colunas no .get() correspondam exatamente ao X_map_info_df
+        # e ao CSV original para que não apareçam N/A se a coluna tiver dados.
         text += f"Ocorrência (original): {format_value(row.get('ocorrenca', 'N/A'))}<br>"
         text += f"Precipitação (mm): {format_value(row.get('precipitacao_mm', 'N/A'))}<br>"
         text += f"Temperatura (°C): {format_value(row.get('temperatura_c', 'N/A'))}<br>"
@@ -378,7 +384,7 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
         text += f"Dist. Água (km): {format_value(row.get('distancia_agua_km', 'N/A'))}<br>"
         text += f"Tipo Solo: {format_value(row.get('tipo_de_solo', 'N/A'))}<br>"
         text += f"Uso do Solo: {format_value(row.get('uso_do_solo', 'N/A'))}<br>"
-        text += f"Acessibilidade: {format_value(row.get('nivel_acessibilidade', 'N/A'))}<br>"
+        text += f"Nível Acessibilidade: {format_value(row.get('nivel_acessibilidade', 'N/A'))}<br>" # Corrigido para "Nível Acessibilidade"
         text += f"Freq. Sismos: {format_value(row.get('frequencia_sismos', 'N/A'))}<br>"
         text += f"Mês: {format_value(row.get('mes', 'N/A'))}<br>"
         text += f"Estação: {format_value(row.get('estacao_do_ano', 'N/A'))}<br>"
@@ -393,14 +399,26 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
 
     fig = go.Figure()
 
-    sorted_risk_levels = sorted(df_filtered[proba_col].unique())
+    # NOVO: Ordem dos níveis de risco para a legenda (do mais crítico para o menos)
+    ordered_risk_levels_for_legend = [
+        'CRITICO', 'ALTO', 'MÉDIO', 'MODERADO', 'BAIXO', 'MUITO BAIXO', 'N/A' # Incluir 'N/A' no final
+    ]
+    
+    # Filtrar apenas os níveis que realmente existem no DataFrame e ordená-los
+    # E garantir que a ordem siga a lista 'ordered_risk_levels_for_legend'
+    existing_unique_levels = [level for level in ordered_risk_levels_for_legend if level in df_filtered[proba_col].unique()]
+    
+    # Adicionar qualquer nível que possa existir mas não está na lista 'ordered_risk_levels_for_legend'
+    for level in df_filtered[proba_col].unique():
+        if level not in existing_unique_levels:
+            existing_unique_levels.append(level) # Adiciona no final se for inesperado
 
-    for risk_level_val in sorted_risk_levels:
+    for risk_level_val in existing_unique_levels:
         df_subset = df_filtered[df_filtered[proba_col] == risk_level_val]
         if df_subset.empty:
             continue
         
-        current_color = cor_por_risco_predito.get(risk_level_val, 'grey')
+        current_color = cor_por_risco_predito.get(str(risk_level_val).strip(), 'grey')
         
         fig.add_trace(go.Scattermapbox(
             lat=df_subset[lat_col],
@@ -436,14 +454,11 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
 
     fig.update_layout(
         title=title,
-        mapbox_style="open-street-map",
+        mapbox_style="open-street-map", # Estilo de mapa base
         mapbox_center_lat=map_center_lat,
         mapbox_center_lon=map_center_lon,
-        mapbox_zoom=3.8,
-        margin={"r": 0, "t": 0, "l": 0, "b": 0},
-        # NÃO DEFINIR WIDTH E HEIGHT AQUI PARA PERMITIR RESPONSIVIDADE DO NAVEGADOR
-        # width=None,
-        # height=None,
+        mapbox_zoom=4.5, # Ajustado para um zoom inicial mais abrangente do Brasil
+        margin={"r": 0, "t": 0, "l": 0, "b": 0}, # Margens mínimas para preencher a tela
         legend=dict(
             title_text='<b>Classificação de Risco (Cor e Tamanho)</b>',
             x=0.01, y=0.99,
@@ -452,13 +467,11 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
             borderwidth=1
         )
     )
-    # print("Mapa gerado. Retornando figura Plotly...") # Remover este print
-    return fig # RETORNA A FIGURA AQUI
+    return fig
 
-# --- 5. Workflow Principal (modificado para retornar a figura) ---
-# MODIFICADO: A função main agora retorna a figura Plotly ou None
-def main_preditor(): # Renomeado para evitar conflito
-    filepath = 'C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/arya-ia/Data/CSV/desastres_naturais_20250608_141114.csv' #
+# --- 5. Workflow Principal ---
+def main_preditor():
+    filepath = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'Data', 'CSV', 'desastres_naturais_20250608_141114.csv')
 
     X_model_df, y_series, X_map_info_df = load_and_prepare_data(filepath)
     
@@ -533,7 +546,11 @@ def main_preditor(): # Renomeado para evitar conflito
     trained_pipelines = {}
     model_to_map = "XGBoost"
 
-    for name, model_instance in models_to_run.items():
+    models_to_process = models_to_run.keys() if RUN_ALL_MODELS else [model_to_map]
+
+    for name in models_to_process:
+        model_instance = models_to_run[name]
+
         print(f"\nTreinando e avaliando {name}...")
         
         steps = [('preprocessor', preprocessor)]
@@ -610,7 +627,7 @@ def main_preditor(): # Renomeado para evitar conflito
         df_for_map = X_test_map_info.copy()
         df_for_map['predicted_level'] = y_pred_map_original
 
-        return display_classification_map( # RETORNA A FIGURA
+        return display_classification_map(
             df_for_map,
             lat_col='latitude',
             lon_col='longitude',
@@ -621,7 +638,3 @@ def main_preditor(): # Renomeado para evitar conflito
     else:
         print(f"O modelo '{model_to_map}' não foi treinado com sucesso.")
         return None
-
-# Remover o bloco if __name__ == '__main__':
-# if __name__ == '__main__':
-#     main()

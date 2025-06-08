@@ -15,15 +15,22 @@
         </nav>
     </header>
     <main class="map-container">
-        <div id="plotly-graph"></div>
+        {% if error_message %}
+            <p class="error-message">{{ error_message }}</p>
+        {% else %}
+            <div id="plotly-graph"></div>
+        {% endif %}
     </main>
     <footer>
         <p>&copy; 2025 Modelos de IA. Todos os direitos reservados.</p>
     </footer>
 
+    {% if not error_message %}
     <script>
-        var graph = {{ graph_json | safe }};
+        // O |safe garante que o Jinja2 não escape o JSON, e o JSON.parse() garante que seja um objeto JS
+        var graph = JSON.parse({{ graph_json | safe }});
         Plotly.newPlot('plotly-graph', graph.data, graph.layout, {responsive: true});
     </script>
+    {% endif %}
 </body>
 </html>
