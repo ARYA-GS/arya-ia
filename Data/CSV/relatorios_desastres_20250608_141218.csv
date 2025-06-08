@@ -1,6 +1,5 @@
 idRelatorio,dataHora,latitude,longitude,tipoFonte,tipoObservacao,nivelGravidade,qtdAtingidos,danoInfraestrutura,acessibilidade,notasAdicionais,classificacaoRisco
-2,2025-06-01 17:16:45,1.278283,-68.0108,Equipe de Campo,Deslizamento,Alta,133,Leve,Fácil,Deslizamento atingiu parte de uma residência.,Suporte Necessário
-3,2025-05-10 00:04:58,-28.374458,-49.539387,App Usuário,Deslizamento,Baixa,56,Severo,Fácil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Suporte Necessário
+3,2025-05-10 00:04:58,-28.374458,-49.539387,App Usuário,Deslizamento,Alta,56,Severo,Difícil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Suporte Necessário
 4,2025-05-11 04:49:33,-28.929635,-51.679829,App Usuário,Pessoas Isoladas,Crítica,134,Severo,Difícil,Comunidade sem acesso após queda de ponte.,Risco Imediato
 5,2025-05-27 21:32:39,2.970951,-61.051241,App Usuário,Estrutura Danificada,Baixa,42,Moderado,Fácil,Ponte apresenta rachaduras na base.,Monitorar
 6,2025-05-10 18:44:30,-2.62843,-43.64127,App Usuário,Incêndio,Crítica,152,Moderado,Difícil,Incêndio em vegetação próximo a área urbana.,Risco Imediato
@@ -299,3 +298,4 @@ idRelatorio,dataHora,latitude,longitude,tipoFonte,tipoObservacao,nivelGravidade,
 299,2025-05-09 01:59:01,1.248476,-67.843137,Equipe de Campo,Alagamento,Baixa,150,Moderado,Fácil,Região com nível de água acima da calçada.,Suporte Necessário
 300,2025-05-27 00:55:54,-22.218252,-46.422901,Drone,Pessoas Isoladas,Baixa,102,Severo,Difícil,Famílias ilhadas aguardam resgate.,Atenção Urgente
 1000,2025-06-01 17:16:45,-23.453399,-46.551033,Equipe de Campo,Incêndio,Alta,500,Alto,Fácil,prédio pegando fogo,Suporte Necessário
+1002,2025-06-08 12:42:04,-23.453412,-46.551059,Equipe de Campo,Incêndio,Alta,200,Moderado,Difícil,Foi um incêndio de larga proporção em um terreno baldio na grande São Paulo,Suporte necessário
