@@ -5,27 +5,19 @@ import geopandas as gpd
 import plotly.graph_objects as go
 from datetime import datetime
 import os
-
-# Preprocessing and Pipeline
 from sklearn.model_selection import train_test_split, GridSearchCV, RandomizedSearchCV
 from sklearn.preprocessing import StandardScaler, OneHotEncoder, LabelEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
-
-# Imbalance-learn for handling imbalanced datasets
 from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline as ImbPipeline
-
-# Models
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 import xgboost as xgb
 import lightgbm as lgb
 import catboost as cb
 from sklearn.neural_network import MLPClassifier
-
-# Metrics
 from sklearn.metrics import (
     accuracy_score,
     roc_auc_score,
@@ -36,13 +28,10 @@ from sklearn.metrics import (
     make_scorer,
     f1_score, recall_score, precision_score
 )
-
-# Plotting
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 
-# SHAP
 try:
     import shap
     SHAP_AVAILABLE = True
@@ -50,7 +39,7 @@ except ImportError:
     SHAP_AVAILABLE = False
     print("Biblioteca SHAP não instalada. A interpretabilidade com SHAP será pulada.")
 
-# --- Configurações Globais ---
+
 RANDOM_STATE = 42
 TARGET_COLUMN = 'nivel_de_risco'
 ENABLE_STATIC_PLOTS = False
@@ -59,7 +48,7 @@ DO_OVERSAMPLING = True
 
 RUN_ALL_MODELS = False 
 
-# --- 1. Carregamento e Preparação Inicial dos Dados ---
+
 def load_and_prepare_data(filepath='C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/arya-ia/Data/CSV/desastres_naturais_20250608_141114.csv'):
     """Carrega os dados e faz uma preparação inicial e engenharia de features de data."""
     try:
@@ -75,7 +64,7 @@ def load_and_prepare_data(filepath='C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/a
         raise KeyError(f"Erro: A coluna alvo '{TARGET_COLUMN}' não foi encontrada no arquivo CSV. "
                        f"Verifique a grafia exata (incluindo maiúsculas/minúsculas e espaços).")
 
-    # --- ENGENHARIA DE FEATURES (Data) ---
+
     if 'data' in df_full.columns:
         df_full['data'] = pd.to_datetime(df_full['data'], errors='coerce')
         df_full['ano'] = df_full['data'].dt.year
@@ -84,7 +73,7 @@ def load_and_prepare_data(filepath='C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/a
         df_full['trimestre'] = df_full['data'].dt.quarter
         df_full.drop(columns=['data'], inplace=True)
 
-    # Colunas a serem descartadas do modelo de features (ID e o TARGET_COLUMN)
+
     cols_to_drop_for_model = ['id_zona', TARGET_COLUMN] 
 
     cols_present_to_drop_for_model = [col for col in cols_to_drop_for_model if col in df_full.columns]
@@ -92,7 +81,7 @@ def load_and_prepare_data(filepath='C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/a
     X_model_df = df_full.drop(columns=cols_present_to_drop_for_model, errors='ignore')
     y_series = df_full[TARGET_COLUMN]
     
-    # Informações para o mapa (manter nomes consistentes com o CSV e com as features extras)
+
     map_info_cols = ['latitude', 'longitude', 'tipo_evento', 'precipitacao_mm',
                      'temperatura_c', 'uso_do_solo', 'ocorrenca',
                      'ano', 'dia_do_ano', 'dia_da_semana', 'trimestre', 'nivel_de_risco',
@@ -103,14 +92,14 @@ def load_and_prepare_data(filepath='C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/a
     map_info_cols_present = [col for col in map_info_cols if col in df_full.columns]
     X_map_info_df = df_full[map_info_cols_present].copy()
 
-    # NOVO: Imputar NaNs em X_map_info_df e limpar strings para o hover text
+
     for col in X_map_info_df.columns:
         if pd.api.types.is_numeric_dtype(X_map_info_df[col]):
             X_map_info_df[col].fillna(X_map_info_df[col].mean(), inplace=True)
         elif X_map_info_df[col].dtype == 'object' or pd.api.types.is_categorical_dtype(X_map_info_df[col]):
-            X_map_info_df[col] = X_map_info_df[col].astype(str).str.strip() # Limpa espaços
-            X_map_info_df[col].fillna('N/A', inplace=True) # Preenche NaNs com 'N/A'
-            X_map_info_df[col] = X_map_info_df[col].replace('nan', 'N/A') # Garante que string 'nan' vire 'N/A'
+            X_map_info_df[col] = X_map_info_df[col].astype(str).str.strip() 
+            X_map_info_df[col].fillna('N/A', inplace=True) 
+            X_map_info_df[col] = X_map_info_df[col].replace('nan', 'N/A') 
 
 
     print(f"Shape de X_model_df (features para o modelo): {X_model_df.shape}")
@@ -146,7 +135,7 @@ def identify_feature_types(df_for_model_features):
     print(f"Features categóricas (modelo): {categorical_features}")
     return numerical_features, categorical_features
 
-# --- 2. Pré-processamento ---
+
 def get_preprocessor(numerical_features, categorical_features):
     numerical_transformer = Pipeline(steps=[
         ('imputer', SimpleImputer(strategy='mean')),
@@ -167,7 +156,7 @@ def get_preprocessor(numerical_features, categorical_features):
     )
     return preprocessor
 
-# --- 3. Treinamento e Avaliação ---
+
 def evaluate_model(y_true, y_pred, y_pred_proba, model_name="Model"):
     print(f"\n--- Resultados para {model_name} ---")
     print(f"Acurácia: {accuracy_score(y_true, y_pred):.4f}")
@@ -197,7 +186,7 @@ def evaluate_model(y_true, y_pred, y_pred_proba, model_name="Model"):
     print(classification_report(y_true, y_pred, target_names=target_names_report, zero_division=0))
 
 
-# --- 4. Interpretabilidade ---
+
 def get_feature_names_from_preprocessor(preprocessor, X_cols_original_names):
     output_features = []
     for name, transformer, original_cols_applied in preprocessor.transformers:
@@ -301,7 +290,6 @@ def explain_with_shap(pipeline, X_test_model_features, model_name="Model"):
     plt.show(block=False)
 
 
-# --- Visualização do Mapa ---
 def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', lon_col='longitude',
                                proba_col='predicted_level',
                                event_type_col='tipo_evento',
@@ -328,20 +316,18 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
         print("Nenhum dado válido de latitude/longitude para centralizar o mapa após conversão.")
         return None
 
-    # NOVO: Dicionário de cores aprimorado para os níveis de risco do Preditor
-    # Usei as classes que vi no seu dataset (BAIXO, MÉDIO, ALTO, MUITO BAIXO)
-    # E adicionei outras classes comuns (CRITICO, MODERADO) se houver
+
     cor_por_risco_predito = {
-        'MUITO BAIXO': '#a6d96a', # Verde claro, para o menor risco
-        'BAIXO': '#66bd63',       # Verde
-        'MODERADO': '#ffffbf',    # Amarelo claro, se houver
-        'MÉDIO': '#fdae61',       # Laranja, para médio
-        'ALTO': '#f46d43',        # Laranja escuro/vermelho, para alto
-        'CRITICO': '#d73027',     # Vermelho escuro, para o mais crítico
-        'N/A': 'grey'             # Fallback para valores não encontrados/imputados
+        'MUITO BAIXO': '#a6d96a', 
+        'BAIXO': '#66bd63',      
+        'MODERADO': '#ffffbf',    
+        'MÉDIO': '#fdae61',       
+        'ALTO': '#f46d43',        
+        'CRITICO': '#d73027',    
+        'N/A': 'grey'             
     }
 
-    # NOVO: Lógica de tamanho de bolhas com base no nível de risco predito
+
     tamanho_por_risco_predito = {
         'MUITO BAIXO': {'solid': 6, 'halo': 25},
         'BAIXO': {'solid': 8, 'halo': 30},
@@ -349,7 +335,7 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
         'MÉDIO': {'solid': 12, 'halo': 45},
         'ALTO': {'solid': 16, 'halo': 60},
         'CRITICO': {'solid': 20, 'halo': 75},
-        'N/A': {'solid': 7, 'halo': 25} # Tamanho padrão para N/A
+        'N/A': {'solid': 7, 'halo': 25} 
     }
     
     df_filtered['color_predito'] = df_filtered[proba_col].map(lambda x: cor_por_risco_predito.get(str(x).strip(), 'grey'))
@@ -372,8 +358,7 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
                 f"<b>Tipo Evento:</b> {format_value(row.get('tipo_evento', 'N/A')).capitalize()}<br>"
                 f"Lat: {format_value(row[lat_col])}, Lon: {format_value(row[lon_col])}<br>")
         
-        # Assegure que os nomes de colunas no .get() correspondam exatamente ao X_map_info_df
-        # e ao CSV original para que não apareçam N/A se a coluna tiver dados.
+
         text += f"Ocorrência (original): {format_value(row.get('ocorrenca', 'N/A'))}<br>"
         text += f"Precipitação (mm): {format_value(row.get('precipitacao_mm', 'N/A'))}<br>"
         text += f"Temperatura (°C): {format_value(row.get('temperatura_c', 'N/A'))}<br>"
@@ -384,7 +369,7 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
         text += f"Dist. Água (km): {format_value(row.get('distancia_agua_km', 'N/A'))}<br>"
         text += f"Tipo Solo: {format_value(row.get('tipo_de_solo', 'N/A'))}<br>"
         text += f"Uso do Solo: {format_value(row.get('uso_do_solo', 'N/A'))}<br>"
-        text += f"Nível Acessibilidade: {format_value(row.get('nivel_acessibilidade', 'N/A'))}<br>" # Corrigido para "Nível Acessibilidade"
+        text += f"Nível Acessibilidade: {format_value(row.get('nivel_acessibilidade', 'N/A'))}<br>" 
         text += f"Freq. Sismos: {format_value(row.get('frequencia_sismos', 'N/A'))}<br>"
         text += f"Mês: {format_value(row.get('mes', 'N/A'))}<br>"
         text += f"Estação: {format_value(row.get('estacao_do_ano', 'N/A'))}<br>"
@@ -399,19 +384,18 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
 
     fig = go.Figure()
 
-    # NOVO: Ordem dos níveis de risco para a legenda (do mais crítico para o menos)
+
     ordered_risk_levels_for_legend = [
-        'CRITICO', 'ALTO', 'MÉDIO', 'MODERADO', 'BAIXO', 'MUITO BAIXO', 'N/A' # Incluir 'N/A' no final
+        'CRITICO', 'ALTO', 'MÉDIO', 'MODERADO', 'BAIXO', 'MUITO BAIXO', 'N/A' 
     ]
     
-    # Filtrar apenas os níveis que realmente existem no DataFrame e ordená-los
-    # E garantir que a ordem siga a lista 'ordered_risk_levels_for_legend'
+
     existing_unique_levels = [level for level in ordered_risk_levels_for_legend if level in df_filtered[proba_col].unique()]
     
-    # Adicionar qualquer nível que possa existir mas não está na lista 'ordered_risk_levels_for_legend'
+
     for level in df_filtered[proba_col].unique():
         if level not in existing_unique_levels:
-            existing_unique_levels.append(level) # Adiciona no final se for inesperado
+            existing_unique_levels.append(level)
 
     for risk_level_val in existing_unique_levels:
         df_subset = df_filtered[df_filtered[proba_col] == risk_level_val]
@@ -454,11 +438,11 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
 
     fig.update_layout(
         title=title,
-        mapbox_style="open-street-map", # Estilo de mapa base
+        mapbox_style="open-street-map", 
         mapbox_center_lat=map_center_lat,
         mapbox_center_lon=map_center_lon,
-        mapbox_zoom=4.5, # Ajustado para um zoom inicial mais abrangente do Brasil
-        margin={"r": 0, "t": 0, "l": 0, "b": 0}, # Margens mínimas para preencher a tela
+        mapbox_zoom=4.5, 
+        margin={"r": 0, "t": 0, "l": 0, "b": 0}, 
         legend=dict(
             title_text='<b>Classificação de Risco (Cor e Tamanho)</b>',
             x=0.01, y=0.99,
@@ -469,9 +453,9 @@ def display_classification_map(df_map_with_preds_and_info, lat_col='latitude', l
     )
     return fig
 
-# --- 5. Workflow Principal ---
+
 def main_preditor():
-    filepath = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'Data', 'CSV', 'desastres_naturais_20250608_141114.csv')
+    filepath = "C:/Users/zenet/OneDrive/Desktop/GS_IA_FINAL/arya-ia/Data/CSV/desastres_naturais_20250608_141114.csv"
 
     X_model_df, y_series, X_map_info_df = load_and_prepare_data(filepath)
     
@@ -499,7 +483,7 @@ def main_preditor():
 
 
     if min_class_count < 2:
-        print(f"\nAviso: A classe menos populosa em '{TARGET_COLUMN}' (após encoding) tem apenas {min_class_count} membro(s).")
+        print(f"/nAviso: A classe menos populosa em '{TARGET_COLUMN}' (após encoding) tem apenas {min_class_count} membro(s).")
         print("A estratificação no train_test_split requer no mínimo 2 membros por classe. Desabilitando estratificação.")
         X_train_model, X_test_model, \
         y_train_encoded, y_test_encoded, \
@@ -509,7 +493,7 @@ def main_preditor():
             X_map_info_df,
             test_size=0.25,
             random_state=RANDOM_STATE,
-            # stratify=y_encoded # REMOVIDO CONDICIONALMENTE
+
         )
     else:
         X_train_model, X_test_model, \

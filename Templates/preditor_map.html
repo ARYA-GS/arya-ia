@@ -22,13 +22,12 @@
         {% endif %}
     </main>
     <footer>
-        <p>&copy; 2025 Modelos de IA. Todos os direitos reservados.</p>
+        <p>&copy; Todos os direitos reservados.</p>
     </footer>
 
     {% if not error_message %}
     <script>
-        // O |safe garante que o Jinja2 não escape o JSON, e o JSON.parse() garante que seja um objeto JS
-        var graph = JSON.parse({{ graph_json | safe }});
+        var graph = JSON.parse('{{ graph_json | safe }}');
         Plotly.newPlot('plotly-graph', graph.data, graph.layout, {responsive: true});
     </script>
     {% endif %}

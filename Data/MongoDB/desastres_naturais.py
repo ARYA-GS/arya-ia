@@ -14,7 +14,7 @@ def export_collection_to_csv(collection, filename):
     """
     documents = list(collection.find())
 
-    os.makedirs(os.path.dirname(filename), exist_ok=True)  # Garante que o diretório existe
+    os.makedirs(os.path.dirname(filename), exist_ok=True)  
 
     with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
         if len(documents) > 0:
@@ -47,7 +47,6 @@ def main():
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
-        # Define o caminho do diretório de saída
         output_dir = "C:/Users/zenet/OneDrive/Desktop/ARYA_IA_GS/arya-ia/Data/CSV"
         csv_file1 = os.path.join(output_dir, f"{collection1_name}_{timestamp}.csv")
 

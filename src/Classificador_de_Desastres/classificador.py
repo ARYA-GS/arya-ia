@@ -1,5 +1,3 @@
-# src/Classificador_de_Desastres/classificador.py
-
 import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
@@ -8,10 +6,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 import os
-
-# =======================
-# 1. Carregamento de dados
-# =======================
 
 def carregar_dados(caminho_csv):
     """
@@ -28,9 +22,6 @@ def carregar_dados(caminho_csv):
         print(f"Ocorreu um erro ao carregar os dados: {e}")
         return None
 
-# =======================
-# 2. Pré-processamento
-# =======================
 
 def preprocessar_dados(df, colunas_features, coluna_alvo):
     """
@@ -79,9 +70,6 @@ def preprocessar_dados(df, colunas_features, coluna_alvo):
 
     return X_train, X_test, y_train, y_test, df_encoded, label_encoders
 
-# =======================
-# 3. Treinamento do Modelo
-# =======================
 
 def treinar_modelo(X_train, y_train):
     """
@@ -93,9 +81,6 @@ def treinar_modelo(X_train, y_train):
     print("Modelo treinado com sucesso!")
     return modelo
 
-# =======================
-# 4. Aplicar Previsões no DataFrame Original
-# =======================
 
 def aplicar_predicoes(df_original, modelo, colunas_features, label_encoder_alvo, label_encoders):
     """
@@ -123,10 +108,6 @@ def aplicar_predicoes(df_original, modelo, colunas_features, label_encoder_alvo,
 
     return df_copy
 
-# =======================
-# 5. Criar GeoDataFrame
-# =======================
-
 def criar_geodataframe(df):
     """
     Cria um GeoDataFrame a partir de um DataFrame pandas, usando
@@ -148,9 +129,7 @@ def criar_geodataframe(df):
     print("GeoDataFrame criado com sucesso!")
     return gdf
 
-# =======================
-# 6. Visualização com Plotly (Estilo Mapa de Calor com Bolhas)
-# =======================
+
 def visualizar_mapa_com_legenda(gdf):
     """
     Cria uma visualização de mapa interativa usando Plotly, mostrando
@@ -161,15 +140,12 @@ def visualizar_mapa_com_legenda(gdf):
         print("Não há dados no GeoDataFrame para visualizar.")
         return None
 
-    # NOVO: Ajuste do dicionário de cores para as classes reais do Classificador
-    # BASEADO NO SEU CSV relatorios_desastres_20250608_141218.csv
-    # Classes encontradas: 'Suporte Necessário', 'Risco Imediato', 'Monitorar', 'Atenção Urgente'
     cor_por_risco = {
-        'Risco Imediato': 'darkred', # Mais crítico
-        'Atenção Urgente': 'orange', # Atenção
-        'Suporte Necessário': 'yellow', # Precisa de suporte, mas não crítico
-        'Monitorar': 'blue', # Baixo risco, apenas monitoramento
-        'DESCONHECIDO': 'gray' # Fallback para qualquer classe não mapeada
+        'Risco Imediato': 'darkred', 
+        'Atenção Urgente': 'orange', 
+        'Suporte Necessário': 'yellow', 
+        'Monitorar': 'blue', 
+        'DESCONHECIDO': 'gray' 
     }
 
     fig = go.Figure()
@@ -233,19 +209,15 @@ def visualizar_mapa_com_legenda(gdf):
     )
     return fig
 
-# =======================
-# 7. Execução principal (modificada para retornar a figura)
-# =======================
-
 def main_classificador():
-    # Caminho do arquivo CSV. Ajustado para ser relativo ao diretório do script.
-    caminho_csv = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'Data', 'CSV', 'relatorios_desastres_20250608_141218.csv')
+
+    caminho_csv = "C:/Users/zenet/OneDrive/Desktop/GS_IA_FINAL/arya-ia/Data/CSV/relatorios_desastres_20250608_141218.csv"
 
     colunas_features = [
         'tipoFonte', 'tipoObservacao', 'nivelGravidade',
         'qtdAtingidos', 'danoInfraestrutura', 'acessibilidade'
     ]
-    coluna_alvo = 'classificacaoRisco' # O alvo é 'classificacaoRisco'
+    coluna_alvo = 'classificacaoRisco' 
 
     df = carregar_dados(caminho_csv)
 
@@ -260,13 +232,9 @@ def main_classificador():
             print("Verifique se o nome da coluna alvo no seu CSV corresponde exatamente.")
             return None
 
-        # Conversão de tipo e imputação para colunas que vão para o modelo
-        # Assegurar que 'qtdAtingidos' é numérica
         df['qtdAtingidos'] = pd.to_numeric(df['qtdAtingidos'], errors='coerce')
         df['qtdAtingidos'].fillna(df['qtdAtingidos'].mean(), inplace=True)
 
-        # Imputação e strip() para as colunas que serão usadas como features e o alvo
-        # Garante que colunas categóricas para o LabelEncoder sejam strings e limpas
         for col in colunas_features + [coluna_alvo]:
             if col in df.columns and df[col].dtype == 'object':
                 df[col] = df[col].astype(str).str.strip()
@@ -280,12 +248,11 @@ def main_classificador():
         label_encoder_alvo = label_encoders[coluna_alvo]
         df_predito = aplicar_predicoes(df.copy(), modelo, colunas_features, label_encoder_alvo, label_encoders)
         
-        # NOVO: Imputar NaNs e limpar strings nas colunas do df_predito que vão para o hovertext
-        # Usar a mesma lógica de imputação das features do modelo
+
         hover_cols_to_impute = [
             'tipoObservacao', 'nivelGravidade', 'qtdAtingidos',
-            'danoInfraestrutura', 'acessibilidade', 'notasAdicionais', # Estas são do hovertext
-            'predicted_class' # A coluna que está no mapa
+            'danoInfraestrutura', 'acessibilidade', 'notasAdicionais', 
+            'predicted_class' 
         ]
         for col_name in hover_cols_to_impute:
             if col_name in df_predito.columns:
@@ -295,7 +262,7 @@ def main_classificador():
                     df_predito[col_name] = df_predito[col_name].astype(str).str.strip().fillna('N/A')
                     df_predito[col_name] = df_predito[col_name].replace('nan', 'N/A')
             else:
-                # Se uma coluna esperada no hovertext não existe no df_predito, adiciona como N/A
+
                 df_predito[col_name] = 'N/A'
 
 

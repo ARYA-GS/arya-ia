@@ -4,7 +4,6 @@ import plotly
 import os
 import sys
 
-# --- Configuração de Caminhos ---
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 import importlib.util
@@ -42,28 +41,23 @@ def index():
 
 @app.route('/classificador_map')
 def classificador_map():
-    fig = main_classificador()
+    fig = main_classificador() 
 
     if fig:
         graph_json = json.dumps(fig.to_dict(), cls=plotly.utils.PlotlyJSONEncoder)
         return render_template('classificador_map.html', graph_json=graph_json, title="Mapa do Classificador de Desastres")
     else:
-        # NOVO: Renderiza o template com um graph_json vazio/erro e uma mensagem para o usuário
-        # Isso evita que o erro JavaScript ocorra e permite exibir uma mensagem no HTML
-        print("Aviso: A função main_classificador retornou None. Verifique os logs do modelo para erros.")
-        return render_template('classificador_map.html', graph_json="{}", title="Erro no Classificador de Desastres", error_message="Não foi possível gerar o mapa. Verifique os dados ou a configuração do modelo.")
+        return "Erro ao gerar o mapa do Classificador de Desastres.", 500
+
 
 @app.route('/preditor_map')
 def preditor_map():
-    fig = main_preditor()
-
+    fig = main_preditor() 
     if fig:
         graph_json = json.dumps(fig.to_dict(), cls=plotly.utils.PlotlyJSONEncoder)
         return render_template('preditor_map.html', graph_json=graph_json, title="Mapa do Preditor de Risco")
     else:
-        # NOVO: Similar para o preditor_map
-        print("Aviso: A função main_preditor retornou None. Verifique os logs do modelo para erros.")
-        return render_template('preditor_map.html', graph_json="{}", title="Erro no Preditor de Risco", error_message="Não foi possível gerar o mapa. Verifique os dados ou a configuração do modelo.")
+        return "Erro ao gerar o mapa do Preditor de Risco.", 500
 
 if __name__ == '__main__':
     app.run(debug=True)

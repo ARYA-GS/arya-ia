@@ -1,4 +1,3 @@
-/* static/style.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -67,19 +66,19 @@ main {
 }
 
 .map-container {
-    padding: 0; /* Remove padding from main for map */
-    margin: 0; /* Remove margin from main for map */
-    width: 100%; /* Make it fill the available width */
-    height: 100vh; /* Make it fill the viewport height */
+    padding: 0; 
+    margin: 0; 
+    width: 100%; 
+    height: 100vh; 
     display: flex;
-    flex-direction: column; /* Allow header/footer and map to stack */
+    flex-direction: column; 
 }
 
 #plotly-graph {
-    flex: 1; /* Allow the graph to fill remaining space */
-    width: 100%; /* Ensure the graph div itself is 100% width */
-    height: 100%; /* Ensure the graph div itself is 100% height */
-    min-height: 500px; /* Garante uma altura mínima para o mapa */
+    flex: 1; 
+    width: 100%;
+    height: 100%; 
+    min-height: 500px; 
 }
 
 footer {
