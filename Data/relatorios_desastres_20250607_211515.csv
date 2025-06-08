@@ -1,0 +1,301 @@
+idRelatorio,dataHora,latitude,longitude,tipoFonte,tipoObservacao,nivelGravidade,qtdAtingidos,danoInfraestrutura,acessibilidade,notasAdicionais,classificacaoRisco
+2,2025-06-01 17:16:45,1.278283,-68.0108,Equipe de Campo,Deslizamento,Alta,133,Leve,Fácil,Deslizamento atingiu parte de uma residência.,Suporte Necessário
+3,2025-05-10 00:04:58,-28.374458,-49.539387,App Usuário,Deslizamento,Baixa,56,Severo,Fácil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Suporte Necessário
+4,2025-05-11 04:49:33,-28.929635,-51.679829,App Usuário,Pessoas Isoladas,Crítica,134,Severo,Difícil,Comunidade sem acesso após queda de ponte.,Risco Imediato
+5,2025-05-27 21:32:39,2.970951,-61.051241,App Usuário,Estrutura Danificada,Baixa,42,Moderado,Fácil,Ponte apresenta rachaduras na base.,Monitorar
+6,2025-05-10 18:44:30,-2.62843,-43.64127,App Usuário,Incêndio,Crítica,152,Moderado,Difícil,Incêndio em vegetação próximo a área urbana.,Risco Imediato
+7,2025-06-02 04:43:07,-2.926449,-42.441275,Drone,Estrutura Danificada,Alta,164,Severo,Bloqueado,Queda de poste afeta fornecimento elétrico.,Risco Imediato
+8,2025-05-16 18:14:09,-0.401144,-60.040702,Equipe de Campo,Estrutura Danificada,Crítica,80,Severo,Bloqueado,Ponte apresenta rachaduras na base.,Risco Imediato
+9,2025-06-03 14:02:12,-4.873945,-41.396508,App Usuário,Alagamento,Média,42,Nenhum,Fácil,Região com nível de água acima da calçada.,Monitorar
+10,2025-06-03 20:29:02,-6.060499,-43.214826,Equipe de Campo,Estrutura Danificada,Alta,70,Nenhum,Bloqueado,Prédio com estrutura comprometida após tremor.,Atenção Urgente
+11,2025-05-30 01:18:05,-20.939184,-41.527716,Drone,Pessoas Isoladas,Média,170,Moderado,Bloqueado,Barreiras naturais impedem saída de moradores.,Atenção Urgente
+12,2025-05-19 05:06:50,3.451762,-63.794048,App Usuário,Pessoas Isoladas,Média,181,Leve,Fácil,Barreiras naturais impedem saída de moradores.,Suporte Necessário
+13,2025-05-09 04:49:27,-28.649154,-54.846424,Equipe de Campo,Incêndio,Baixa,67,Moderado,Bloqueado,"Fogo controlado por brigada local, mas danos registrados.",Suporte Necessário
+14,2025-05-15 05:39:35,-10.429844,-43.232143,App Usuário,Pessoas Isoladas,Baixa,30,Moderado,Bloqueado,Barreiras naturais impedem saída de moradores.,Suporte Necessário
+15,2025-05-25 20:27:25,-28.747662,-51.883544,Drone,Alagamento,Média,165,Severo,Bloqueado,Moradores relatam alagamento em vias principais.,Risco Imediato
+16,2025-05-29 23:33:59,-6.62634,-41.023966,App Usuário,Incêndio,Alta,185,Nenhum,Bloqueado,Moradores evacuados devido à fumaça intensa.,Atenção Urgente
+17,2025-06-04 12:24:04,-31.273229,-51.558502,Drone,Pessoas Isoladas,Média,183,Leve,Difícil,Barreiras naturais impedem saída de moradores.,Suporte Necessário
+18,2025-05-22 16:40:15,-14.548568,-45.874346,App Usuário,Estrutura Danificada,Média,155,Severo,Fácil,Ponte apresenta rachaduras na base.,Atenção Urgente
+19,2025-05-30 18:06:02,-19.574352,-41.270171,Drone,Estrutura Danificada,Alta,20,Moderado,Fácil,Queda de poste afeta fornecimento elétrico.,Suporte Necessário
+20,2025-05-21 11:21:46,-10.236145,-47.55327,Equipe de Campo,Deslizamento,Média,6,Nenhum,Fácil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Monitorar
+21,2025-05-14 11:08:02,-17.439853,-52.549227,App Usuário,Incêndio,Crítica,85,Nenhum,Difícil,Moradores evacuados devido à fumaça intensa.,Atenção Urgente
+22,2025-05-18 12:37:30,-15.58994,-53.400203,Drone,Alagamento,Baixa,100,Severo,Bloqueado,Região com nível de água acima da calçada.,Atenção Urgente
+23,2025-05-30 20:53:42,0.838969,-54.753788,Equipe de Campo,Deslizamento,Baixa,44,Severo,Fácil,Deslizamento atingiu parte de uma residência.,Monitorar
+24,2025-05-29 11:15:52,-21.478642,-56.859086,Equipe de Campo,Deslizamento,Baixa,183,Nenhum,Fácil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Monitorar
+25,2025-06-02 23:28:22,-8.14293,-39.366125,App Usuário,Estrutura Danificada,Média,161,Leve,Fácil,Ponte apresenta rachaduras na base.,Suporte Necessário
+26,2025-06-05 10:56:07,-13.272029,-52.761762,Drone,Deslizamento,Crítica,20,Leve,Difícil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Suporte Necessário
+27,2025-05-13 15:24:46,-17.165463,-53.724229,Equipe de Campo,Incêndio,Baixa,141,Nenhum,Bloqueado,"Fogo controlado por brigada local, mas danos registrados.",Suporte Necessário
+28,2025-05-26 19:06:14,-8.159369,-41.791903,App Usuário,Alagamento,Alta,106,Nenhum,Bloqueado,Região com nível de água acima da calçada.,Atenção Urgente
+29,2025-05-16 07:53:19,-12.241483,-54.037306,Drone,Estrutura Danificada,Crítica,43,Leve,Difícil,Queda de poste afeta fornecimento elétrico.,Suporte Necessário
+30,2025-05-23 01:54:11,-12.247402,-38.208388,App Usuário,Pessoas Isoladas,Alta,71,Moderado,Fácil,Comunidade sem acesso após queda de ponte.,Suporte Necessário
+31,2025-06-05 02:16:24,-3.549625,-54.532257,Equipe de Campo,Alagamento,Média,122,Severo,Fácil,Moradores relatam alagamento em vias principais.,Atenção Urgente
+32,2025-05-15 10:26:30,2.159173,-52.035926,Equipe de Campo,Alagamento,Alta,162,Nenhum,Difícil,Água acumulada impede o tráfego de veículos.,Atenção Urgente
+33,2025-05-12 21:16:57,-12.641607,-40.6714,Equipe de Campo,Alagamento,Alta,5,Moderado,Bloqueado,Água acumulada impede o tráfego de veículos.,Atenção Urgente
+34,2025-06-01 07:28:00,-13.699525,-45.852781,App Usuário,Pessoas Isoladas,Média,94,Moderado,Fácil,Comunidade sem acesso após queda de ponte.,Suporte Necessário
+35,2025-06-06 02:17:00,-23.172397,-46.197111,Equipe de Campo,Pessoas Isoladas,Alta,19,Moderado,Difícil,Barreiras naturais impedem saída de moradores.,Suporte Necessário
+36,2025-05-30 00:21:56,-2.112448,-46.772062,Equipe de Campo,Deslizamento,Alta,26,Leve,Fácil,Deslizamento atingiu parte de uma residência.,Monitorar
+37,2025-05-21 16:39:27,-5.404247,-70.359483,Drone,Alagamento,Baixa,147,Nenhum,Difícil,Moradores relatam alagamento em vias principais.,Suporte Necessário
+38,2025-05-25 08:22:06,-11.613663,-59.263816,Drone,Alagamento,Baixa,7,Severo,Fácil,Moradores relatam alagamento em vias principais.,Monitorar
+39,2025-05-14 23:05:08,-25.610191,-53.519115,Drone,Incêndio,Baixa,170,Nenhum,Difícil,Moradores evacuados devido à fumaça intensa.,Suporte Necessário
+40,2025-05-23 04:04:55,-21.598935,-51.910637,Drone,Incêndio,Média,192,Severo,Bloqueado,"Fogo controlado por brigada local, mas danos registrados.",Risco Imediato
+41,2025-05-14 01:36:47,-9.685372,-68.169795,Drone,Deslizamento,Alta,50,Leve,Fácil,Deslizamento atingiu parte de uma residência.,Monitorar
+42,2025-05-17 08:24:49,-13.796098,-43.559601,Equipe de Campo,Deslizamento,Alta,39,Nenhum,Fácil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Monitorar
+43,2025-05-28 08:38:09,-22.233682,-45.320219,Equipe de Campo,Estrutura Danificada,Alta,132,Severo,Fácil,Ponte apresenta rachaduras na base.,Atenção Urgente
+44,2025-05-26 14:25:06,-2.481759,-48.408182,Drone,Incêndio,Crítica,27,Severo,Bloqueado,Moradores evacuados devido à fumaça intensa.,Risco Imediato
+45,2025-05-13 13:18:37,-13.135543,-49.833436,App Usuário,Pessoas Isoladas,Baixa,94,Moderado,Difícil,Barreiras naturais impedem saída de moradores.,Suporte Necessário
+46,2025-05-21 09:43:50,-18.984188,-51.011459,Equipe de Campo,Alagamento,Baixa,25,Nenhum,Fácil,Água acumulada impede o tráfego de veículos.,Monitorar
+47,2025-06-02 03:51:29,-15.533592,-42.203458,Drone,Pessoas Isoladas,Crítica,103,Moderado,Difícil,Comunidade sem acesso após queda de ponte.,Risco Imediato
+48,2025-05-15 10:23:17,-24.035654,-49.18822,App Usuário,Alagamento,Média,24,Leve,Difícil,Água acumulada impede o tráfego de veículos.,Monitorar
+49,2025-05-29 08:21:45,-8.679007,-44.754639,Equipe de Campo,Alagamento,Baixa,156,Moderado,Difícil,Moradores relatam alagamento em vias principais.,Suporte Necessário
+50,2025-06-03 11:37:27,-12.202778,-43.616415,App Usuário,Deslizamento,Alta,185,Severo,Bloqueado,Deslizamento atingiu parte de uma residência.,Risco Imediato
+51,2025-05-29 23:49:39,1.927449,-51.1248,Drone,Estrutura Danificada,Baixa,93,Nenhum,Difícil,Prédio com estrutura comprometida após tremor.,Monitorar
+52,2025-05-27 17:12:40,-8.063969,-72.548824,Equipe de Campo,Pessoas Isoladas,Crítica,132,Severo,Difícil,Comunidade sem acesso após queda de ponte.,Risco Imediato
+53,2025-05-26 18:09:03,-15.369928,-48.218388,Equipe de Campo,Deslizamento,Média,37,Severo,Bloqueado,Deslizamento atingiu parte de uma residência.,Atenção Urgente
+54,2025-05-12 07:29:18,-28.363388,-53.838223,Equipe de Campo,Incêndio,Baixa,27,Severo,Difícil,Incêndio em vegetação próximo a área urbana.,Suporte Necessário
+55,2025-05-21 03:07:54,-5.822485,-54.593402,App Usuário,Incêndio,Alta,79,Leve,Bloqueado,Incêndio em vegetação próximo a área urbana.,Atenção Urgente
+56,2025-06-02 16:42:18,-16.488681,-48.549712,Drone,Estrutura Danificada,Média,1,Leve,Difícil,Queda de poste afeta fornecimento elétrico.,Monitorar
+57,2025-05-27 05:09:53,-11.525455,-40.439199,Equipe de Campo,Deslizamento,Baixa,21,Nenhum,Bloqueado,Área interditada após deslizamento de terra.,Monitorar
+58,2025-05-09 04:24:15,-3.047999,-59.122964,App Usuário,Alagamento,Baixa,107,Nenhum,Bloqueado,Região com nível de água acima da calçada.,Suporte Necessário
+59,2025-05-28 04:57:26,-0.490161,-53.226414,App Usuário,Pessoas Isoladas,Alta,103,Leve,Fácil,Comunidade sem acesso após queda de ponte.,Suporte Necessário
+60,2025-05-14 17:14:11,-29.348642,-51.64949,Drone,Alagamento,Média,110,Moderado,Difícil,Moradores relatam alagamento em vias principais.,Atenção Urgente
+61,2025-06-01 23:49:54,-12.063591,-43.771537,Drone,Incêndio,Média,22,Moderado,Bloqueado,Incêndio em vegetação próximo a área urbana.,Suporte Necessário
+62,2025-05-08 04:10:43,-21.798179,-48.854866,App Usuário,Incêndio,Alta,188,Severo,Fácil,Incêndio em vegetação próximo a área urbana.,Atenção Urgente
+63,2025-06-02 11:48:29,-16.811708,-47.833014,App Usuário,Estrutura Danificada,Alta,55,Leve,Fácil,Queda de poste afeta fornecimento elétrico.,Suporte Necessário
+64,2025-06-01 15:37:28,-28.536683,-52.530619,App Usuário,Alagamento,Crítica,34,Nenhum,Difícil,Região com nível de água acima da calçada.,Suporte Necessário
+65,2025-06-05 23:30:56,-3.869071,-40.936506,Equipe de Campo,Deslizamento,Baixa,106,Leve,Difícil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Suporte Necessário
+66,2025-06-03 11:21:37,-25.620232,-52.245474,Drone,Deslizamento,Crítica,91,Nenhum,Difícil,Deslizamento atingiu parte de uma residência.,Atenção Urgente
+67,2025-05-22 19:05:36,-6.757265,-66.984072,App Usuário,Incêndio,Crítica,74,Severo,Difícil,Moradores evacuados devido à fumaça intensa.,Risco Imediato
+68,2025-05-23 15:20:17,-14.530721,-59.650252,Equipe de Campo,Deslizamento,Alta,151,Moderado,Bloqueado,Área interditada após deslizamento de terra.,Risco Imediato
+69,2025-05-27 19:03:46,1.476208,-54.862103,Equipe de Campo,Deslizamento,Média,174,Moderado,Difícil,Deslizamento atingiu parte de uma residência.,Atenção Urgente
+70,2025-05-20 00:59:15,-13.074048,-41.553833,Drone,Estrutura Danificada,Alta,100,Nenhum,Fácil,Queda de poste afeta fornecimento elétrico.,Suporte Necessário
+71,2025-05-31 12:52:40,-5.588389,-40.067541,Drone,Alagamento,Alta,2,Leve,Fácil,Moradores relatam alagamento em vias principais.,Monitorar
+72,2025-05-29 22:16:23,-19.824007,-41.026444,App Usuário,Pessoas Isoladas,Baixa,19,Nenhum,Fácil,Famílias ilhadas aguardam resgate.,Monitorar
+73,2025-05-23 05:21:51,-5.127457,-69.169597,Equipe de Campo,Incêndio,Média,81,Leve,Difícil,Incêndio em vegetação próximo a área urbana.,Suporte Necessário
+74,2025-05-11 09:22:40,-14.254851,-56.069831,Drone,Alagamento,Baixa,93,Leve,Bloqueado,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+75,2025-06-03 01:59:01,-1.439505,-59.098686,Equipe de Campo,Alagamento,Alta,96,Nenhum,Bloqueado,Moradores relatam alagamento em vias principais.,Atenção Urgente
+76,2025-05-24 09:10:38,-19.455694,-40.060073,Equipe de Campo,Alagamento,Média,0,Nenhum,Fácil,Região com nível de água acima da calçada.,Monitorar
+77,2025-05-30 11:53:33,-28.030839,-49.717667,Equipe de Campo,Incêndio,Média,19,Severo,Fácil,"Fogo controlado por brigada local, mas danos registrados.",Suporte Necessário
+78,2025-05-24 10:29:02,-7.72317,-45.914079,Equipe de Campo,Deslizamento,Média,195,Nenhum,Bloqueado,Deslizamento atingiu parte de uma residência.,Atenção Urgente
+79,2025-06-01 19:17:34,-2.128235,-45.064511,Drone,Deslizamento,Média,158,Severo,Difícil,Área interditada após deslizamento de terra.,Atenção Urgente
+80,2025-05-31 14:31:41,-12.91163,-55.26469,Equipe de Campo,Deslizamento,Alta,77,Moderado,Fácil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Suporte Necessário
+81,2025-05-26 22:29:13,-4.828967,-47.695147,Equipe de Campo,Incêndio,Alta,98,Leve,Bloqueado,"Fogo controlado por brigada local, mas danos registrados.",Atenção Urgente
+82,2025-06-05 13:40:28,-3.223192,-42.228849,App Usuário,Pessoas Isoladas,Alta,188,Nenhum,Difícil,Comunidade sem acesso após queda de ponte.,Atenção Urgente
+83,2025-05-22 20:45:11,-5.848824,-69.577037,Equipe de Campo,Estrutura Danificada,Crítica,33,Nenhum,Fácil,Prédio com estrutura comprometida após tremor.,Suporte Necessário
+84,2025-05-23 20:27:30,-13.873633,-56.044372,App Usuário,Incêndio,Baixa,178,Nenhum,Fácil,"Fogo controlado por brigada local, mas danos registrados.",Monitorar
+85,2025-05-26 04:58:14,-14.055173,-53.066774,Equipe de Campo,Estrutura Danificada,Alta,109,Leve,Fácil,Queda de poste afeta fornecimento elétrico.,Suporte Necessário
+86,2025-05-26 18:15:58,-22.725735,-48.805593,Drone,Estrutura Danificada,Baixa,145,Moderado,Difícil,Prédio com estrutura comprometida após tremor.,Suporte Necessário
+87,2025-05-20 01:55:31,-9.30684,-41.838593,App Usuário,Incêndio,Alta,37,Severo,Difícil,Moradores evacuados devido à fumaça intensa.,Atenção Urgente
+88,2025-05-21 13:16:14,2.26919,-61.34737,App Usuário,Alagamento,Baixa,54,Severo,Fácil,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+89,2025-05-27 23:59:29,-21.71225,-41.058678,Drone,Estrutura Danificada,Baixa,72,Moderado,Difícil,Ponte apresenta rachaduras na base.,Suporte Necessário
+90,2025-06-06 14:58:17,-3.467111,-53.744255,Equipe de Campo,Deslizamento,Baixa,137,Severo,Difícil,Área interditada após deslizamento de terra.,Atenção Urgente
+91,2025-05-10 16:42:47,-9.219135,-55.74637,Equipe de Campo,Estrutura Danificada,Alta,71,Leve,Difícil,Ponte apresenta rachaduras na base.,Suporte Necessário
+92,2025-06-02 00:39:21,-0.546002,-55.612747,App Usuário,Alagamento,Baixa,51,Severo,Difícil,Moradores relatam alagamento em vias principais.,Suporte Necessário
+93,2025-05-10 19:02:19,-0.852748,-57.734911,Drone,Pessoas Isoladas,Alta,83,Severo,Fácil,Comunidade sem acesso após queda de ponte.,Atenção Urgente
+94,2025-06-02 00:57:46,-10.133077,-49.153778,App Usuário,Incêndio,Baixa,153,Severo,Bloqueado,Incêndio em vegetação próximo a área urbana.,Atenção Urgente
+95,2025-05-24 05:11:38,-6.691782,-45.797127,Drone,Pessoas Isoladas,Média,165,Moderado,Difícil,Barreiras naturais impedem saída de moradores.,Atenção Urgente
+96,2025-05-12 16:30:58,-1.766883,-56.906791,Equipe de Campo,Pessoas Isoladas,Alta,70,Leve,Difícil,Famílias ilhadas aguardam resgate.,Suporte Necessário
+97,2025-05-14 01:42:02,-7.850781,-63.786562,Equipe de Campo,Deslizamento,Crítica,139,Nenhum,Fácil,Deslizamento atingiu parte de uma residência.,Atenção Urgente
+98,2025-06-06 03:53:32,-5.623751,-35.316951,Drone,Alagamento,Média,174,Leve,Fácil,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+99,2025-05-28 16:15:33,-8.518321,-54.239159,App Usuário,Alagamento,Alta,71,Moderado,Difícil,Água acumulada impede o tráfego de veículos.,Atenção Urgente
+100,2025-05-24 06:02:15,-3.532678,-51.497664,Equipe de Campo,Pessoas Isoladas,Média,90,Leve,Difícil,Barreiras naturais impedem saída de moradores.,Suporte Necessário
+101,2025-05-19 11:12:00,0.738164,-65.77191,Equipe de Campo,Deslizamento,Média,171,Moderado,Difícil,Deslizamento atingiu parte de uma residência.,Atenção Urgente
+102,2025-05-26 05:31:58,-16.717002,-41.12492,Drone,Estrutura Danificada,Crítica,165,Moderado,Difícil,Ponte apresenta rachaduras na base.,Risco Imediato
+103,2025-06-05 02:55:25,-10.624862,-64.84607,Equipe de Campo,Pessoas Isoladas,Média,135,Severo,Difícil,Barreiras naturais impedem saída de moradores.,Atenção Urgente
+104,2025-05-14 07:50:06,-7.225137,-36.961306,App Usuário,Incêndio,Baixa,82,Nenhum,Difícil,"Fogo controlado por brigada local, mas danos registrados.",Monitorar
+105,2025-05-27 18:10:51,-16.515744,-53.834186,Equipe de Campo,Incêndio,Média,89,Nenhum,Fácil,Incêndio em vegetação próximo a área urbana.,Monitorar
+106,2025-05-29 16:15:01,-2.375745,-50.653205,App Usuário,Pessoas Isoladas,Alta,93,Leve,Bloqueado,Comunidade sem acesso após queda de ponte.,Atenção Urgente
+107,2025-05-30 09:56:25,-27.598924,-48.576358,Equipe de Campo,Alagamento,Média,143,Severo,Difícil,Região com nível de água acima da calçada.,Atenção Urgente
+108,2025-06-01 12:45:30,-5.883342,-58.811317,Equipe de Campo,Pessoas Isoladas,Alta,67,Leve,Difícil,Famílias ilhadas aguardam resgate.,Suporte Necessário
+109,2025-06-04 00:42:43,-3.894255,-58.623151,App Usuário,Estrutura Danificada,Média,126,Severo,Bloqueado,Ponte apresenta rachaduras na base.,Risco Imediato
+110,2025-05-20 04:47:37,-19.583422,-53.007971,Drone,Alagamento,Baixa,54,Moderado,Bloqueado,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+111,2025-05-20 20:58:25,-15.19186,-44.120554,App Usuário,Incêndio,Média,115,Leve,Difícil,Moradores evacuados devido à fumaça intensa.,Suporte Necessário
+112,2025-05-28 03:40:44,-0.167953,-65.076345,App Usuário,Alagamento,Baixa,107,Severo,Bloqueado,Região com nível de água acima da calçada.,Atenção Urgente
+113,2025-05-30 00:27:03,-19.029154,-49.79158,Equipe de Campo,Incêndio,Média,49,Nenhum,Difícil,Moradores evacuados devido à fumaça intensa.,Monitorar
+114,2025-05-29 09:57:25,-4.051566,-54.146749,Drone,Deslizamento,Alta,15,Nenhum,Fácil,Deslizamento atingiu parte de uma residência.,Monitorar
+115,2025-05-17 23:37:12,-23.535379,-52.715837,Drone,Incêndio,Média,15,Leve,Difícil,Incêndio em vegetação próximo a área urbana.,Monitorar
+116,2025-06-04 14:54:34,-2.857056,-64.650634,Equipe de Campo,Alagamento,Baixa,165,Moderado,Fácil,Região com nível de água acima da calçada.,Suporte Necessário
+117,2025-05-30 21:40:01,-7.068039,-54.247561,Equipe de Campo,Estrutura Danificada,Crítica,61,Nenhum,Difícil,Queda de poste afeta fornecimento elétrico.,Atenção Urgente
+118,2025-05-18 14:34:01,-12.865187,-54.469489,Drone,Alagamento,Crítica,65,Leve,Fácil,Moradores relatam alagamento em vias principais.,Suporte Necessário
+119,2025-05-15 05:12:02,-0.568239,-64.235106,Drone,Deslizamento,Crítica,11,Severo,Difícil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Atenção Urgente
+120,2025-05-26 10:41:30,-7.605597,-53.296363,Drone,Deslizamento,Média,145,Nenhum,Bloqueado,Deslizamento atingiu parte de uma residência.,Atenção Urgente
+121,2025-05-30 01:02:35,-11.456351,-63.916486,App Usuário,Estrutura Danificada,Média,165,Nenhum,Difícil,Prédio com estrutura comprometida após tremor.,Suporte Necessário
+122,2025-05-18 17:22:18,-10.252203,-41.635233,Equipe de Campo,Incêndio,Alta,73,Severo,Difícil,Moradores evacuados devido à fumaça intensa.,Atenção Urgente
+123,2025-05-20 20:11:16,-5.941226,-56.763883,Drone,Pessoas Isoladas,Crítica,199,Leve,Fácil,Famílias ilhadas aguardam resgate.,Atenção Urgente
+124,2025-05-12 18:20:03,-1.512294,-68.581823,App Usuário,Estrutura Danificada,Alta,30,Moderado,Difícil,Queda de poste afeta fornecimento elétrico.,Suporte Necessário
+125,2025-05-15 16:07:06,-5.519485,-60.965656,Drone,Pessoas Isoladas,Média,49,Moderado,Fácil,Famílias ilhadas aguardam resgate.,Monitorar
+126,2025-05-14 14:42:11,-6.269113,-38.516621,Drone,Incêndio,Baixa,194,Severo,Difícil,"Fogo controlado por brigada local, mas danos registrados.",Atenção Urgente
+127,2025-05-18 21:49:46,-12.101498,-46.1611,App Usuário,Incêndio,Crítica,185,Leve,Difícil,Incêndio em vegetação próximo a área urbana.,Atenção Urgente
+128,2025-05-24 20:43:23,-11.073874,-61.6201,App Usuário,Pessoas Isoladas,Média,7,Leve,Bloqueado,Famílias ilhadas aguardam resgate.,Suporte Necessário
+129,2025-05-14 10:56:56,-1.386755,-59.503555,Drone,Deslizamento,Média,166,Nenhum,Fácil,Área interditada após deslizamento de terra.,Suporte Necessário
+130,2025-05-18 10:05:06,-2.288093,-59.521693,Drone,Deslizamento,Média,10,Nenhum,Bloqueado,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Suporte Necessário
+131,2025-05-09 11:40:38,-22.343435,-45.994688,Equipe de Campo,Incêndio,Alta,119,Severo,Fácil,Incêndio em vegetação próximo a área urbana.,Atenção Urgente
+132,2025-05-25 04:23:38,-3.907793,-59.382779,Drone,Pessoas Isoladas,Baixa,132,Severo,Bloqueado,Comunidade sem acesso após queda de ponte.,Atenção Urgente
+133,2025-05-17 02:43:37,-22.323872,-52.689798,Equipe de Campo,Incêndio,Alta,104,Moderado,Fácil,Incêndio em vegetação próximo a área urbana.,Atenção Urgente
+134,2025-05-20 13:14:58,-22.533105,-54.105244,Drone,Alagamento,Média,65,Moderado,Fácil,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+135,2025-06-01 22:51:47,-6.576188,-72.666366,App Usuário,Alagamento,Alta,42,Moderado,Difícil,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+136,2025-05-13 02:13:28,-6.54878,-48.150473,Drone,Alagamento,Baixa,121,Nenhum,Fácil,Água acumulada impede o tráfego de veículos.,Monitorar
+137,2025-05-11 06:44:01,-8.86474,-63.106643,Drone,Estrutura Danificada,Baixa,73,Moderado,Fácil,Prédio com estrutura comprometida após tremor.,Monitorar
+138,2025-05-29 02:37:34,-13.402586,-42.971754,App Usuário,Deslizamento,Alta,35,Nenhum,Fácil,Área interditada após deslizamento de terra.,Monitorar
+139,2025-05-28 05:20:22,-17.844307,-45.605748,Equipe de Campo,Pessoas Isoladas,Média,13,Moderado,Fácil,Comunidade sem acesso após queda de ponte.,Monitorar
+140,2025-05-22 01:43:21,-31.216941,-54.660957,Drone,Incêndio,Crítica,71,Nenhum,Fácil,Incêndio em vegetação próximo a área urbana.,Suporte Necessário
+141,2025-05-08 07:03:24,-4.651011,-45.058839,Drone,Deslizamento,Média,196,Moderado,Fácil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Suporte Necessário
+142,2025-05-20 20:15:37,-26.415819,-51.95774,App Usuário,Estrutura Danificada,Baixa,129,Leve,Bloqueado,Queda de poste afeta fornecimento elétrico.,Suporte Necessário
+143,2025-06-05 21:08:18,-0.825923,-49.381006,App Usuário,Alagamento,Média,59,Leve,Bloqueado,Moradores relatam alagamento em vias principais.,Suporte Necessário
+144,2025-05-14 11:07:25,-5.465156,-38.36142,Equipe de Campo,Deslizamento,Alta,113,Moderado,Bloqueado,Área interditada após deslizamento de terra.,Risco Imediato
+145,2025-05-22 01:23:33,-15.600079,-59.558676,Equipe de Campo,Pessoas Isoladas,Baixa,143,Nenhum,Bloqueado,Barreiras naturais impedem saída de moradores.,Suporte Necessário
+146,2025-05-15 12:11:43,-5.260647,-53.234679,App Usuário,Incêndio,Alta,54,Nenhum,Difícil,"Fogo controlado por brigada local, mas danos registrados.",Suporte Necessário
+147,2025-05-25 03:16:06,-3.140907,-53.652992,Equipe de Campo,Incêndio,Média,161,Moderado,Fácil,Incêndio em vegetação próximo a área urbana.,Suporte Necessário
+148,2025-05-31 09:33:10,-21.010208,-56.350914,App Usuário,Alagamento,Média,136,Nenhum,Difícil,Moradores relatam alagamento em vias principais.,Suporte Necessário
+149,2025-05-12 07:21:05,-14.463598,-51.381293,Drone,Pessoas Isoladas,Crítica,5,Leve,Fácil,Comunidade sem acesso após queda de ponte.,Suporte Necessário
+150,2025-05-24 07:59:30,-10.331616,-58.077986,Equipe de Campo,Deslizamento,Média,24,Leve,Fácil,Deslizamento atingiu parte de uma residência.,Monitorar
+151,2025-05-07 21:06:24,-5.022395,-63.219975,Drone,Deslizamento,Alta,12,Leve,Fácil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Monitorar
+152,2025-05-29 05:21:59,-9.220835,-43.484902,Drone,Alagamento,Baixa,107,Severo,Bloqueado,Água acumulada impede o tráfego de veículos.,Atenção Urgente
+153,2025-05-25 20:57:04,2.599416,-63.244263,App Usuário,Estrutura Danificada,Baixa,35,Nenhum,Bloqueado,Ponte apresenta rachaduras na base.,Monitorar
+154,2025-06-01 23:29:20,-16.383336,-41.955987,Drone,Deslizamento,Baixa,7,Severo,Fácil,Deslizamento atingiu parte de uma residência.,Monitorar
+155,2025-05-08 03:45:52,-5.234844,-62.568671,App Usuário,Pessoas Isoladas,Crítica,198,Nenhum,Fácil,Famílias ilhadas aguardam resgate.,Atenção Urgente
+156,2025-05-15 23:18:13,-12.620486,-49.81576,Drone,Alagamento,Média,151,Moderado,Fácil,Região com nível de água acima da calçada.,Suporte Necessário
+157,2025-05-29 15:16:39,-7.164744,-72.45344,Drone,Estrutura Danificada,Crítica,46,Moderado,Fácil,Ponte apresenta rachaduras na base.,Suporte Necessário
+158,2025-05-19 02:37:49,-1.240385,-48.418063,App Usuário,Estrutura Danificada,Crítica,124,Moderado,Difícil,Prédio com estrutura comprometida após tremor.,Risco Imediato
+159,2025-05-25 17:03:27,-6.948021,-42.53474,App Usuário,Incêndio,Baixa,77,Severo,Bloqueado,Moradores evacuados devido à fumaça intensa.,Atenção Urgente
+160,2025-05-31 07:37:03,-2.765991,-47.451465,Drone,Pessoas Isoladas,Crítica,176,Moderado,Bloqueado,Famílias ilhadas aguardam resgate.,Risco Imediato
+161,2025-05-23 22:22:18,-8.252279,-69.09975,Drone,Alagamento,Alta,18,Severo,Bloqueado,Moradores relatam alagamento em vias principais.,Atenção Urgente
+162,2025-05-08 13:01:20,-28.135103,-50.877752,Equipe de Campo,Deslizamento,Média,82,Moderado,Bloqueado,Área interditada após deslizamento de terra.,Atenção Urgente
+163,2025-05-13 08:19:36,-9.030267,-64.939395,App Usuário,Incêndio,Crítica,145,Moderado,Bloqueado,Moradores evacuados devido à fumaça intensa.,Risco Imediato
+164,2025-06-04 09:57:27,-17.275812,-44.746057,App Usuário,Estrutura Danificada,Média,9,Nenhum,Bloqueado,Ponte apresenta rachaduras na base.,Suporte Necessário
+165,2025-06-01 18:14:26,-10.598997,-51.354287,Equipe de Campo,Alagamento,Baixa,56,Severo,Bloqueado,Água acumulada impede o tráfego de veículos.,Atenção Urgente
+166,2025-05-30 11:56:35,-6.770785,-58.757604,Equipe de Campo,Estrutura Danificada,Crítica,124,Leve,Difícil,Ponte apresenta rachaduras na base.,Atenção Urgente
+167,2025-05-13 15:59:02,-4.750898,-58.372088,App Usuário,Incêndio,Crítica,190,Nenhum,Fácil,Moradores evacuados devido à fumaça intensa.,Atenção Urgente
+168,2025-05-08 04:13:55,-8.169796,-67.812352,Drone,Incêndio,Média,190,Nenhum,Bloqueado,Incêndio em vegetação próximo a área urbana.,Atenção Urgente
+169,2025-05-28 07:56:48,-15.072885,-48.880177,Equipe de Campo,Alagamento,Alta,190,Leve,Difícil,Moradores relatam alagamento em vias principais.,Atenção Urgente
+170,2025-05-17 05:59:28,0.122991,-60.066931,App Usuário,Deslizamento,Baixa,86,Leve,Fácil,Área interditada após deslizamento de terra.,Monitorar
+171,2025-06-03 06:27:25,-17.487666,-54.161211,Drone,Estrutura Danificada,Alta,79,Severo,Difícil,Queda de poste afeta fornecimento elétrico.,Atenção Urgente
+172,2025-05-24 09:38:08,-0.01574,-60.106355,Drone,Estrutura Danificada,Crítica,152,Severo,Bloqueado,Prédio com estrutura comprometida após tremor.,Risco Imediato
+173,2025-05-26 23:11:36,-10.124653,-47.170404,App Usuário,Incêndio,Alta,48,Severo,Difícil,"Fogo controlado por brigada local, mas danos registrados.",Atenção Urgente
+174,2025-06-02 05:32:29,-9.431874,-63.66993,Drone,Incêndio,Alta,76,Moderado,Fácil,Moradores evacuados devido à fumaça intensa.,Suporte Necessário
+175,2025-05-15 23:05:40,-12.884228,-47.522021,App Usuário,Estrutura Danificada,Baixa,148,Severo,Difícil,Prédio com estrutura comprometida após tremor.,Atenção Urgente
+176,2025-05-20 07:42:46,1.093134,-63.329483,Drone,Incêndio,Alta,171,Moderado,Fácil,Incêndio em vegetação próximo a área urbana.,Atenção Urgente
+177,2025-05-20 04:10:12,-15.415112,-60.246972,App Usuário,Alagamento,Crítica,134,Nenhum,Fácil,Água acumulada impede o tráfego de veículos.,Atenção Urgente
+178,2025-05-19 08:52:08,-16.384994,-42.820236,Equipe de Campo,Pessoas Isoladas,Média,181,Leve,Bloqueado,Comunidade sem acesso após queda de ponte.,Atenção Urgente
+179,2025-05-12 19:59:43,-27.541111,-53.033241,Drone,Incêndio,Alta,71,Nenhum,Fácil,Incêndio em vegetação próximo a área urbana.,Suporte Necessário
+180,2025-05-31 21:35:46,-5.983203,-63.16558,Equipe de Campo,Estrutura Danificada,Média,43,Severo,Fácil,Queda de poste afeta fornecimento elétrico.,Suporte Necessário
+181,2025-05-28 15:21:00,-3.404352,-48.769573,App Usuário,Pessoas Isoladas,Baixa,53,Severo,Bloqueado,Barreiras naturais impedem saída de moradores.,Atenção Urgente
+182,2025-06-03 12:27:03,-9.764616,-43.951889,Drone,Incêndio,Média,188,Nenhum,Difícil,Incêndio em vegetação próximo a área urbana.,Suporte Necessário
+183,2025-05-10 14:04:38,4.105521,-59.859853,Drone,Deslizamento,Baixa,93,Severo,Fácil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Suporte Necessário
+184,2025-06-02 21:57:44,-6.738035,-43.638346,Drone,Deslizamento,Alta,69,Nenhum,Difícil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Suporte Necessário
+185,2025-05-11 00:02:11,-19.81188,-48.33996,App Usuário,Deslizamento,Média,194,Leve,Fácil,Área interditada após deslizamento de terra.,Suporte Necessário
+186,2025-05-27 03:49:18,-2.397387,-56.487999,Drone,Alagamento,Alta,131,Leve,Bloqueado,Região com nível de água acima da calçada.,Atenção Urgente
+187,2025-05-23 17:38:32,-0.504743,-68.317953,Equipe de Campo,Estrutura Danificada,Baixa,187,Moderado,Bloqueado,Prédio com estrutura comprometida após tremor.,Atenção Urgente
+188,2025-06-06 10:16:09,-19.531731,-41.572195,Equipe de Campo,Estrutura Danificada,Baixa,105,Nenhum,Bloqueado,Prédio com estrutura comprometida após tremor.,Suporte Necessário
+189,2025-05-13 11:36:20,-11.539424,-53.471088,Drone,Incêndio,Baixa,82,Moderado,Bloqueado,Incêndio em vegetação próximo a área urbana.,Suporte Necessário
+190,2025-05-20 16:56:19,0.462615,-57.757835,Drone,Pessoas Isoladas,Baixa,45,Moderado,Fácil,Famílias ilhadas aguardam resgate.,Monitorar
+191,2025-06-05 15:16:06,-23.596068,-46.279247,Drone,Incêndio,Baixa,76,Nenhum,Difícil,"Fogo controlado por brigada local, mas danos registrados.",Monitorar
+192,2025-05-24 12:07:40,-7.440032,-63.051838,Equipe de Campo,Incêndio,Média,108,Moderado,Bloqueado,"Fogo controlado por brigada local, mas danos registrados.",Atenção Urgente
+193,2025-05-10 20:15:58,-6.807568,-72.439077,App Usuário,Estrutura Danificada,Média,197,Nenhum,Fácil,Queda de poste afeta fornecimento elétrico.,Suporte Necessário
+194,2025-05-31 07:44:03,-11.889353,-63.999687,Drone,Alagamento,Média,95,Moderado,Fácil,Região com nível de água acima da calçada.,Suporte Necessário
+195,2025-05-27 19:46:01,-1.70182,-44.872122,Drone,Alagamento,Crítica,73,Leve,Bloqueado,Água acumulada impede o tráfego de veículos.,Atenção Urgente
+196,2025-05-13 22:42:35,-11.42557,-41.564948,Equipe de Campo,Incêndio,Crítica,159,Severo,Fácil,Incêndio em vegetação próximo a área urbana.,Risco Imediato
+197,2025-05-14 10:48:39,0.247742,-66.434735,Drone,Pessoas Isoladas,Crítica,194,Moderado,Fácil,Famílias ilhadas aguardam resgate.,Atenção Urgente
+198,2025-05-28 16:10:49,-10.546537,-61.980159,App Usuário,Alagamento,Alta,140,Nenhum,Difícil,Moradores relatam alagamento em vias principais.,Atenção Urgente
+199,2025-05-11 01:02:28,-9.573364,-38.847167,Drone,Estrutura Danificada,Média,9,Leve,Fácil,Queda de poste afeta fornecimento elétrico.,Monitorar
+200,2025-05-27 08:58:15,-2.124925,-63.306791,Drone,Pessoas Isoladas,Baixa,48,Moderado,Bloqueado,Comunidade sem acesso após queda de ponte.,Suporte Necessário
+201,2025-05-10 04:38:23,-7.706693,-72.726925,Equipe de Campo,Incêndio,Crítica,85,Nenhum,Fácil,Incêndio em vegetação próximo a área urbana.,Suporte Necessário
+202,2025-05-26 16:06:54,-5.132156,-61.29108,Equipe de Campo,Deslizamento,Média,102,Severo,Fácil,Deslizamento atingiu parte de uma residência.,Atenção Urgente
+203,2025-05-29 05:56:20,-14.572625,-44.216697,Drone,Pessoas Isoladas,Alta,151,Leve,Difícil,Barreiras naturais impedem saída de moradores.,Atenção Urgente
+204,2025-05-12 16:32:14,-22.010614,-45.49119,Drone,Incêndio,Crítica,34,Nenhum,Difícil,Incêndio em vegetação próximo a área urbana.,Suporte Necessário
+205,2025-05-11 09:40:32,-5.940494,-45.795741,Equipe de Campo,Incêndio,Média,50,Moderado,Bloqueado,Incêndio em vegetação próximo a área urbana.,Suporte Necessário
+206,2025-05-28 03:53:40,-4.768442,-48.94279,Equipe de Campo,Pessoas Isoladas,Baixa,102,Leve,Bloqueado,Famílias ilhadas aguardam resgate.,Suporte Necessário
+207,2025-05-11 05:16:44,-8.197867,-63.403862,App Usuário,Pessoas Isoladas,Média,68,Leve,Fácil,Famílias ilhadas aguardam resgate.,Monitorar
+208,2025-05-08 02:11:41,-27.583118,-51.517061,App Usuário,Estrutura Danificada,Alta,136,Leve,Difícil,Ponte apresenta rachaduras na base.,Atenção Urgente
+209,2025-05-18 19:45:32,-18.143203,-47.822508,App Usuário,Estrutura Danificada,Baixa,10,Nenhum,Fácil,Queda de poste afeta fornecimento elétrico.,Monitorar
+210,2025-05-29 06:05:36,-31.554682,-51.829636,App Usuário,Deslizamento,Baixa,170,Leve,Difícil,Área interditada após deslizamento de terra.,Suporte Necessário
+211,2025-05-20 08:00:27,-8.561436,-55.797586,Equipe de Campo,Pessoas Isoladas,Crítica,24,Severo,Bloqueado,Comunidade sem acesso após queda de ponte.,Risco Imediato
+212,2025-05-14 04:38:40,-12.405775,-50.001271,Drone,Deslizamento,Alta,94,Leve,Difícil,Deslizamento atingiu parte de uma residência.,Suporte Necessário
+213,2025-05-22 22:31:28,-8.622904,-55.44081,App Usuário,Estrutura Danificada,Baixa,196,Leve,Fácil,Ponte apresenta rachaduras na base.,Monitorar
+214,2025-05-14 18:54:30,-21.907687,-45.141625,Drone,Alagamento,Alta,18,Severo,Bloqueado,Região com nível de água acima da calçada.,Atenção Urgente
+215,2025-05-10 00:13:50,-28.480524,-53.979638,Drone,Pessoas Isoladas,Média,132,Severo,Difícil,Famílias ilhadas aguardam resgate.,Atenção Urgente
+216,2025-05-31 16:05:11,-11.692874,-53.239051,Equipe de Campo,Pessoas Isoladas,Média,164,Moderado,Difícil,Comunidade sem acesso após queda de ponte.,Atenção Urgente
+217,2025-06-05 10:15:01,-5.37986,-50.622364,Drone,Estrutura Danificada,Alta,19,Leve,Bloqueado,Ponte apresenta rachaduras na base.,Suporte Necessário
+218,2025-05-16 16:20:35,-5.637421,-67.315866,Drone,Incêndio,Alta,154,Leve,Bloqueado,Moradores evacuados devido à fumaça intensa.,Atenção Urgente
+219,2025-05-26 14:34:47,-3.942218,-63.267475,App Usuário,Deslizamento,Alta,107,Leve,Fácil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Suporte Necessário
+220,2025-06-04 21:49:57,-6.263474,-57.711368,Drone,Deslizamento,Baixa,25,Severo,Bloqueado,Deslizamento atingiu parte de uma residência.,Suporte Necessário
+221,2025-05-11 09:53:58,-6.109586,-69.16354,Drone,Pessoas Isoladas,Baixa,171,Nenhum,Bloqueado,Famílias ilhadas aguardam resgate.,Suporte Necessário
+222,2025-05-23 23:31:39,-7.727203,-61.646169,Equipe de Campo,Incêndio,Crítica,120,Moderado,Difícil,"Fogo controlado por brigada local, mas danos registrados.",Risco Imediato
+223,2025-05-22 17:03:47,-12.56978,-51.021358,Drone,Pessoas Isoladas,Alta,13,Nenhum,Bloqueado,Comunidade sem acesso após queda de ponte.,Suporte Necessário
+224,2025-05-23 18:20:03,-22.948206,-51.384687,App Usuário,Deslizamento,Média,89,Severo,Bloqueado,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Atenção Urgente
+225,2025-06-04 09:35:59,-16.670427,-57.134271,Drone,Alagamento,Baixa,49,Nenhum,Bloqueado,Região com nível de água acima da calçada.,Monitorar
+226,2025-05-17 10:17:16,-10.637538,-43.200904,Equipe de Campo,Deslizamento,Baixa,105,Leve,Fácil,Deslizamento atingiu parte de uma residência.,Monitorar
+227,2025-05-29 10:52:25,-5.363632,-55.001707,Equipe de Campo,Alagamento,Crítica,38,Leve,Bloqueado,Moradores relatam alagamento em vias principais.,Atenção Urgente
+228,2025-05-17 06:59:41,-6.228865,-38.197497,Equipe de Campo,Alagamento,Média,61,Moderado,Fácil,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+229,2025-06-04 12:39:15,-14.706233,-55.548422,Drone,Deslizamento,Média,165,Leve,Fácil,Deslizamento atingiu parte de uma residência.,Suporte Necessário
+230,2025-06-04 16:06:40,-8.722832,-36.538869,Drone,Alagamento,Baixa,70,Moderado,Difícil,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+231,2025-05-29 03:10:15,-11.854803,-52.077337,Equipe de Campo,Estrutura Danificada,Baixa,32,Nenhum,Bloqueado,Ponte apresenta rachaduras na base.,Monitorar
+232,2025-05-18 00:55:55,-17.060585,-51.006852,Equipe de Campo,Alagamento,Média,51,Moderado,Fácil,Moradores relatam alagamento em vias principais.,Suporte Necessário
+233,2025-05-07 22:43:57,-10.62069,-39.465901,Drone,Alagamento,Média,166,Nenhum,Fácil,Região com nível de água acima da calçada.,Suporte Necessário
+234,2025-05-16 01:30:59,-11.54922,-63.490742,App Usuário,Incêndio,Alta,167,Leve,Difícil,"Fogo controlado por brigada local, mas danos registrados.",Atenção Urgente
+235,2025-05-18 00:04:15,-11.643747,-47.659053,Drone,Alagamento,Alta,177,Severo,Bloqueado,Região com nível de água acima da calçada.,Risco Imediato
+236,2025-06-06 14:27:06,-8.30185,-69.114476,App Usuário,Incêndio,Baixa,95,Severo,Fácil,Moradores evacuados devido à fumaça intensa.,Suporte Necessário
+237,2025-05-11 22:30:53,-21.71158,-43.480392,App Usuário,Alagamento,Baixa,2,Severo,Difícil,Moradores relatam alagamento em vias principais.,Suporte Necessário
+238,2025-06-05 21:52:36,-25.465941,-49.992962,Equipe de Campo,Incêndio,Média,176,Nenhum,Bloqueado,Incêndio em vegetação próximo a área urbana.,Atenção Urgente
+239,2025-06-02 20:44:14,-6.838964,-46.080236,Equipe de Campo,Estrutura Danificada,Média,189,Severo,Bloqueado,Prédio com estrutura comprometida após tremor.,Risco Imediato
+240,2025-06-05 06:54:16,-3.920687,-43.453545,App Usuário,Alagamento,Média,94,Nenhum,Bloqueado,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+241,2025-05-14 04:35:39,-11.675732,-48.824327,Equipe de Campo,Pessoas Isoladas,Média,189,Leve,Difícil,Famílias ilhadas aguardam resgate.,Suporte Necessário
+242,2025-05-31 21:56:55,-2.696728,-54.32799,Equipe de Campo,Pessoas Isoladas,Crítica,81,Moderado,Bloqueado,Comunidade sem acesso após queda de ponte.,Risco Imediato
+243,2025-05-15 22:47:44,-30.511897,-56.385277,App Usuário,Alagamento,Crítica,119,Severo,Difícil,Região com nível de água acima da calçada.,Risco Imediato
+244,2025-05-16 06:33:37,-17.490092,-55.656625,Drone,Estrutura Danificada,Crítica,87,Moderado,Bloqueado,Ponte apresenta rachaduras na base.,Risco Imediato
+245,2025-06-04 14:11:58,-9.659002,-43.657778,Drone,Pessoas Isoladas,Baixa,28,Severo,Difícil,Comunidade sem acesso após queda de ponte.,Suporte Necessário
+246,2025-05-17 02:21:02,-17.511958,-44.405966,Drone,Pessoas Isoladas,Média,50,Leve,Bloqueado,Barreiras naturais impedem saída de moradores.,Suporte Necessário
+247,2025-06-03 20:30:17,-9.841464,-63.520739,Equipe de Campo,Alagamento,Baixa,160,Nenhum,Fácil,Moradores relatam alagamento em vias principais.,Monitorar
+248,2025-05-14 03:41:05,-10.770667,-63.041694,Drone,Deslizamento,Alta,109,Nenhum,Difícil,"Encosta cedeu parcialmente, risco de novos deslizamentos.",Atenção Urgente
+249,2025-05-12 19:27:49,0.270171,-69.775197,App Usuário,Pessoas Isoladas,Média,7,Moderado,Difícil,Famílias ilhadas aguardam resgate.,Suporte Necessário
+250,2025-05-15 06:15:54,0.818024,-51.867144,Drone,Pessoas Isoladas,Crítica,142,Severo,Fácil,Famílias ilhadas aguardam resgate.,Risco Imediato
+251,2025-05-22 16:05:25,-12.591601,-42.324247,Drone,Alagamento,Média,52,Leve,Difícil,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+252,2025-05-16 15:56:15,-14.460659,-54.258297,Equipe de Campo,Estrutura Danificada,Crítica,162,Moderado,Bloqueado,Ponte apresenta rachaduras na base.,Risco Imediato
+253,2025-06-01 03:42:05,-28.064401,-51.393665,App Usuário,Estrutura Danificada,Alta,79,Leve,Bloqueado,Queda de poste afeta fornecimento elétrico.,Atenção Urgente
+254,2025-05-08 14:46:57,-3.578946,-61.067302,App Usuário,Pessoas Isoladas,Média,27,Leve,Fácil,Barreiras naturais impedem saída de moradores.,Monitorar
+255,2025-05-13 02:37:00,-4.664689,-52.595148,Equipe de Campo,Incêndio,Média,152,Moderado,Difícil,"Fogo controlado por brigada local, mas danos registrados.",Atenção Urgente
+256,2025-05-19 07:04:04,-3.812601,-64.435383,Drone,Estrutura Danificada,Média,67,Nenhum,Fácil,Queda de poste afeta fornecimento elétrico.,Monitorar
+257,2025-06-01 03:16:39,-4.604275,-37.828267,App Usuário,Estrutura Danificada,Alta,58,Moderado,Fácil,Ponte apresenta rachaduras na base.,Suporte Necessário
+258,2025-05-21 19:54:22,-30.59671,-53.959818,App Usuário,Deslizamento,Baixa,92,Leve,Fácil,Deslizamento atingiu parte de uma residência.,Monitorar
+259,2025-05-29 05:25:46,-6.082724,-52.483567,Drone,Pessoas Isoladas,Alta,152,Moderado,Difícil,Comunidade sem acesso após queda de ponte.,Atenção Urgente
+260,2025-05-30 04:47:45,-28.064448,-50.17771,App Usuário,Estrutura Danificada,Alta,184,Moderado,Bloqueado,Queda de poste afeta fornecimento elétrico.,Risco Imediato
+261,2025-05-25 22:17:21,-16.360753,-54.143569,Drone,Incêndio,Baixa,160,Nenhum,Bloqueado,"Fogo controlado por brigada local, mas danos registrados.",Suporte Necessário
+262,2025-05-21 04:53:44,-15.53519,-57.312234,Equipe de Campo,Deslizamento,Média,193,Moderado,Bloqueado,Área interditada após deslizamento de terra.,Atenção Urgente
+263,2025-05-19 01:54:08,-4.170113,-38.717006,Equipe de Campo,Estrutura Danificada,Alta,185,Severo,Bloqueado,Ponte apresenta rachaduras na base.,Risco Imediato
+264,2025-05-15 18:04:52,-5.288936,-40.736399,Equipe de Campo,Estrutura Danificada,Baixa,85,Moderado,Fácil,Prédio com estrutura comprometida após tremor.,Monitorar
+265,2025-06-05 16:10:04,-4.062507,-39.369597,Equipe de Campo,Estrutura Danificada,Alta,99,Moderado,Difícil,Prédio com estrutura comprometida após tremor.,Atenção Urgente
+266,2025-05-16 15:13:32,-3.743294,-51.781297,Drone,Estrutura Danificada,Alta,14,Moderado,Fácil,Queda de poste afeta fornecimento elétrico.,Suporte Necessário
+267,2025-05-24 08:09:01,-21.70609,-55.443898,Equipe de Campo,Estrutura Danificada,Alta,150,Moderado,Fácil,Queda de poste afeta fornecimento elétrico.,Atenção Urgente
+268,2025-05-15 23:04:25,-0.429582,-54.45142,App Usuário,Estrutura Danificada,Média,105,Severo,Difícil,Queda de poste afeta fornecimento elétrico.,Atenção Urgente
+269,2025-05-22 09:07:15,-8.827118,-38.93654,App Usuário,Estrutura Danificada,Média,82,Nenhum,Fácil,Queda de poste afeta fornecimento elétrico.,Monitorar
+270,2025-05-31 07:05:37,-7.660061,-70.269383,App Usuário,Deslizamento,Média,86,Nenhum,Difícil,Área interditada após deslizamento de terra.,Suporte Necessário
+271,2025-05-08 02:46:09,-23.334228,-54.349183,Equipe de Campo,Alagamento,Crítica,39,Nenhum,Bloqueado,Água acumulada impede o tráfego de veículos.,Atenção Urgente
+272,2025-05-10 23:11:03,-2.89596,-53.497712,App Usuário,Incêndio,Baixa,181,Nenhum,Fácil,Incêndio em vegetação próximo a área urbana.,Monitorar
+273,2025-05-18 19:45:18,-7.0614,-72.179493,Drone,Estrutura Danificada,Baixa,192,Severo,Fácil,Ponte apresenta rachaduras na base.,Suporte Necessário
+274,2025-05-28 11:37:17,-2.691939,-56.044987,App Usuário,Deslizamento,Média,48,Nenhum,Fácil,Deslizamento atingiu parte de uma residência.,Monitorar
+275,2025-05-30 04:43:26,-24.638562,-48.370746,Equipe de Campo,Estrutura Danificada,Crítica,57,Leve,Fácil,Prédio com estrutura comprometida após tremor.,Suporte Necessário
+276,2025-05-14 13:36:41,-0.801078,-52.837676,Equipe de Campo,Alagamento,Alta,19,Nenhum,Difícil,Moradores relatam alagamento em vias principais.,Suporte Necessário
+277,2025-06-03 10:49:46,-6.671592,-53.464313,Equipe de Campo,Incêndio,Baixa,104,Leve,Fácil,Incêndio em vegetação próximo a área urbana.,Monitorar
+278,2025-06-03 19:47:41,-5.007794,-64.085469,App Usuário,Alagamento,Alta,18,Severo,Fácil,Região com nível de água acima da calçada.,Suporte Necessário
+279,2025-05-27 07:58:08,0.244287,-51.988025,Drone,Incêndio,Baixa,98,Moderado,Difícil,Moradores evacuados devido à fumaça intensa.,Suporte Necessário
+280,2025-05-31 22:28:48,-14.292121,-51.387785,Drone,Pessoas Isoladas,Alta,80,Leve,Fácil,Barreiras naturais impedem saída de moradores.,Suporte Necessário
+281,2025-05-19 03:32:48,-5.724732,-50.815959,Equipe de Campo,Estrutura Danificada,Média,3,Leve,Fácil,Prédio com estrutura comprometida após tremor.,Monitorar
+282,2025-05-11 21:38:27,-1.270447,-59.084673,App Usuário,Pessoas Isoladas,Média,174,Leve,Fácil,Barreiras naturais impedem saída de moradores.,Suporte Necessário
+283,2025-05-26 23:28:45,1.382159,-55.302779,Equipe de Campo,Pessoas Isoladas,Alta,36,Leve,Bloqueado,Comunidade sem acesso após queda de ponte.,Suporte Necessário
+284,2025-05-23 02:28:48,-26.90157,-53.026902,Equipe de Campo,Alagamento,Média,55,Leve,Fácil,Moradores relatam alagamento em vias principais.,Monitorar
+285,2025-05-19 21:25:09,-15.050602,-60.067414,App Usuário,Alagamento,Média,65,Leve,Difícil,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+286,2025-05-15 16:07:21,-18.887179,-46.950254,App Usuário,Incêndio,Média,107,Moderado,Difícil,Moradores evacuados devido à fumaça intensa.,Atenção Urgente
+287,2025-05-27 04:31:30,-12.027305,-40.482258,Equipe de Campo,Deslizamento,Crítica,53,Leve,Bloqueado,Área interditada após deslizamento de terra.,Atenção Urgente
+288,2025-06-06 00:19:56,-10.411611,-59.859252,Equipe de Campo,Deslizamento,Média,168,Moderado,Fácil,Área interditada após deslizamento de terra.,Suporte Necessário
+289,2025-05-17 21:34:19,-5.938215,-49.407165,Drone,Alagamento,Baixa,129,Moderado,Difícil,Água acumulada impede o tráfego de veículos.,Suporte Necessário
+290,2025-05-18 09:14:33,-10.275218,-38.239493,Equipe de Campo,Alagamento,Média,74,Nenhum,Bloqueado,Região com nível de água acima da calçada.,Suporte Necessário
+291,2025-05-17 12:22:01,-5.200046,-37.453289,Equipe de Campo,Incêndio,Média,61,Severo,Bloqueado,Incêndio em vegetação próximo a área urbana.,Atenção Urgente
+292,2025-05-27 02:41:54,1.385095,-59.519161,Drone,Deslizamento,Média,128,Moderado,Fácil,Área interditada após deslizamento de terra.,Suporte Necessário
+293,2025-05-08 05:13:02,-1.188109,-67.02607,App Usuário,Deslizamento,Crítica,33,Moderado,Fácil,Área interditada após deslizamento de terra.,Suporte Necessário
+294,2025-05-28 13:17:21,-11.687807,-56.760729,Equipe de Campo,Deslizamento,Baixa,175,Nenhum,Difícil,Área interditada após deslizamento de terra.,Suporte Necessário
+295,2025-05-18 04:57:57,-13.202179,-51.887729,Equipe de Campo,Estrutura Danificada,Crítica,172,Moderado,Bloqueado,Ponte apresenta rachaduras na base.,Risco Imediato
+296,2025-06-05 06:25:49,-27.499841,-52.348277,Drone,Incêndio,Média,31,Leve,Difícil,"Fogo controlado por brigada local, mas danos registrados.",Monitorar
+297,2025-05-10 23:01:04,-7.752602,-62.389235,App Usuário,Deslizamento,Alta,111,Nenhum,Fácil,Deslizamento atingiu parte de uma residência.,Suporte Necessário
+298,2025-05-11 08:03:11,-10.847222,-49.878238,Equipe de Campo,Alagamento,Crítica,41,Moderado,Bloqueado,Moradores relatam alagamento em vias principais.,Atenção Urgente
+299,2025-05-09 01:59:01,1.248476,-67.843137,Equipe de Campo,Alagamento,Baixa,150,Moderado,Fácil,Região com nível de água acima da calçada.,Suporte Necessário
+300,2025-05-27 00:55:54,-22.218252,-46.422901,Drone,Pessoas Isoladas,Baixa,102,Severo,Difícil,Famílias ilhadas aguardam resgate.,Atenção Urgente
+1000,2025-06-01 17:16:45,-23.453399,-46.551033,Equipe de Campo,Incêndio,Alta,500,Alto,Fácil,prédio pegando fogo,Suporte Necessário

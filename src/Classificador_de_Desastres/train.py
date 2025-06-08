@@ -148,7 +148,7 @@ def visualizar_mapa_com_legenda(gdf):
 # =======================
 
 def main():
-    caminho_csv = "C:/Users/zenet/OneDrive/Desktop/GS_IA_FINAL/arya-ia/DATA/desastres_reports_brasil.csv"
+    caminho_csv = "C:/Users/zenet/OneDrive/Desktop/GS_IA_FINAL/arya-ia/MODELO_1_VITOR/DATA/desastres_reports_brasil.csv"
 
     colunas_features = [
         'source_type', 'observation_type', 'severity_reported',

@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import time
+import geopandas
+import plotly.graph_objects as go
 
 # Preprocessing and Pipeline
 from sklearn.model_selection import train_test_split
@@ -157,93 +159,115 @@ def explain_with_shap(pipeline, X_test_model_features, model_name="Model"):
 # --- NOVA Seção: Visualização do Mapa (Ajustada) ---
 # --- NOVA Seção: Visualização do Mapa (Ajustada) ---
 # --- NOVA Seção: Visualização do Mapa (Ajustada) ---
+# --- Visualização do Mapa (MODIFICADA para Melhor Estética e Correção de Erro) ---
+# --- Visualização do Mapa (MODIFICADA para Melhor Estética e Estilo de Mapa) ---
 def display_classification_map(df_map_with_preds_and_info, lat_col='lat', lon_col='lon',
                                proba_col='probability', event_type_col='tipo_evento',
-                               title="Mapa de Classificação de Risco por Tipo de Evento"):
+                               title="Mapa de Classificação de Risco"):
     """
-    Exibe um mapa interativo com as classificações de risco.
-    df_map_with_preds_and_info: DataFrame contendo 'lat', 'lon', 'tipo_evento' (original),
-                                 e 'probability' (predita pelo modelo), e outras features para hover.
+    Exibe um mapa interativo com pontos sólidos e halos transparentes (estética aprimorada).
     """
-    print(f"Gerando mapa. Amostra dos dados para o mapa (antes de filtrar 'nenhum'):\n{df_map_with_preds_and_info.head()}")
+    print(f"Gerando mapa com Plotly Graph Objects. Amostra dos dados (antes de filtrar 'nenhum'):\n{df_map_with_preds_and_info.head(3)}")
 
-    # --- NOVO: Filtrar eventos do tipo "nenhum" ---
-    df_filtered_for_map = df_map_with_preds_and_info[df_map_with_preds_and_info[event_type_col] != 'nenhum'].copy()
-    # Usar .copy() para evitar SettingWithCopyWarning em operações subsequentes
-
-    if df_filtered_for_map.empty:
+    df_filtered = df_map_with_preds_and_info[df_map_with_preds_and_info[event_type_col] != 'nenhum'].copy()
+    if df_filtered.empty:
         print("Nenhum evento para exibir no mapa após filtrar 'nenhum'.")
         return
-    
-    print(f"Amostra dos dados para o mapa (APÓS filtrar 'nenhum'):\n{df_filtered_for_map.head()}")
 
-
-    # 1. Definir Nivel_Risco (severidade) baseado na probabilidade predita
+    # 1. Definir Nivel_Risco (severidade)
     bins_risco = [-0.01, 0.3, 0.7, 1.01]
     labels_risco = ['Baixo Risco', 'Médio Risco', 'Alto Risco']
-    df_filtered_for_map['Nivel_Risco_Predito'] = pd.cut(
-        df_filtered_for_map[proba_col], bins=bins_risco, labels=labels_risco, right=True, include_lowest=True
+    df_filtered['Nivel_Risco_Predito'] = pd.cut(
+        df_filtered[proba_col], bins=bins_risco, labels=labels_risco, right=True, include_lowest=True
     )
 
-    # 2. Definir mapa de cores para event_type_col (tipo de evento original)
-    default_event_colors = {
-        'inundação': 'rgba(0, 100, 255, 0.8)',    # Azul mais vibrante
-        'deslizamento': 'rgba(165, 42, 42, 0.8)', # Marrom (Brown)
-        'seca': 'rgba(255, 193, 7, 0.8)',        # Ambar/Laranja para seca
-        'incêndio': 'rgba(220, 53, 69, 0.8)',     # Vermelho mais forte
-        'vendaval': 'rgba(128, 0, 128, 0.7)'     # Roxo para vendaval
+    # 2. Definir cores BASE para event_type_col
+    base_event_colors = {
+        'inundação': 'blue', 
+        'deslizamento': 'saddlebrown',
+        'seca': 'orange', 
+        'incêndio': 'red', 
+        'vendaval': 'darkviolet' 
     }
-    unique_event_types_on_map = df_filtered_for_map[event_type_col].unique()
-    event_color_map = {
-        etype: default_event_colors.get(etype, 'rgba(108, 117, 125, 0.7)') # Cinza secundário para não mapeados
-        for etype in unique_event_types_on_map
-    }
+    df_filtered['base_color'] = df_filtered[event_type_col].map(lambda x: base_event_colors.get(x, 'grey'))
 
-    # 3. Definir tamanho do marcador (efeito de raio) baseado no Nivel_Risco_Predito
-    # MODIFICADO: Aumentando AINDA MAIS os tamanhos para melhor visualização do "raio"
-    size_map = {'Baixo Risco': 12, 'Médio Risco': 22, 'Alto Risco': 30} # Valores anteriores: 10, 18, 25
+    # 3. Definir tamanhos para pontos sólidos e halos
+    solid_point_size_map = {'Baixo Risco': 8, 'Médio Risco': 12, 'Alto Risco': 16}
+    halo_effect_size_map = {'Baixo Risco': 30, 'Médio Risco': 45, 'Alto Risco': 60}
     
-    mapped_sizes = df_filtered_for_map['Nivel_Risco_Predito'].map(size_map)
-    df_filtered_for_map['marker_size'] = mapped_sizes.astype(float).fillna(10.0).astype(int) # Usar 10 como fallback
+    df_filtered['solid_marker_size'] = df_filtered['Nivel_Risco_Predito'].map(solid_point_size_map).astype(float).fillna(7.0).astype(int)
+    df_filtered['halo_marker_size'] = df_filtered['Nivel_Risco_Predito'].map(halo_effect_size_map).astype(float).fillna(20.0).astype(int)
 
-    # 4. Configurar hover_data
-    hover_data_list = [
-        event_type_col,
-        'Nivel_Risco_Predito',
-        proba_col,
-        'chuva_mm',
-        'temperatura_media',
-        'uso_solo'
-    ]
-    hover_data_list_filtered = [col for col in hover_data_list if col in df_filtered_for_map.columns]
-    
-    # Não precisamos mais do df_display separado, pois df_filtered_for_map já é uma cópia
-    if proba_col in df_filtered_for_map.columns:
-        df_filtered_for_map[proba_col] = df_filtered_for_map[proba_col].round(3)
+    # 4. Criar hovertext para os pontos sólidos
+    hover_texts = []
+    for _, row in df_filtered.iterrows():
+        text = (f"<b>Tipo Evento:</b> {row[event_type_col]}<br>"
+                f"<b>Nível Risco:</b> {row['Nivel_Risco_Predito']}<br>"
+                f"<b>Probabilidade:</b> {row[proba_col]:.3f}<br>"
+                f"Lat: {row[lat_col]:.4f}, Lon: {row[lon_col]:.4f}<br>")
+        if 'chuva_mm' in row and pd.notna(row['chuva_mm']): text += f"Chuva (mm): {row['chuva_mm']}<br>"
+        if 'temperatura_media' in row and pd.notna(row['temperatura_media']): text += f"Temp. Média: {row['temperatura_media']}<br>"
+        if 'uso_solo' in row and pd.notna(row['uso_solo']): text += f"Uso do Solo: {row['uso_solo']}"
+        hover_texts.append(text)
+    df_filtered['hover_text'] = hover_texts
 
-    fig = px.scatter_mapbox(
-        df_filtered_for_map, # MODIFICADO: Usar o DataFrame filtrado
-        lat=lat_col,
-        lon=lon_col,
-        color=event_type_col,
-        color_discrete_map=event_color_map,
-        size='marker_size', 
-        zoom=3.5,
-        hover_name=event_type_col,
-        hover_data=hover_data_list_filtered,
-        title=title
-    )
+    # 5. Criar a figura com plotly.graph_objects
+    fig = go.Figure()
 
-    map_center_lat = df_filtered_for_map[lat_col].mean() if not df_filtered_for_map[lat_col].empty else -15.78
-    map_center_lon = df_filtered_for_map[lon_col].mean() if not df_filtered_for_map[lon_col].empty else -47.93
+    # Camada 1: Halos
+    fig.add_trace(go.Scattermapbox(
+        lat=df_filtered[lat_col],
+        lon=df_filtered[lon_col],
+        mode='markers',
+        marker=go.scattermapbox.Marker(
+            size=df_filtered['halo_marker_size'],
+            color=df_filtered['base_color'], 
+            opacity=0.12
+        ),
+        hoverinfo='skip',
+        name='Área de Influência (Halo)',
+        showlegend=False 
+    ))
+
+    # Camada 2: Pontos Sólidos
+    legend_names_added = set()
+    sorted_event_types = sorted(df_filtered[event_type_col].unique())
+
+    for event_type_val in sorted_event_types:
+        df_subset = df_filtered[df_filtered[event_type_col] == event_type_val]
+        if df_subset.empty:
+            continue
+        show_legend_for_trace = event_type_val not in legend_names_added
+        
+        fig.add_trace(go.Scattermapbox(
+            lat=df_subset[lat_col],
+            lon=df_subset[lon_col],
+            mode='markers', 
+            marker=go.scattermapbox.Marker(
+                size=df_subset['solid_marker_size'],
+                color=df_subset['base_color'],
+                opacity=0.9
+            ),
+            hovertext=df_subset['hover_text'],
+            hoverinfo='text',
+            name=str(event_type_val).capitalize(),
+            showlegend=show_legend_for_trace
+        ))
+        if show_legend_for_trace:
+            legend_names_added.add(event_type_val)
+
+    map_center_lat = df_filtered[lat_col].mean() if not df_filtered[lat_col].empty else -15.78
+    map_center_lon = df_filtered[lon_col].mean() if not df_filtered[lon_col].empty else -47.93
 
     fig.update_layout(
-        mapbox_style="open-street-map",
+        title=title,
+        mapbox_style="open-street-map", # MODIFICADO AQUI
         mapbox_center_lat=map_center_lat,
         mapbox_center_lon=map_center_lon,
+        mapbox_zoom=3.5,
         margin={"r":0,"t":50,"l":0,"b":0},
         height=700,
-        legend_title_text='Tipo de Evento (Cor)<br>Severidade (Tamanho)'
+        legend_title_text='<b>Tipo de Evento (Cor)</b><br><i>Severidade do Risco (Tamanho do Ponto)</i>'
     )
     fig.show()
 
