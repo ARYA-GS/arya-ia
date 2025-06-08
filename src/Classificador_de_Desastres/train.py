@@ -1,167 +1,119 @@
-# desastres_modelo_visualizacao.py
+# src/Classificador_de_Desastres/train.py
 
 import pandas as pd
-import geopandas as gpd
-from shapely.geometry import Point
-import plotly.graph_objects as go
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import accuracy_score
+import plotly.graph_objects as go
+import os
 
-# =======================
-# 1. Carregamento de dados
-# =======================
+def run_classification():
+    """
+    Executa o modelo de classificação de desastres.
+    Lê os dados, treina um RandomForestClassifier, faz previsões e
+    gera um mapa Plotly com a classificação de risco.
+    Retorna:
+        go.Figure: A figura do mapa Plotly.
+    """
+    # Garante que o caminho para o arquivo de dados esteja correto
+    # assumindo que o script é executado a partir da raiz do projeto (onde está o app.py)
+    file_path = "C:/Users/zenet/OneDrive/Desktop/GS_IA_FINAL/arya-ia/Data/relatorios_desastres.csv"
+    
+    try:
+        data = pd.read_csv(file_path)
+    except FileNotFoundError:
+        return go.Figure().update_layout(title_text=f"Erro: Arquivo não encontrado em {file_path}")
 
-def carregar_dados(caminho_csv):
-    df = pd.read_csv(caminho_csv)
-    return df
+    # Pré-processamento dos dados
+    data = data.dropna(subset=['latitude', 'longitude', 'AREA_RISK_CLASSIFICATION'])
+    data.fillna('Não Informado', inplace=True)
 
-# =======================
-# 2. Pré-processamento
-# =======================
-
-def preprocessar_dados(df, colunas_features, coluna_alvo):
-    df_encoded = df.copy()
+    categorical_cols = [
+        'source_type', 'observation_type', 'severity_reported', 
+        'infrastructure_damage', 'accessibility'
+    ]
+    
     label_encoders = {}
-
-    for col in colunas_features + [coluna_alvo]:
-        if df_encoded[col].dtype == 'object':
+    for column in categorical_cols:
+        if column in data.columns:
             le = LabelEncoder()
-            df_encoded[col] = le.fit_transform(df_encoded[col])
-            label_encoders[col] = le
+            data[column] = le.fit_transform(data[column].astype(str))
+            label_encoders[column] = le
+        else:
+             return go.Figure().update_layout(title_text=f"Erro: Coluna categórica '{column}' não encontrada no CSV.")
 
-    X = df_encoded[colunas_features]
-    y = df_encoded[coluna_alvo]
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    features = [
+        'source_type', 'observation_type', 'severity_reported', 
+        'num_affected_estimate', 'infrastructure_damage', 'accessibility'
+    ]
+    
+    # Verifica se todas as features necessárias existem no DataFrame
+    for feature in features:
+        if feature not in data.columns:
+             return go.Figure().update_layout(title_text=f"Erro: Coluna de feature '{feature}' não encontrada no CSV.")
 
-    return X_train, X_test, y_train, y_test, df_encoded, label_encoders
+    X = data[features]
+    y = data['AREA_RISK_CLASSIFICATION']
 
-# =======================
-# 3. Treinamento do Modelo
-# =======================
+    # Divisão em treino e teste
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-def treinar_modelo(X_train, y_train):
-    modelo = RandomForestClassifier(n_estimators=100, random_state=42)
-    modelo.fit(X_train, y_train)
-    return modelo
+    # Treinamento do modelo
+    model = RandomForestClassifier(n_estimators=100, random_state=42, class_weight='balanced')
+    model.fit(X_train, y_train)
 
-# =======================
-# 4. Aplicar Previsões no DataFrame Original
-# =======================
+    # Avaliação
+    y_pred = model.predict(X_test)
+    accuracy = accuracy_score(y_test, y_pred)
+    print(f"Acurácia do Classificador de Desastres: {accuracy:.2f}")
 
-def aplicar_predicoes(df_original, modelo, colunas_features, label_encoder_alvo, label_encoders):
-    df_copy = df_original.copy()
+    # Previsão para todos os dados para visualização
+    data['predicted_risk'] = model.predict(X)
 
-    for col in colunas_features:
-        if col in label_encoders:
-            df_copy[col] = label_encoders[col].transform(df_copy[col])
-
-    X_pred = df_copy[colunas_features]
-    df_copy['predicted_class'] = label_encoder_alvo.inverse_transform(modelo.predict(X_pred))
-
-    return df_copy
-
-# =======================
-# 5. Criar GeoDataFrame
-# =======================
-
-def criar_geodataframe(df):
-    geometry = [Point(xy) for xy in zip(df['longitude'], df['latitude'])]
-    gdf = gpd.GeoDataFrame(df, geometry=geometry)
-    gdf.set_crs(epsg=4326, inplace=True)
-    return gdf
-
-# =======================
-# 6. Visualização com Plotly (mapa estilo Google Maps)
-# =======================
-
-# =======================
-# 6. Visualização com Plotly (Estilo Mapa de Calor com Bolhas)
-# =======================
-
-def visualizar_mapa_com_legenda(gdf):
-    # Cores fixas por classe de risco
-    cor_por_risco = {
-        'Risco Imediato': 'red',
-        'Atenção Urgente': 'orange',
-        'Suporte Necessário': 'yellow',
-        'Monitorar': 'blue'
+    # Criação do mapa
+    color_map = {
+        'Low': '#2ca02c',       # Verde
+        'Medium': '#ff7f0e',    # Laranja
+        'High': '#d62728',      # Vermelho
+        'Critical': '#8c564b'   # Marrom (vermelho escuro)
     }
 
     fig = go.Figure()
 
-    for risco, grupo in gdf.groupby("predicted_class"):
-        cor = cor_por_risco.get(risco, 'gray')
-
-        # Marcadores principais (pontos com hover)
-        fig.add_trace(go.Scattermapbox(
-            lat=grupo.geometry.y,
-            lon=grupo.geometry.x,
-            mode='markers',
-            marker=dict(
-                size=14,
-                color=cor,
-                opacity=0.8
-            ),
-            name=risco,
-            hoverinfo='text',
-            hovertext=grupo.apply(lambda row:
-                f"<b>Classificação:</b> {row['predicted_class']}<br>"
-                f"<b>Tipo:</b> {row.get('observation_type', '')}<br>"
-                f"<b>Severidade:</b> {row.get('severity_reported', '')}<br>"
-                f"<b>Atingidos:</b> {row.get('num_affected_estimate', '')}<br>"
-                f"<b>Notas:</b> {row.get('additional_notes', '')}", axis=1)
-        ))
-
-        # Círculo de impacto (só visual)
-        fig.add_trace(go.Scattermapbox(
-            lat=grupo.geometry.y,
-            lon=grupo.geometry.x,
-            mode='markers',
-            marker=dict(
-                size=80,  # aumentar para simular raio de alcance maior
-                color=cor,
-                opacity=0.2
-            ),
-            hoverinfo='skip',
-            showlegend=False
-        ))
+    for risk, color in color_map.items():
+        df_risk = data[data['predicted_risk'] == risk]
+        if not df_risk.empty:
+            fig.add_trace(go.Scattermapbox(
+                lat=df_risk['latitude'],
+                lon=df_risk['longitude'],
+                mode='markers',
+                marker=go.scattermapbox.Marker(
+                    size=10,
+                    color=color,
+                    opacity=0.7
+                ),
+                text=[f"Tipo: {obs}<br>Gravidade: {sev}" for obs, sev in zip(df_risk['observation_type'].map(lambda x: label_encoders['observation_type'].inverse_transform([x])[0]), df_risk['severity_reported'].map(lambda x: label_encoders['severity_reported'].inverse_transform([x])[0]))],
+                hoverinfo='text',
+                name=risk
+            ))
 
     fig.update_layout(
-        mapbox=dict(
-            style="open-street-map",
-            zoom=5,
-            center=dict(lat=gdf.geometry.y.mean(), lon=gdf.geometry.x.mean())
-        ),
-        margin={"r": 0, "t": 30, "l": 0, "b": 0},
-        title="Classificação de Risco com Áreas de Impacto Ampliadas",
-        legend=dict(title="Classes de Risco", x=0, y=1)
+        title_text='<b>Classificação de Risco de Desastres Reportados no Brasil</b>',
+        title_x=0.5,
+        mapbox_style="open-street-map",
+        mapbox_center_lon=-55,
+        mapbox_center_lat=-14,
+        mapbox_zoom=3.5,
+        legend_title_text='Nível de Risco Previsto',
+        margin={"r":0,"t":40,"l":0,"b":0}
     )
+    
+    # MODIFICAÇÃO PRINCIPAL: Retorna a figura para o Flask
+    return fig
 
-    fig.show()
-
-
-
-# =======================
-# 7. Execução principal
-# =======================
-
-def main():
-    caminho_csv = "C:/Users/zenet/OneDrive/Desktop/GS_IA_FINAL/arya-ia/MODELO_1_VITOR/DATA/desastres_reports_brasil.csv"
-
-    colunas_features = [
-        'source_type', 'observation_type', 'severity_reported',
-        'num_affected_estimate', 'infrastructure_damage', 'accessibility'
-    ]
-    coluna_alvo = 'AREA_RISK_CLASSIFICATION'
-
-    df = carregar_dados(caminho_csv)
-    X_train, X_test, y_train, y_test, df_encoded, label_encoders = preprocessar_dados(df, colunas_features, coluna_alvo)
-    modelo = treinar_modelo(X_train, y_train)
-    df_predito = aplicar_predicoes(df, modelo, colunas_features, label_encoders[coluna_alvo], label_encoders)
-    gdf = criar_geodataframe(df_predito)
-    visualizar_mapa_com_legenda(gdf)
-
-if __name__ == "__main__":
-    main()
+# A chamada principal foi removida para não auto-executar quando importado
+# if __name__ == '__main__':
+#     fig = run_classification()
+#     fig.show()
